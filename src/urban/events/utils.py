@@ -111,5 +111,5 @@ def import_all_config(
             )
             import_json_config(
                 json_path=json_path,
-                context=context_plone
+                context=context_plone,
             )
