@@ -20,8 +20,8 @@ def remove_uid(data):
     new_data = []
 
     for item in data:
-        if "UID" in data:
-            del data["UID"]
+        if "UID" in item:
+            del item["UID"]
         new_data.append(item)
 
     return new_data
