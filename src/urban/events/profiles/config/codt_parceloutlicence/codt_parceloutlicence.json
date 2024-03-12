@@ -1,0 +1,119 @@
+[{
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_parceloutlicence/urbaneventtypes/intention-de-depot-de-plans-modifies",
+    "@type": "UrbanEventType",
+    "TALCondition": "",
+    "UID": "f88a3eb4f971422ab63c8154563e82a3",
+    "activatedFields": [
+        "receiptDate",
+        "ultimeDate"
+    ],
+    "allow_discussion": false,
+    "contributors": [],
+    "created": "2024-03-07T14:55:42+00:00",
+    "creators": [
+        "admin"
+    ],
+    "description": null,
+    "effective": null,
+    "eventDateLabel": "Date",
+    "eventPortalType": "UrbanEvent",
+    "eventTypeType": [
+        "Products.urban.interfaces.IIntentionToSubmitAmendedPlans"
+    ],
+    "expires": null,
+    "id": "intention-de-depot-de-plans-modifies",
+    "isDefaultValue": false,
+    "isKeyEvent": true,
+    "is_folderish": true,
+    "keyDates": [
+        "eventDate"
+    ],
+    "language": "fr",
+    "layout": "base_view",
+    "location": "",
+    "modified": "2024-03-07T14:55:43+00:00",
+    "parent": {
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_parceloutlicence/urbaneventtypes",
+        "@type": "Folder",
+        "UID": "1234",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "review_state": "enabled",
+    "rights": null,
+    "showTitle": false,
+    "subjects": [],
+    "textDefaultValues": [],
+    "title": "Intention de d\u00e9p\u00f4t de plans modifi\u00e9s",
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2024-03-07T14:55:42+00:00"
+            }
+        ]
+    }
+},
+    {
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_parceloutlicence/urbaneventtypes/en-attente-de-paiement-de-lamende",
+    "@type": "UrbanEventType",
+    "TALCondition": "",
+    "UID": "ec6187d6b8d1443eaca5772f33f2f332",
+    "activatedFields": [
+        "paymentDeadline",
+        "ultimeDate"
+    ],
+    "allow_discussion": false,
+    "contributors": [],
+    "created": "2024-03-07T15:08:03+00:00",
+    "creators": [
+        "admin"
+    ],
+    "description": null,
+    "effective": null,
+    "eventDateLabel": "Date",
+    "eventPortalType": "UrbanEvent",
+    "eventTypeType": [],
+    "expires": null,
+    "id": "en-attente-de-paiement-de-lamende",
+    "isDefaultValue": false,
+    "isKeyEvent": true,
+    "is_folderish": true,
+    "keyDates": [
+        "eventDate"
+    ],
+    "language": "fr",
+    "layout": "base_view",
+    "location": "",
+    "modified": "2024-03-07T15:08:04+00:00",
+    "parent": {
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_parceloutlicence/urbaneventtypes",
+        "@type": "Folder",
+        "UID": "1234",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "review_state": "enabled",
+    "rights": null,
+    "showTitle": false,
+    "subjects": [],
+    "textDefaultValues": [],
+    "title": "En attente de paiement de l'amende",
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2024-03-07T15:08:03+00:00"
+            }
+        ]
+    }
+}
+]
