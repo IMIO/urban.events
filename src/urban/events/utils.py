@@ -22,6 +22,8 @@ def remove_uid(data):
     for item in data:
         if "UID" in item:
             del item["UID"]
+        if "UID" in item["parent"]:
+            del item["parent"]["UID"]
         new_data.append(item)
 
     return new_data
@@ -29,6 +31,27 @@ def remove_uid(data):
 
 def remove_none(data):
     return [{k: v for k, v in item.items() if v is not None} for item in data]
+
+
+def fix_id(id):
+    path = id.split("portal_urban")[1]
+    root_site = getSite()
+    return os.path.normpath(
+        os.path.join(
+            "/".join(root_site.getPhysicalPath()), "portal_urban", path.lstrip("/")
+        )
+    )
+
+
+def fix_all_ids(data):
+    new_data = []
+
+    for item in data:
+        item["@id"] = fix_id(item["@id"])
+        item["parent"]["@id"] = fix_id(item["parent"]["@id"])
+        new_data.append(item)
+
+    return new_data
 
 
 def import_json_config(
@@ -71,6 +94,7 @@ def import_json_config(
 
     data = remove_uid(data)
     data = remove_none(data)
+    data = fix_all_ids(data)
 
     import_content.start()
     import_content.do_import(data)
@@ -105,9 +129,14 @@ def import_all_config(
             continue
         for file in files:
             json_path = os.path.join(root, file)
-            licence_type = root.split('/')[-1]
+            licence_type = root.split("/")[-1]
             context_plone = os.path.normpath(
-                os.path.join(root_site.id, base_context_path, licence_type, config_type)
+                os.path.join(
+                    "/".join(root_site.getPhysicalPath()),
+                    base_context_path,
+                    licence_type,
+                    config_type,
+                )
             )
             import_json_config(
                 json_path=json_path,
