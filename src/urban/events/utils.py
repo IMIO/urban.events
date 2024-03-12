@@ -43,12 +43,16 @@ def fix_id(id):
     )
 
 
-def fix_all_ids(data):
+def fix_all_ids(data, replacements=[]):
     new_data = []
 
     for item in data:
         item["@id"] = fix_id(item["@id"])
         item["parent"]["@id"] = fix_id(item["parent"]["@id"])
+
+        for old, new in replacements:
+            item["@id"] = item["@id"].replace(old, new)
+            item["parent"]["@id"] = item["parent"]["@id"].replace(old, new)
         new_data.append(item)
 
     return new_data
@@ -57,6 +61,7 @@ def fix_all_ids(data):
 def import_json_config(
     json_path,
     context,
+    id_replacements=[],
 ):
     """
     This function is used to import a json file (exported with c.exportimport)
@@ -65,6 +70,8 @@ def import_json_config(
     :type json_path: String
     :param context: Path to or object of the context where the json will be imported
     :type context: String or plone object
+    :param id_replacements: List of ids to be replaced
+    :type context: List of List of String
     :raises ValueError: Raise if the json doesn't exist
     """
 
@@ -94,7 +101,7 @@ def import_json_config(
 
     data = remove_uid(data)
     data = remove_none(data)
-    data = fix_all_ids(data)
+    data = fix_all_ids(data, id_replacements)
 
     import_content.start()
     import_content.do_import(data)
@@ -105,6 +112,7 @@ def import_all_config(
     base_json_path="./profiles/config",
     base_context_path="portal_urban",
     config_type="eventconfigs",
+    id_replacements=[],
 ):
     """
     Function used to import all json inside a folder
@@ -115,6 +123,8 @@ def import_all_config(
     :type base_context_path: String or plone object, optional
     :param config_type: config folder whre to import, defaults to "eventconfigs"
     :type config_type: String, optional
+    :param id_replacements: List of ids to be replaced
+    :type context: List of List of String
     """
     directory_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -141,4 +151,5 @@ def import_all_config(
             import_json_config(
                 json_path=json_path,
                 context=context_plone,
+                id_replacements=id_replacements,
             )

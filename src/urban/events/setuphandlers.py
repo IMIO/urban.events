@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.interfaces import INonInstallable
+from plone import api
 from zope.interface import implementer
 from urban.events.utils import import_all_config
 
@@ -16,11 +17,19 @@ class HiddenProfiles(object):
 def post_install(context):
     """Post install script"""
     # Do something at the end of the installation of this package.
+    portal_urban = api.portal.get().portal_urban
 
+
+    config_folder_id = "urbaneventtypes"
+    replacements = []
+    if config_folder_id not in portal_urban.codt_buildlicence.keys():
+        config_folder_id = "eventconfigs"
+        replacements = [("urbaneventtypes", config_folder_id)]
     import_all_config(
         "./profiles/config",
         "portal_urban",
         "urbaneventtypes",
+        id_replacements=replacements,
     )
 
 
