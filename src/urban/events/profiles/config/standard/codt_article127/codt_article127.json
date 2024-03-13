@@ -1,0 +1,160 @@
+[
+{
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes/demande-davis-pole-environnement",
+    "@type": "OpinionEventConfig",
+    "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+    "UID": "47bcbe9ac80648acad6be5218faf655b",
+    "activatedFields": [
+        "receiptDate",
+        "receivedDocumentReference",
+        "externalDecision",
+        "opinionText"
+    ],
+    "allow_discussion": false,
+    "concernedOutsideDirections": [],
+    "contributors": [],
+    "coring_id": null,
+    "country": null,
+    "created": "2024-03-07T15:16:48+00:00",
+    "creators": [
+        "admin"
+    ],
+    "description": {
+        "content-type": "text/x-plone-outputfilters-html",
+        "data": "",
+        "encoding": "utf-8"
+    },
+    "dispatchSInformation": null,
+    "effective": null,
+    "endValidity": null,
+    "eventDateLabel": "Date de transmis",
+    "eventPortalType": "UrbanEventOpinionRequest",
+    "eventType": [
+        "Products.urban.interfaces.IOpinionRequestEvent"
+    ],
+    "expires": null,
+    "abbreviation": "P\u00f4le environnement",
+    "function_department": null,
+    "id": "demande-davis-pole-environnement",
+    "internal_service": null,
+    "isDefaultValue": false,
+    "isKeyEvent": false,
+    "is_folderish": true,
+    "is_internal_service": false,
+    "keyDates": [],
+    "language": "fr",
+    "layout": "view",
+    "location": null,
+    "modified": "2024-03-07T15:16:49+00:00",
+    "numbering": null,
+    "organization": null,
+    "parent": {
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes",
+        "@type": "Folder",
+        "UID": "b9d04510ccb74f2593f37b3e65c2def5",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "postcode_locality": null,
+    "recipientSName": null,
+    "review_state": "enabled",
+    "rights": null,
+    "showTitle": false,
+    "startValidity": null,
+    "subjects": [],
+    "textDefaultValues": [],
+    "title": "Demande d'avis (P\u00f4le environnement)",
+    "typeAndStreetName_number_box": null,
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2024-03-07T15:16:48+00:00"
+            }
+        ]
+    }
+},
+{
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes/demande-davis-amenagement-du-territoire",
+    "@type": "OpinionEventConfig",
+    "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+    "UID": "6943b777542b41189ce509403f677b8c",
+    "activatedFields": [
+        "receiptDate",
+        "receivedDocumentReference",
+        "externalDecision",
+        "opinionText"
+    ],
+    "allow_discussion": false,
+    "concernedOutsideDirections": [],
+    "contributors": [],
+    "coring_id": null,
+    "country": null,
+    "created": "2024-03-08T08:50:11+00:00",
+    "creators": [
+        "admin"
+    ],
+    "description": {
+        "content-type": "text/x-plone-outputfilters-html",
+        "data": "",
+        "encoding": "utf-8"
+    },
+    "dispatchSInformation": null,
+    "effective": null,
+    "endValidity": null,
+    "eventDateLabel": "Date de transmis",
+    "eventPortalType": "UrbanEventOpinionRequest",
+    "eventType": [
+        "Products.urban.interfaces.IOpinionRequestEvent"
+    ],
+    "expires": null,
+    "abbreviation": "Am\u00e9nagement du territoire",
+    "function_department": null,
+    "id": "demande-davis-amenagement-du-territoire",
+    "internal_service": null,
+    "isDefaultValue": false,
+    "isKeyEvent": false,
+    "is_folderish": true,
+    "is_internal_service": false,
+    "keyDates": [],
+    "language": "fr",
+    "layout": "view",
+    "location": null,
+    "modified": "2024-03-08T08:50:11+00:00",
+    "numbering": null,
+    "organization": null,
+    "parent": {
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes",
+        "@type": "Folder",
+        "UID": "b9d04510ccb74f2593f37b3e65c2def5",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "postcode_locality": null,
+    "recipientSName": null,
+    "review_state": "enabled",
+    "rights": null,
+    "showTitle": false,
+    "startValidity": null,
+    "subjects": [],
+    "textDefaultValues": [],
+    "title": "Demande d'avis (Am\u00e9nagement du territoire)",
+    "typeAndStreetName_number_box": null,
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2024-03-08T08:50:11+00:00"
+            }
+        ]
+    }
+}
+]
