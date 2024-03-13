@@ -61,6 +61,7 @@ def fix_all_ids(data, replacements=[]):
 def import_json_config(
     json_path,
     context,
+    handle_existing_content=ExistingContent.SKIP,
     id_replacements=[],
 ):
     """
@@ -94,7 +95,7 @@ def import_json_config(
     import_content = ImportContent(context, request)
 
     import_content.import_to_current_folder = False
-    import_content.handle_existing_content = ExistingContent.SKIP
+    import_content.handle_existing_content = handle_existing_content.value
     import_content.limit = None
     import_content.commit = None
     import_content.import_old_revisions = False
@@ -112,6 +113,7 @@ def import_all_config(
     base_json_path="./profiles/config",
     base_context_path="portal_urban",
     config_type="eventconfigs",
+    handle_existing_content=ExistingContent.SKIP,
     id_replacements=[],
 ):
     """
@@ -151,5 +153,6 @@ def import_all_config(
             import_json_config(
                 json_path=json_path,
                 context=context_plone,
+                handle_existing_content=handle_existing_content,
                 id_replacements=id_replacements,
             )
