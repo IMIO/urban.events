@@ -53,6 +53,7 @@ setup(
         "plone.restapi",
         "z3c.jbot",
         "collective.exportimport",
+        'enum34',
     ],
     extras_require={
         "test": [
