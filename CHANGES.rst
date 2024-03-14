@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.0a2 (2024-03-14)
+--------------------
+
+Bug fixes:
+
+
+- Fix enum dependency
+  [jchandelle] (URB-3006)
+
+
 1.0.0a1 (2024-03-13)
 --------------------
 
