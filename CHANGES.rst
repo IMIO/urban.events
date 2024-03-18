@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.0a3 (2024-03-18)
+--------------------
+
+Bug fixes:
+
+
+- Fix an error with event config on Urban Classic
+  [mpeeters] (URB-3006)
+
+
 1.0.0a2 (2024-03-14)
 --------------------
 
