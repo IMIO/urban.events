@@ -1,7 +1,7 @@
 [{
     "@id": "http://localhost:8081/liege/liege/portal_urban/codt_buildlicence/urbaneventtypes/intention-de-depot-de-plans-modifies",
     "@type": "EventConfig",
-    "TALCondition": null,
+    "TALCondition": "here/is_CODT2024",
     "UID": "f88a3eb4f971422ab63c8154563e82a3",
     "activatedFields": [
         "receiptDate",
@@ -65,7 +65,7 @@
 {
     "@id": "http://localhost:8081/liege/liege/portal_urban/codt_buildlicence/urbaneventtypes/en-attente-de-paiement-de-lamende",
     "@type": "EventConfig",
-    "TALCondition": null,
+    "TALCondition": "here/is_CODT2024",
     "UID": "ec6187d6b8d1443eaca5772f33f2f332",
     "activatedFields": [
         "paymentDeadline",
