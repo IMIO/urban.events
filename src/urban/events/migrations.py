@@ -23,3 +23,20 @@ def update_talcondition_on_events(context):
             obj.TALCondition = u"here/is_CODT2024"
             logger.info("Update {0}".format(obj.absolute_url()))
     logger.info("upgrade done!")
+
+
+def fix_event_type(context):
+    logger.info("starting : Update event type on new events")
+    brains = api.content.find(
+        container=api.portal.get(),
+        id="intention-de-depot-de-plans-modifies",
+        portal_type=["EventConfig"],
+    )
+    for brain in brains:
+        obj = brain.getObject()
+        if obj.eventType in (None, [], ()):
+            obj.eventType = (
+                "Products.urban.interfaces.IIntentionToSubmitAmendedPlans",
+            )
+            logger.info("Update {0}".format(obj.absolute_url()))
+    logger.info("upgrade done!")

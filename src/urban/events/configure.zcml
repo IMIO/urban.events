@@ -45,4 +45,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Fix event type field"
+    description=""
+    source="1001"
+    destination="1002"
+    handler=".migrations.fix_event_type"
+    profile="urban.events:default"
+    />
+
 </configure>

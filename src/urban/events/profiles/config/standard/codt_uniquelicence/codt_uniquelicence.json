@@ -21,7 +21,7 @@
     "effective": null,
     "eventDateLabel": "Date",
     "eventPortalType": "UrbanEvent",
-    "eventTypeType": [
+    "eventType": [
         "Products.urban.interfaces.IIntentionToSubmitAmendedPlans"
     ],
     "expires": null,
@@ -84,7 +84,7 @@
     "effective": null,
     "eventDateLabel": "Date",
     "eventPortalType": "UrbanEvent",
-    "eventTypeType": [],
+    "eventType": [],
     "expires": null,
     "id": "en-attente-de-paiement-de-lamende",
     "isDefaultValue": false,
