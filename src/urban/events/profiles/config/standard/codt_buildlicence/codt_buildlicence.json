@@ -123,5 +123,60 @@
             }
         ]
     }
+},
+{
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_buildlicence/urbaneventtypes/recepisse-de-plans-modificatifs",
+    "@type": "EventConfig",
+    "UID": "01d3eec4cd5a4d0b9845f3aed820563f",
+    "allow_discussion": false,
+    "contributors": [],
+    "created": "2018-05-04T12:54:29+00:00",
+    "creators": [
+        "burletv"
+    ],
+    "description": null,
+    "effective": null,
+    "eventDateLabel": "Date",
+    "eventPortalType": "UrbanEvent",
+    "eventType": [
+        "Products.urban.interfaces.IModificationDepositEvent"
+    ],
+    "expires": null,
+    "id": "recepisse-de-plans-modificatifs",
+    "isDefaultValue": false,
+    "isKeyEvent": true,
+    "is_folderish": true,
+    "keyDates": [
+        "eventDate"
+    ],
+    "language": "fr",
+    "layout": "base_view",
+    "location": "",
+    "modified": "2022-06-15T20:33:26+00:00",
+    "parent": {
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_buildlicence/urbaneventtypes",
+        "@type": "Folder",
+        "UID": "b9d04510ccb74f2593f37b3e65c2def5",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "review_state": "enabled",
+    "rights": null,
+    "showTitle": false,
+    "subjects": [],
+    "textDefaultValues": [],
+    "title": "R\u00e9c\u00e9piss\u00e9 de plans modificatifs",
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "burletv",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2018-05-04T12:54:29+00:00"
+            }
+        ]
+    }
 }
 ]
