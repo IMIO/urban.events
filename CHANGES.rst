@@ -8,6 +8,18 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.0a5 (2024-06-27)
+--------------------
+
+New features:
+
+
+- URB-3005: Add `recepisse-de-plans-modificatifs` to standard config
+  [daggelpop]
+  URB-3005: Move `recepisse-de-plans-modificatifs` config to appropriate package
+  [daggelpop] (URB-3005)
+
+
 1.0.0a4 (2024-03-23)
 --------------------
 
