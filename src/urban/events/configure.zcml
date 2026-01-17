@@ -54,4 +54,22 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import roaddecree events"
+    description=""
+    source="1002"
+    destination="1003"
+    handler=".migrations.install_roaddecree_procedure"
+    profile="urban.events:default"
+    />
+
+  <genericsetup:upgradeStep
+    title="Import housing events"
+    description=""
+    source="1003"
+    destination="1004"
+    handler=".migrations.install_housing_procedure"
+    profile="urban.events:default"
+    />
+
 </configure>
