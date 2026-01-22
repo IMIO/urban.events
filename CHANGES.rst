@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.1 (2026-01-22)
+------------------
+
+Bug fixes:
+
+
+- Fix python requirement
+  [mpeeters] (URB-3482)
+
+
 1.0.0 (2026-01-22)
 ------------------
 
