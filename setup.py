@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="urban.events",
-    version="1.0.0",
+    version="1.0.1.dev0",
     description="Events configuration for Urban",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
