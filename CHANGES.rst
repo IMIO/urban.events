@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.0 (2026-01-22)
+------------------
+
+New features:
+
+
+- Add event config and upgrade step for roaddecree and housing
+  [jchandelle] (URBBDC-3142)
+
+
 1.0.0a5 (2024-06-27)
 --------------------
 
