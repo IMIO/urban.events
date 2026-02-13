@@ -72,4 +72,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import PE and PU bordering licence events"
+    description=""
+    source="1004"
+    destination="1005"
+    handler=".migrations.install_bordering_licence_events"
+    profile="urban.events:default"
+    />
+
 </configure>
