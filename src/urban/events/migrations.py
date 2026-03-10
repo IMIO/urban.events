@@ -79,33 +79,18 @@ def install_housing_procedure(context):
 
 def install_bordering_licence_events(context):
     logger.info("starting : Import PE and PU bordering licence events")
-    directory_path = os.path.dirname(os.path.realpath(__file__))
     if "liege" not in utils.get_configs():
+
         # envclassbordering
-        path = "./profiles/config/standard/envclassbordering/global_urban_templates.json"
-        utils.import_json_config(
-            json_path=os.path.normpath(os.path.join(directory_path, path)),
-            context=api.portal.get_tool("portal_urban"),
-            handle_existing_content=utils.ExistingContent.UPDATE,
-        )
-        path = "./profiles/config/standard/envclassbordering/envclassbordering.json"
-        utils.import_json_config(
-            json_path=os.path.normpath(os.path.join(directory_path, path)),
-            context=api.portal.get_tool("portal_urban"),
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/envclassbordering",
             handle_existing_content=utils.ExistingContent.UPDATE,
         )
 
         # codt_uniqueborderinglicence
-        path = "./profiles/config/standard/codt_uniqueborderinglicence/global_urban_templates.json"
-        utils.import_json_config(
-            json_path=os.path.normpath(os.path.join(directory_path, path)),
-            context=api.portal.get_tool("portal_urban"),
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/codt_uniqueborderinglicence",
             handle_existing_content=utils.ExistingContent.UPDATE,
         )
-        path = "./profiles/config/standard/codt_uniqueborderinglicence/codt_uniqueborderinglicence.json"
-        utils.import_json_config(
-            json_path=os.path.normpath(os.path.join(directory_path, path)),
-            context=api.portal.get_tool("portal_urban"),
-            handle_existing_content=utils.ExistingContent.UPDATE,
-        )
+
     logger.info("upgrade done!")

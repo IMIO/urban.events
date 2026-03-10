@@ -1,0 +1,77 @@
+[
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/depot-de-la-demande", 
+        "uuid": "c29d1ba3f7dd457bb2ae29c0ced9f631"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/depot-de-la-demande/env1-recepisse.odt", 
+        "uuid": "358476b3084847bb8147e9a338204a74"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique/codt_pu_reclamations_reimport.ods", 
+        "uuid": "bbbd7c920a394a359faa02630b46c5ac"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/affichage-decision/codt_punq_affichage_decision.odt", 
+        "uuid": "1ab1746f19634023aec0d407fdd84404"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/dossier-complet-recevable", 
+        "uuid": "cfd80337a5bf4ea9a99f75ce82563056"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique/env1-enq-avis.odt", 
+        "uuid": "9feaddd1bc32430ca236c675d33f7cab"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/affichage-decision/codt_punq_attestation_affichage_decision.odt", 
+        "uuid": "94fada1c34ad475382390f0ab6033056"
+    }, 
+    {
+        "order": 2, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique", 
+        "uuid": "4934c03ed2114328b01fc2980ca6034c"
+    }, 
+    {
+        "order": 2, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique/env1-enq-ordre-mission.odt", 
+        "uuid": "f5373ef27ee948c9ab21ef99f76b0849"
+    }, 
+    {
+        "order": 3, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique/env1-enq-recommandes.odt", 
+        "uuid": "80541668e9ee430ea07f50b630c91fe1"
+    }, 
+    {
+        "order": 3, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/pre-decision", 
+        "uuid": "aa407b7243dd455b84e4fa80f9765d74"
+    }, 
+    {
+        "order": 4, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique/env1-enq-transmis-FT.odt", 
+        "uuid": "8385dca7dca24edc92b7f250c06336f0"
+    }, 
+    {
+        "order": 4, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/decision-ft-fd", 
+        "uuid": "de3fe4d91e214d93a1ce95e61f117fb8"
+    }, 
+    {
+        "order": 5, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/enquete-publique/env1-enq-transmis-college.odt", 
+        "uuid": "3b14fc3c37e94f669e71c9e19d8cee83"
+    }, 
+    {
+        "order": 5, 
+        "path": "/urbanisme/portal_urban/envclassbordering/eventconfigs/affichage-decision", 
+        "uuid": "7fe2299ccc5d4de9b8a9d49bdd8d228d"
+    }
+]

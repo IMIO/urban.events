@@ -1,0 +1,182 @@
+[
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/depot-de-la-demande", 
+        "uuid": "5d6b0c9f4c054e2daa5ec161c6660a0c"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/depot-de-la-demande/codt_punq_information_demandeur.odt", 
+        "uuid": "b8bb4506e7d64a1cb465ee245ed135b8"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_pu_reclamations_reimport.ods", 
+        "uuid": "c7071eb26656465e80ad1508d589e8b0"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/avis-college/codt_punq_rapport_college.odt", 
+        "uuid": "b826e53300d44a74b6013b3d5a3f2a0e"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/affichage-decision/codt_punq_affichage_decision.odt", 
+        "uuid": "230cec8ccad84f099751ee90595d7afc"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/demande-davis-ccatm/codt_punq_demande_avis_ccatm.odt", 
+        "uuid": "7f753c09cecf4a4489df9273f69f604a"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/recours-gouvernement/codt_punq_attestation_affichage_recours.odt", 
+        "uuid": "af8955f3048b4fc7b716c752b023cec8"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/decision-recours/codt_punq_attestation_affichage_decision_recours.odt", 
+        "uuid": "ebc9460ca26b4de497b124a3af7df66d"
+    }, 
+    {
+        "order": 0, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/config-opinion-request/codt-avis.odt", 
+        "uuid": "f111aea45f1a46d4bed35b382340a9de"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/depot-de-la-demande/codt_punq_recepisse_depot_demande.odt", 
+        "uuid": "f6b35a8673b245a591523fd998c4ab64"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/dossier-incomplet", 
+        "uuid": "83a67366e4974053835650c935fd48bb"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_annexe_26.odt", 
+        "uuid": "1b5cf9d5776b41caa9b48ac68f817dbf"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/affichage-decision/codt_punq_attestation_affichage_decision.odt", 
+        "uuid": "1d652eeff49e412bbc8d6dff015990b2"
+    }, 
+    {
+        "order": 1, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/recours-gouvernement/codt_punq_transmis_pieces_recours_dgo3.odt", 
+        "uuid": "fdaa45a4e1bb42c4b96d1f8d4d4bcc62"
+    }, 
+    {
+        "order": 2, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/depot-de-la-demande/codt_punq_transmis_demande_dgo3.odt", 
+        "uuid": "2aebb37cd7084ee0b90faca2a245d609"
+    }, 
+    {
+        "order": 2, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/depot-complements-demande", 
+        "uuid": "1fc633a17e9e439eab2c03afa32abc87"
+    }, 
+    {
+        "order": 2, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_attestation_affichage_apres_enquete.odt", 
+        "uuid": "989a173ca33947688a3470c11d7fe773"
+    }, 
+    {
+        "order": 2, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/recours-gouvernement/codt_punq_transmis_pieces_recours_dgo4.odt", 
+        "uuid": "cc862fa7c92844b1afcd5ec6e6b36709"
+    }, 
+    {
+        "order": 3, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/depot-de-la-demande/codt_punq_transmis_demande_dgo4.odt", 
+        "uuid": "8f07cf68fcf040edaaf870cdcd7e33f9"
+    }, 
+    {
+        "order": 3, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/dossier-irrecevable", 
+        "uuid": "0d0c60213a554044840dc35495b6ef3c"
+    }, 
+    {
+        "order": 3, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_pv_cloture_enquete.odt", 
+        "uuid": "878ab290949e498fa3feaae773d92873"
+    }, 
+    {
+        "order": 4, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/dossier-complet", 
+        "uuid": "be394f7f9ad24d918e97ab7aee94b084"
+    }, 
+    {
+        "order": 4, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_transmis_affichage_dgo3.odt", 
+        "uuid": "d2adf26eed184a4d8814e3e192bcfef3"
+    }, 
+    {
+        "order": 5, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique", 
+        "uuid": "7f77c2d42e084c9183a99dd8494e49ca"
+    }, 
+    {
+        "order": 5, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_transmis_affichage_dgo4.odt", 
+        "uuid": "eb98c0ad138247f9805509603c119227"
+    }, 
+    {
+        "order": 6, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_transmis_elements_enquete_dgo3.odt", 
+        "uuid": "e6e5711949f2499ab19a341bd599d024"
+    }, 
+    {
+        "order": 6, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/avis-college", 
+        "uuid": "925bd44ae0da452185949f5b42d5931d"
+    }, 
+    {
+        "order": 7, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/enquete-publique/codt_punq_transmis_elements_enquete_dgo4.odt", 
+        "uuid": "477ee6b7a36e4693b0f3facd52fb49ee"
+    }, 
+    {
+        "order": 7, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/plans-modificatifs", 
+        "uuid": "da08ac91bfca411faa2eb15e23988167"
+    }, 
+    {
+        "order": 8, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/rapport-synthese", 
+        "uuid": "f2cb1d42eccc40cda7e019da79b9a45c"
+    }, 
+    {
+        "order": 9, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/delivrance-permis", 
+        "uuid": "aaf505c608544d45959feffd001224c8"
+    }, 
+    {
+        "order": 10, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/affichage-decision", 
+        "uuid": "52b58836d11e4a13a5567c429e76ca9e"
+    }, 
+    {
+        "order": 11, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/demande-davis-ccatm", 
+        "uuid": "104fbdcf29d740ffa37d79b0df3fe3d9"
+    }, 
+    {
+        "order": 12, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/recours-gouvernement", 
+        "uuid": "a9b20f16a5d04641a03a1f60ce171327"
+    }, 
+    {
+        "order": 13, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/decision-recours", 
+        "uuid": "2eb763eaa3064603afcaa1f82c03fc98"
+    }, 
+    {
+        "order": 14, 
+        "path": "/urbanisme/portal_urban/codt_uniqueborderinglicence/eventconfigs/config-opinion-request", 
+        "uuid": "ff0d24b3498c419c84663e58670b71be"
+    }
+]
