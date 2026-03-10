@@ -75,3 +75,22 @@ def install_housing_procedure(context):
             base_json_path="./profiles/config/standard/housing",
             handle_existing_content=utils.ExistingContent.UPDATE,
         )
+
+
+def install_bordering_licence_events(context):
+    logger.info("starting : Import PE and PU bordering licence events")
+    if "liege" not in utils.get_configs():
+
+        # envclassbordering
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/envclassbordering",
+            handle_existing_content=utils.ExistingContent.UPDATE,
+        )
+
+        # codt_uniqueborderinglicence
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/codt_uniqueborderinglicence",
+            handle_existing_content=utils.ExistingContent.UPDATE,
+        )
+
+    logger.info("upgrade done!")
