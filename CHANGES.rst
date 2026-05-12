@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.2 (2026-05-12)
+------------------
+
+New features:
+
+
+- Add events for EnvClassBordering and CODT_UniqueBorderingLicence
+  [daggelpop] (URB-3470)
+
+
 1.0.1 (2026-01-22)
 ------------------
 
