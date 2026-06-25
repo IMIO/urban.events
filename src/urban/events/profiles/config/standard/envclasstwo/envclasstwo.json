@@ -1,0 +1,1656 @@
+[
+    [
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/affichage-decision",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/affichage-decision",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "4ef825aed8ce42489f189b7b7a73fac2",
+            "activatedFields": [
+                "displayDate",
+                "displayDateEnd"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:45+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IDisplayingTheDecisionEvent"
+            ],
+            "id": "affichage-decision",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-24T08:29:56+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Affichage de la d\u00e9cision",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/cessation-de-letablissement",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/cessation-de-letablissement",
+            "@type": "EventConfig",
+            "TALCondition": null,
+            "UID": "f63a31782951462395616819df24c8dc",
+            "activatedFields": [
+                "receiptDate",
+                "pmTitle",
+                "pmDescription",
+                "pmMotivation",
+                "pmDecision"
+            ],
+            "allow_discussion": false,
+            "created": "2024-05-08T08:48:04+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEventCollege",
+            "eventType": [
+                "Products.urban.interfaces.ISimpleCollegeEvent"
+            ],
+            "id": "cessation-de-letablissement",
+            "isKeyEvent": false,
+            "is_folderish": true,
+            "keyDates": [],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-06-18T11:15:10+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [
+                {
+                    "fieldname": "pmTitle",
+                    "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> ENVIRONNEMENT - <tal:a replace=\"self/reference\"/> - <tal:a replace=\"applicants_signaletic\"/> - <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> - CESSATION \r\n</tal:vars>"
+                },
+                {
+                    "fieldname": "pmDescription",
+                    "text": "Cessation du permis"
+                },
+                {
+                    "fieldname": "pmMotivation",
+                    "text": "<tal:vars define=\"\r\n    applicants_signaletic python: self.getApplicantsSignaletic();\r\n    portion_outs_text python: self.getPortionOutsText();\r\n    work_location_signaletic python: self.getWorkLocationSignaletic();\r\n    licence_subject python: self.getLicenceSubject();\r\n    reference self/reference;\r\n    date_decision python: tool.formatDate(licence.getLastSimpleCollege().getDecisionDate());\r\n    \r\n\">\r\n<p>Vu le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement ;</p>\r\n\r\n<p>Consid\u00e9rant que le coll\u00e8ge \u00e0 prit acte du permis en date du <tal:a replace=\"date_decision\"/>;</p>\r\n\r\n<p>Que la d\u00e9claration concerne <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/> cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> ; </p>\r\n\r\n<p>Consid\u00e9rant que l'exploitant nous informe de la cessation de son permis ;</p>\r\n\r\n</tal:vars>"
+                },
+                {
+                    "fieldname": "pmDecision",
+                    "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> <p>PREND CONNAISSANCE de la cessation susvis\u00e9e, et ,</p> <p>DECIDE unanimement d'en informer les Fonctionnaires technique et d\u00e9l\u00e9gu\u00e9.</p> </tal:vars>"
+                }
+            ],
+            "title": "Cessation de l'\u00e9tablissement",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2024-05-08T08:48:04+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/cession-permis",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/cession-permis",
+            "@type": "EventConfig",
+            "TALCondition": "here/mayAddTransferOfLicenceEvent",
+            "UID": "50a5448c74a94b698056a77363d63f37",
+            "activatedFields": [
+                "transferType",
+                "transferDescription",
+                "pmTitle",
+                "pmDescription",
+                "pmMotivation",
+                "pmDecision"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": null,
+            "eventDateLabel": "Date de la cession",
+            "eventPortalType": "UrbanEventCollege",
+            "eventType": [
+                "Products.urban.interfaces.ISimpleCollegeEvent",
+                "Products.urban.interfaces.ITransferOfLicenceEvent",
+                "Products.urban.interfaces.ICollegeEvent"
+            ],
+            "id": "cession-permis",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2026-04-27T10:08:07+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [
+                {
+                    "fieldname": "pmTitle",
+                    "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> ENVIRONNEMENT - <tal:a replace=\"self/reference\"/> - <tal:a replace=\"applicants_signaletic\"/> - <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> - Changement d'exploitant - CESSION \r\n</tal:vars>"
+                },
+                {
+                    "fieldname": "pmDescription",
+                    "text": "<p>Cession du permis d'environnement</p>"
+                },
+                {
+                    "fieldname": "pmMotivation",
+                    "text": "<tal:vars define=\"\r\n    applicants_signaletic python: self.getApplicantsSignaletic();\r\n    portion_outs_text python: self.getPortionOutsText();\r\n    work_location_signaletic python: self.getWorkLocationSignaletic();\r\n    licence_subject python: self.getLicenceSubject();\r\n    reference self/reference;\r\n    date_decision python: tool.formatDate(licence.getLastSimpleCollege().getDecisionDate());\r\n    premier_demandeur python: licence.getApplicants()[0].getSignaletic();\r\n    dernier_demandeur python: licence.getApplicants()[0].getSignaletic();\r\n\">\r\n<p>Vu le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement ;</p>\r\n\r\n<p>Consid\u00e9rant que le coll\u00e8ge \u00e0 prit acte du permis en date du <tal:a replace=\"date_decision\"/>;</p>\r\n\r\n<p>Que la d\u00e9claration concerne <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/> cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> ; </p>\r\n\r\n<p>Consid\u00e9rant que l'exploitant <tal:a replace=\"premier_demandeur\"/> nous informe de la cession de son permis \u00e0 <tal:a replace=\"dernier_demandeur\"/>;\r\n\r\n<p>Consid\u00e9rant qu'il s'agit d'une cession compl\u00e8te de l'\u00e9tablissement.</p>\r\n\r\n</tal:vars>"
+                },
+                {
+                    "fieldname": "pmDecision",
+                    "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> <p>PREND CONNAISSANCE du changement d'exploitant susvis\u00e9, et ,</p> <p>DECIDE unanimement d'en informer les Fonctionnaires technique et d\u00e9l\u00e9gu\u00e9.</p> </tal:vars>"
+                }
+            ],
+            "title": "Cession de permis",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/config-opinion-request",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/config-opinion-request",
+            "@type": "EventConfig",
+            "TALCondition": "python: False",
+            "UID": "febfdde2144e407ea75e6638aaeec5e7",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:44+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEventOpinionRequest",
+            "eventType": [
+                "Products.urban.interfaces.IOpinionRequestEvent"
+            ],
+            "id": "config-opinion-request",
+            "isKeyEvent": false,
+            "is_folderish": true,
+            "keyDates": null,
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-23T14:02:38+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "*** Demande d'avis CONFIG ***",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:44+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/decision",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/decision",
+            "@type": "EventConfig",
+            "TALCondition": "python: here.getAuthority() == 'college'",
+            "UID": "a883454b6f2c4d109771b6e38a25ff10",
+            "activatedFields": [
+                "decisionDate",
+                "decision",
+                "transmitDate",
+                "pmTitle",
+                "pmDescription",
+                "pmMotivation",
+                "pmDecision",
+                "validityEndDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:45+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEventCollege",
+            "eventType": [
+                "Products.urban.interfaces.ISimpleCollegeEvent",
+                "Products.urban.interfaces.ILicenceDeliveryEvent"
+            ],
+            "id": "decision",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2026-05-04T13:52:10+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [
+                {
+                    "fieldname": "pmTitle",
+                    "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> ENVIRONNEMENT - <tal:a replace=\"self/reference\"/> - <tal:a replace=\"applicants_signaletic\"/> - <tal:a replace=\"licence_subject\"/>, <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> - DECISION </tal:vars>"
+                },
+                {
+                    "fieldname": "pmDescription",
+                    "text": "<p>octroi-refus</p>"
+                },
+                {
+                    "fieldname": "pmMotivation",
+                    "text": "<tal:vars define=\"\r\napplicantobj python: self.getApplicants() and self.getApplicants()[0]; \r\nsi_1dem python: applicantobj.voc_term('personTitle').getMultiplicity() == 'single';\r\n    si_demandeurs python: applicantobj.voc_term('personTitle').getMultiplicity() == 'plural';\r\n licence_helper python: self;\r\n    date_accuse_de_reception python: licence.getLastAcknowledgment() and tool.formatDate(licence.getLastAcknowledgment().getEventDate());\r\n    date_de_transmis_nouveau_complet python: licence.getLastModificationDeposit() and tool.formatDate(licence.getLastModificationDeposit().getEventDate());\r\n\r\n    applicants_signaletic python: self.getApplicantsSignaletic(); \r\n    work_location_signaletic python: self.getWorkLocationSignaletic(); \r\n    portion_outs_text python: self.getPortionOutsText(); \r\n    licence_subject python: self.getLicenceSubject(); \r\n    patrimoine python: 'certificat de patrimoine' in licence.protectedBuilding;\r\n    is_cpdelivre python: 'certificatpatrimoine' in self.getProtectedBuilding();\r\n\r\naccuse_de_reception_complet python: self.getLastAcknowledgment();\r\n\r\nis_in_prorogation self/prorogation; \r\n     \r\n    sdc_zone python: licence.SSC;\r\n    egout python: licence.sewers;\r\n    si_zonecaptage python: len(self.catchmentArea) > 0;\r\n    zone python: licence.catchmentArea;\r\n    has_pash python: len(self.pash) > 0;\r\n    zone_pash python: self.pash;\r\n    bassinhydaulique python: context.pashDetails;\r\n    is_in_natura_2000 self/natura_2000;\r\n    is_in_sevesoSite self/sevesoSite;\r\n    has_linked_inquiry python: bool(context.getLastInquiry() and self.getLastInquiry().getLinkedInquiry());\r\n    folder_zone self/folderZone;\r\n    is_in_pca self/isInPCA;\r\n    pca_zone self/pcaZone;\r\n    is_in_subdivision self/isInSubdivision;\r\n    subdivision_details python: context.subdivisionDetails;\r\n    date_de_delivrance_du_lot python: self.getParcellings() and self.get_parcellings().split(' - ')[1][:-1];\r\n    numero_de_lot python: self.getParcellings() and self.get_parcellings().split(' (')[0]; \r\n    has_catchment_area_and_not_outside python: len(self.catchmentArea) > 0 and 'outside' not in context.catchmentArea;\r\n    location_technical_advice context/locationTechnicalAdvice;\r\n      karstNone python: 'no' in licence.karstConstraints;\r\n    karstFaible python: 'low' in licence.karstConstraints;\r\n    karstMod python: 'moderate' in licence.karstConstraints;\r\n    karstFort python: 'high' in licence.karstConstraints;\r\n    karstAll python: licence.karstConstraints;\r\n    floodingLevelRisque python: licence.floodingLevel;\r\n    floodingLevelNon python: not licence.floodingLevel;\r\n    concentratedRunoffSRiskAll python: licence.concentratedRunoffSRisk;\r\n    notConcentratedRunoffSRisk python: not licence.concentratedRunoffSRisk;\r\n    pash python: licence.pash;\r\n\r\nis_enquete_public python:'inquiry' in self.getProcedureChoice(); \r\n    nombre_de_reclamationEP python: self.getLastInquiry() and len(self.getLastInquiry().getClaimants()) or 0;\r\n    article_enquete python: self.getInvestigationArticlesText();\r\n    date_debutenquete python: self.getLastInquiry() and (self.getLastInquiry().investigationStart);\r\n    date_finenquete python: self.getLastInquiry() and (self.getLastInquiry().investigationEnd);\r\n    has_derogation python: len(self.derogation) > 0; \r\n    derogation python: self.derogation; \r\n    detail_derogation python: self.getDerogationDetails();\r\n\r\n    \r\n    licence_view python: self.restrictedTraverse('document_generation_helper_view');\r\n \r\n    all_opinion_requests_no_dup python: self.getAllOpinionRequestsNoDup(); \r\n    has_all_opinion_requests_no_dup python: len(self.getAllOpinionRequestsNoDup()) > 0; \r\n    avis_obligatoire python: self.solicitOpinionsTo;\r\n    avis_facultatif python: self.solicitOpinionsToOptional;\r\n   \r\n    has_protected_building python: len(self.protectedBuilding) > 0; \r\n    protected_building python: self.protectedBuilding; \r\n    is_archeologique python: 'archeologique' in self.getProtectedBuilding(); \r\n    is_centre_ancien_protege python: 'centre-ancien-protege' in self.getProtectedBuilding(); \r\n    is_classe python: 'classe' in self.getProtectedBuilding(); \r\n    is_zoneprotection python: 'zoneprotection' in self.getProtectedBuilding(); \r\n        is_inventaire python: 'reprisinventaire' in self.getProtectedBuilding();\r\n    noteworthyTrees python: licence.noteworthyTrees;\r\n    notNoteworthyTrees python: not licence.noteworthyTrees;\r\n    remarquable python: licence.noteworthyTrees;\r\n   \r\nproro python: self.getProrogationDelay();\r\n\r\nrubrics python: licence.getRubrics(); \r\nrubrics_titre python: licence.getRubrics()[0].title; \r\nrubrics_description python: licence.getRubrics()[0].Description(); \r\nintegralC python: licence.getIntegralConditions(); \r\nsectorialC python: licence.getSectorialConditions(); \r\niAndSC python: licence.getIandSConditions(); \r\nall_conditions python: licence._getConditions();\r\n\r\n\" > \r\n\r\n\r\n<p>Vu le Code de l\u2019environnement\u00a0;</p>\r\n<p>Vu le Code du d\u00e9veloppement territorial (CoDT) entr\u00e9 en vigueur le 1er juin 2017;</p>\r\n<p>Vu le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement;</p>\r\n<p>Vu l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 arr\u00eatant la liste des projets soumis \u00e0 \u00e9tude d\u2019incidences et des installations et activit\u00e9s class\u00e9es;</p>\r\n<p>Vu l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 relatif \u00e0 la proc\u00e9dure et \u00e0 diverses mesures d\u2019ex\u00e9cution du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement;</p>\r\n<p>Vu l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 fixant les conditions g\u00e9n\u00e9rales d\u2019exploitation des \u00e9tablissements vis\u00e9s par le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement;</p>\r\n\r\n\r\n<p tal:condition=\"si_1dem\">Consid\u00e9rant que <tal:a replace=\"applicants_signaletic\"/> ci-apr\u00e8s d\u00e9nomm\u00e9 l\u2019exploitant, sollicite un permis d'environnement relatif \u00e0 un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/>, et ayant pour objet : <tal:a replace=\"python: self.getLicenceSubject()[0].lower() + self.getLicenceSubject()[1:]\"/> ;</p> \r\n<p tal:condition=\"python:\"si_demandeurs\">Consid\u00e9rant que <tal:a replace=\"applicants_signaletic\"/> ci-apr\u00e8s d\u00e9nomm\u00e9 les exploitants, sollicitent un permis d'environnement relatif \u00e0 un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/>, et ayant pour objet : <tal:a replace=\"python: self.getLicenceSubject()[0].lower() + self.getLicenceSubject()[1:]\"/> ;</p> \r\n\r\n<p>Vu l\u2019ensemble des pi\u00e8ces du dossier ;</p>\r\n\r\n<p>Consid\u00e9rant que la demande compl\u00e8te a fait l'objet d'un accus\u00e9 de r\u00e9ception envoy\u00e9 en date du <tal:a replace=\"date_accuse_de_reception\"/>;</p> \r\n\r\n\r\n<p>&nbsp;</p> \r\n<p><strong><u>INCIDENCES SUR L'ENVIRONNEMENT :</u></strong> </p>\r\n \r\n<p>Consid\u00e9rant que l'autorit\u00e9 qui a appr\u00e9ci\u00e9 la recevabilit\u00e9 et la compl\u00e9tude du dossier a \u00e9galement proc\u00e9d\u00e9 \u00e0 l'examen des incidences probables du projet sur l'environnement au sens large, sur base des crit\u00e8res de s\u00e9lection pertinents vis\u00e9s \u00e0 l'article D.62 du livre Ier du Code de l'Environnement ;</p>\r\n<p>Consid\u00e9rant que les rubriques de classement concern\u00e9es pour le projet le rangent en seconde classe ; que, d\u00e8s lors, une \u00e9tude d'incidences sur l'environnement ne s'impose pas d'office ;</p>\r\n<p>Consid\u00e9rant que le formulaire de demande de permis vaut notice d'\u00e9valuation des incidences sur l'environnement ; que cette notice est compl\u00e8te en identifiant, d\u00e9crivant et \u00e9valuant les incidences probables directes et indirectes du projet sur la population et la sant\u00e9 humaine ; la biodiversit\u00e9, en accordant une attention particuli\u00e8re aux esp\u00e8ces et aux habitats prot\u00e9g\u00e9s ; le bien-\u00eatre animal ; les terres, le sol, le sous-sol, l'eau, l'air, le bruit, les vibrations, la mobilit\u00e9, l'\u00e9nergie et le climat; les biens mat\u00e9riels, le patrimoine culturel et le paysage ; ainsi que sur l'interaction entre ces facteurs ;</p>\r\n\r\n<p>Consid\u00e9rant que la notice d'\u00e9valuation des incidences, les plans et les autres documents constitutifs du dossier synth\u00e9tisent suffisamment les principaux param\u00e8tres \u00e9cologiques du projet sur l'environnement, que la population int\u00e9ress\u00e9e a pu, d\u00e8s lors, recevoir l'information qu'elle \u00e9tait en droit d'attendre et que l'autorit\u00e9 appel\u00e9e \u00e0 statuer a \u00e9t\u00e9 suffisamment \u00e9clair\u00e9e sur les incidences possibles du projet sur l'environnement ;\r\n</p>\r\n\r\n<p>&nbsp;</p> <p><strong><u>SITUATION DU BIEN :</u></strong> </p> \r\n<p>&nbsp;</p> \r\n<p>Consid\u00e9rant que le bien est soumis \u00e0 l\u2019application :</p> \r\n\r\n<p tal:condition=\"has_linked_inquiry\">&nbsp;</p> \r\n<p>- &nbsp;du plan de secteur, qui n'a pas cess\u00e9 de produire ses effets pour le bien pr\u00e9cit\u00e9 en <tal:a replace=\"folder_zone\"/> ; &nbsp;</p> \r\n\r\n<p>&nbsp;du sch\u00e9ma de d\u00e9veloppement communal en <tal:a replace=\"sdc_zone\"/> ;</p> \r\n\r\n<p tal:condition=\"is_in_pca\">&nbsp;</p> \r\n<p tal:condition=\"is_in_pca\">- &nbsp;du sch\u00e9ma d\u2019orientation local, ancien plan communal d'am\u00e9nagement approuv\u00e9 par approbateur PCA  et qui n'a pas cess\u00e9 de produire ses effets pour le bien pr\u00e9cit\u00e9 en <tal:a replace=\"pca_zone\"/> dans le p\u00e9rim\u00e8tre du SOL ;</p> \r\n\r\n<p tal:condition=\"is_in_subdivision\">&nbsp;</p> \r\n<p tal:condition=\"is_in_subdivision\">- &nbsp;du permis d'urbanisation n\u00b0 <tal:a replace=\"numero_de_lot\"/> non p\u00e9rim\u00e9 autoris\u00e9 par le Coll\u00e8ge Communal d\u00e9livr\u00e9 le <tal:a replace=\"date_de_delivrance_du_lot\"/>, dans le lot n\u00b0<tal:a replace=\"subdivision_details\"/> ;</p> \r\n\r\n\r\n<p tal:condition=\"is_inventaire\">- &nbsp;du Code wallon du patrimoine, \u00e0 un site - un site arch\u00e9ologique - un monument - un ensemble architectural - inscrit sur la liste de sauvegarde - class\u00e9 - soumis provisoirement aux effets du classement - figurant sur la liste du patrimoine immobilier exceptionnel ; </p> \r\n\r\n<p tal:condition=\"is_zoneprotection\">- &nbsp;du Code wallon du patrimoine, \u00e0 un bien immobilier - situ\u00e9 dans une zone de protection - repris pastill\u00e9 \u00e0 l'inventaire r\u00e9gional du patrimoine - relevant du petit patrimoine populaire qui b\u00e9n\u00e9ficie ou a b\u00e9n\u00e9fici\u00e9 de l'intervention financi\u00e8re de la R\u00e9gion - repris \u00e0 l'inventaire communal - vis\u00e9 \u00e0 la carte arch\u00e9ologique et que les actes et travaux projet\u00e9s impliquent une modification de la structure portante d'un b\u00e2timent ant\u00e9rieur au XXe si\u00e8cle - vis\u00e9 \u00e0 la carte arch\u00e9ologique et que les actes et travaux projet\u00e9s impliquent une modification du sol ou du sous-sol du bien ; </p> \r\n\r\n  \r\n  <p tal:condition=\"noteworthyTrees\">- &nbsp;-du Code wallon du patrimoine, comportant <tal:a replace=\"remarquable\"/> ;</p> \r\n\r\n  <p tal:condition=\"is_classe\">- &nbsp;du Code wallon du patrimoine, \u00e0 bien class\u00e9 ou assimil\u00e9 ;</p>\r\n\r\n  <p tal:condition=\"is_zoneprotection\">- &nbsp;du Code wallon du patrimoine, repris dans la zone de protection ;</p>\r\n\r\n  <p tal:condition=\"is_inventaire\">- &nbsp;du Code wallon du patrimoine, repris \u00e0 l'inventaire Patrimonial de la Belgique ;</p>\r\n\r\n  <p tal:condition=\"is_archeologique\">- &nbsp;du Code wallon du patrimoine,repris \u00e0 l'Atlas Arch\u00e9ologique en vertu du Code Wallon du Patrimoine ;</p>\r\n \r\n  <p tal:condition=\"notNoteworthyTrees\">- &nbsp;du Code wallon du patrimoine, ne se rapporte pas \u00e0 un bien comportant un (une) (des) arbre(s), arbuste(s) ou haie(s) remarquable(s) ;</p>\r\n   \r\n\r\n  <p tal:condition=\"si_zonecaptage\">- &nbsp;de la zone de captage, en zone de pr\u00e9vention <tal:a replace=\"zone\"/> ;</p> \r\n \r\n  <p tal:condition=\"is_in_natura_2000\">- &nbsp;du p\u00e9rim\u00e8tre d\u2019un Site Natura 2000 (site&nbsp;: <tal:fusion replace=\"self/natura_2000\"/>) vis\u00e9 par l\u2019article 1 bis alin\u00e9a unique 18\u00b0 de la Loi du 12 juillet 1973 sur la conservation de la nature, modifi\u00e9 par le D\u00e9cret du 6 d\u00e9cembre 2001 relatif \u00e0 la conservation des Sites Natura 2000 ainsi que de la faune et de la flore sauvages; \u00e0 un bien immobilier situ\u00e9s dans ou \u00e0 proximit\u00e9 d\u2019un site Natura 2000 propos\u00e9 ou arr\u00eat\u00e9 en application de la loi du 12 juillet 1973 sur la conservation de la nature d\u2019une r\u00e9serve naturelle domaniale - d\u2019une r\u00e9serve naturelle agr\u00e9\u00e9e - d\u2019une cavit\u00e9 souterraine d\u2019int\u00e9r\u00eat scientifique - d\u2019une zone humide d\u2019int\u00e9r\u00eat biologique - d\u2019une r\u00e9serve foresti\u00e8re - vis\u00e9e par la loi du 12 juillet 1973 sur la conservation de la nature ;</p>\r\n\r\n     <p tal:condition=\"python: self.trail\">- &nbsp;est bord\u00e9 et/ou travers\u00e9 par <span tal:replace=\"trailDetails\"></span> repris \u00e0 l'atlas des chemins ;</p>\r\n     <p tal:condition=\"python: not self.trail\">- &nbsp;n\u2019est pas bord\u00e9 ou travers\u00e9 par un sentier repris \u00e0 l\u2019atlas des chemins vicinaux\u00a0;</p>\r\n\r\n\r\n<p>&nbsp;</p> \r\n<p><strong><u>\u00c9GOUTTAGE :</u></strong> </p>\r\n\r\n  <p tal:condition=\"karstNone\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone sans contrainte ;</p>\r\n    <p tal:condition=\"karstFaible\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone de contraintes faibles ;</p>\r\n    <p tal:condition=\"karstMod\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone de contraintes mod\u00e9r\u00e9es ;</p>\r\n    <p tal:condition=\"karstFort\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone de contraintes fortes ;</p>\r\n    <p tal:condition=\"karstAll\">Consid\u00e9rant qu'en cons\u00e9quence il a \u00e9t\u00e9 joint une \u00e9tude g\u00e9ophysique du bureau \u2026 ;</p>\r\n    <p tal:condition=\"karstAll\">dont les conclusions excluent le risque d\u2019effondrement karstique;</p>\r\n    <p tal:condition=\"karstAll\">dont les conclusions concluent \u00e0 l\u2019impossibilit\u00e9 de r\u00e9aliser un essai sur le site;</p>\r\n    <p tal:condition=\"karstAll\">Consid\u00e9rant que les travaux ne sont pas de nature \u00e0 accentuer le risque pour la construction existante, la demande n\u2019a pas fait l\u2019objet d\u2019une \u00e9tude g\u00e9ophysique pr\u00e9alable ;</p>\r\n    \r\n    <p tal:condition=\"floodingLevelRisque\">Consid\u00e9rant que le bien est situ\u00e9 \u00e0 proximit\u00e9 d'un cours d'eau <span tal:replace=\"categorieEau\"></span> du sous-bassin hydrographique ; qu'il est repris sur la cartographie de l'al\u00e9a inondation par d\u00e9bordement de cours d'eau (cartographie adopt\u00e9e par le Gouvernement Wallon du 13 juillet 2006 \u2013 Moniteur Belge du 11 ao\u00fbt 2006 pris en ex\u00e9cution du plan P.L.U.I.E.S. - Plan de Pr\u00e9vention et de Lutte contre les Inondations et leurs Effets sur les Sinistr\u00e9s-) et qu'il y est d\u00e9fini avec une valeur d'al\u00e9a <tal:fusion replace=\"self/floodingLevel\"/> ;</p>\r\n\r\n    <p tal:condition=\"floodingLevelNon\">Consid\u00e9rant que le bien n'est pas concern\u00e9 par un risque d'inondation selon la cartographie de la R\u00e9gion Wallonne ;</p>\r\n\r\n    <p tal:condition=\"concentratedRunoffSRiskAll\">Consid\u00e9rant que, selon la cartographie approuv\u00e9e par le Gouvernement Wallon, des sous bassins hydrographiques de la Wallonie des al\u00e9as d'inondation par d\u00e9bordement \u00ab naturel \u00bb de cours d'eau ou par ruissellement \u00ab naturel \u00bb des eaux de pluies (axe d'\u00e9coulement pr\u00e9f\u00e9rentiel), pour le susdit bien ; qu' il y a \u00e9t\u00e9 d\u00e9fini un axe <tal:fusion replace=\"self/concentratedRunoffSRisk\"/> d'inondation par ruissellement ; qu'en cons\u00e9quence, l'avis de la cellule Giser de la R\u00e9gion Wallonne a \u00e9t\u00e9 sollicit\u00e9 ;</p>\r\n\r\n    <p tal:condition=\"notConcentratedRunoffSRisk\">Consid\u00e9rant que le bien n'est pas concern\u00e9 par un axe de ruissellement concentr\u00e9 selon la cartographie de la R\u00e9gion Wallonne ;</p>\r\n\r\n<p tal:condition=\"python: 'seuil' in licence.sevesoSite\"> Consid\u00e9rant que le bien se situe dans le p\u00e9rim\u00e8tre provisoire d\u00e9fini comme zone vuln\u00e9rable du site <span tal:replace=\"sevesoSite\"></span> ; que l\u2019avis de la Cellule Risques d\u2019Accidents Majeurs (RAM) du Service Public de Wallonie a \u00e9t\u00e9 sollicit\u00e9 ;</p>\r\n\r\n<p tal:condition=\"python: not licence.sevesoSite and not 'seuil' in licence.sevesoSite\">Consid\u00e9rant que la demande ne se rapporte pas \u00e0 un bien vis\u00e9  par le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement (site et p\u00e9rim\u00e8tre SEVESO)\u00a0;</p>\r\n \r\n    <p tal:condition=\"pash\">Consid\u00e9rant que le bien est situ\u00e9 dans le p\u00e9rim\u00e8tre du Plan d\u2019Assainissement par Sous-bassin Hydrographique , que celui-ci est applicable par d\u00e9cision du Gouvernement Wallon du 10 novembre 2005 (Moniteur Belge du 2 d\u00e9cembre 2005) et qu'il reprend celui-ci en <tal:fusion replace=\"pash\"/> ;</p>\r\n\r\n<p tal:condition=\"pash\">Consid\u00e9rant que le bien est situ\u00e9 dans le p\u00e9rim\u00e8tre du Plan d\u2019Assainissement Meuse Aval qui reprend celui-ci en <tal:a replace=\"zone_pash\"/> ;</p> \r\n\r\n<p>Consid\u00e9rant que le r\u00e9seau public d\u2019\u00e9gouttage \u00e0 cet endroit est : <tal:a replace=\"egout\"/> ;</p> \r\n\r\n\r\n<p>&nbsp;</p>\r\n<p><strong><u>PUBLICIT\u00c9 : </u></strong> </p>\r\n\r\n<p tal:condition=\"has_derogation\">&nbsp;</p> \r\n<p tal:condition=\"has_derogation\"> Consid\u00e9rant que la demande d\u00e9roge \u00e0 <tal:a replace=\"derogation\"/> pour les motifs suivants: <tal:a replace=\"detail_derogation\"/> ;</p> \r\n\r\n<p tal:condition=\"is_enquete_public\">&nbsp;</p> \r\n<p tal:condition=\"is_enquete_public\"> Consid\u00e9rant que la demande est soumise conform\u00e9ment \u00e0 l\u2019article D.IV.40 - D.IV.26, \u00a72 - D.IV.41 - D.VIII.3 - R.IV.40-1  \u00e0 une enqu\u00eate publique pour les motifs suivants :<tal:a replace=\"article_enquete\"/>;</p> \r\n\r\n<p tal:condition=\"is_enquete_public\">&nbsp;</p> \r\n<p tal:condition=\"is_enquete_public\">Consid\u00e9rant que l'enqu\u00eate a eu lieu du <tal:a replace=\"date_debutenquete\"/> au <tal:a replace=\"date_finenquete\"/>, conform\u00e9ment aux articles D.VIII.6 et suivants du Code; </p>\r\n\r\n\r\n<p>&nbsp;</p> \r\n<p><strong><u>ANALYSE : </u></strong> </p>\r\n\r\n<p>Consid\u00e9rant que, \u00e0 l\u2019analyse de la demande, les installations et/ou activit\u00e9s vis\u00e9es par le projet sont class\u00e9es comme suit par l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002, arr\u00eatant la liste des projets soumis \u00e0 \u00e9tude d'incidences, des installations et activit\u00e9s class\u00e9es ou des installations ou des activit\u00e9s pr\u00e9sentant un risque pour le sol :  </p>\r\n<ul tal:repeat=\"rubric rubrics\"> <li><span tal:replace=\"python: rubric.title\"></span><span tal:replace=\"structure python: rubric.Description()\"></span></li> </ul> \r\n\r\n\r\n\r\n</tal:vars>"
+                },
+                {
+                    "fieldname": "pmDecision",
+                    "text": "<tal:vars define=\"\r\n    applicants_signaletic python: self.getApplicantsSignaletic();\r\n    portion_outs_text python: self.getPortionOutsText();\r\n    work_location_signaletic python: self.getWorkLocationSignaletic();\r\n    licence_subject python: self.getLicenceSubject();\r\n    reference self/reference;\r\n    all_opinion_requests_no_dup python: self.getAllOpinionRequestsNoDup(); \r\n\">\r\n\r\n<p>Pour les motifs pr\u00e9cit\u00e9s, DECIDE \u00e0 l'unanimit\u00e9 des membres votants : </p> \r\n\r\n<p><strong>1. </strong> L\u2019exploitant est autoris\u00e9 \u00e0 exploiter <tal:a replace=\"licence_subject\"/> moyennant le respect des prescriptions l\u00e9gales et r\u00e9glementaires en vigueur et des conditions d'exploitation pr\u00e9cis\u00e9es dans le pr\u00e9sent arr\u00eat\u00e9.</p> \r\n<p>&nbsp;</p>\r\n\r\n<p><strong>2. </strong> Sont autoris\u00e9s, les b\u00e2timents, installations, activit\u00e9s, proc\u00e9d\u00e9s et d\u00e9p\u00f4ts principaux suivants :</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>3. </strong> Les rubriques compl\u00e9mentaires aux rubriques autoris\u00e9es et applicables \u00e0 l\u2019\u00e9tablissement sont les suivantes :</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>4. </strong>Les conditions transform\u00e9es applicables la modification de l\u2019\u00e9tablissement sont les suivantes :</p>\r\n\r\n<ol>\r\n\t<li>Les dispositions de l\u2019Arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 fixant les conditions g\u00e9n\u00e9rales d\u2019exploitation des \u00e9tablissements vis\u00e9s par le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement</li>\r\n\t<li>Les dispositions du R\u00e8glement g\u00e9n\u00e9ral sur les installations \u00e9lectriques rendues obligatoires dans les \u00e9tablissements dangereux, insalubres ou incommodes par l'arr\u00eat\u00e9 royal du 02 septembre 1981</li>\r\n\t<li>Les dispositions du R\u00e8glement G\u00e9n\u00e9ral pour la Protection du Travail (Titres II et III) [prescriptions non abrog\u00e9es]</li>\r\n\t<li>Les dispositions de l\u2019Arr\u00eat\u00e9 du Gouvernement wallon du 21 d\u00e9cembre 2006 d\u00e9terminant les conditions int\u00e9grales relatives aux transformateurs statiques d\u2019\u00e9lectricit\u00e9 d\u2019une puissance nominale \u00e9gale ou sup\u00e9rieure \u00e0 100 kVA et inf\u00e9rieure \u00e0 1 500 kVA</li>\r\n</ol>\r\n\r\n<p>Ces conditions peuvent \u00eatre consult\u00e9es sur le site <u>http://environnement.wallonie.be</u>.</p>\r\n\r\n<p><strong>5. </strong>Les conditions d'exploitation particuli\u00e8res sont compl\u00e9t\u00e9es par les conditions applicables \u00e0 l'\u00e9tablissement sont les suivantes : XXX</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n\r\n<p style=\"text-align:center\"><strong>******************</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>6. </strong>Le pr\u00e9sent permis est ex\u00e9cutoire selon les dispositions de l\u2019article 46 du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement.</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>7. </strong>Le pr\u00e9sent permis est accord\u00e9 pour un terme expirant le XXX.</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>8. </strong>Le permis d\u2019environnement est mis en \u0153uvre dans un d\u00e9lai de maximum de deux ans \u00e0 partir du jour o\u00f9 le permis devient ex\u00e9cutoire conform\u00e9ment \u00e0 l\u2019article 46.</p> \r\n<p>&nbsp;</p>\r\n\r\n<p>La p\u00e9remption s\u2019op\u00e8re de plein droit.</p>\r\n\r\n<p>Toutefois, \u00e0 la demande de l\u2019exploitant, l\u2019autorit\u00e9 ayant d\u00e9livr\u00e9 le permis peut, sur requ\u00eate sp\u00e9cialement motiv\u00e9e, accorder un nouveau d\u00e9lai sans que celui-ci ne puisse exc\u00e9der deux ans.</p>\r\n\r\n<p><strong>9. </strong>Le pr\u00e9sent permis est frapp\u00e9 de caducit\u00e9 si l'\u00e9tablissement autoris\u00e9 n'est pas exploit\u00e9 durant deux ann\u00e9es cons\u00e9cutives.</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>10. </strong>L\u2019exploitant est tenu :</p>\r\n\r\n\r\n<ol>\r\n\t<li>de prendre toutes les pr\u00e9cautions n\u00e9cessaires pour \u00e9viter, r\u00e9duire ou rem\u00e9dier aux dangers, nuisances et inconv\u00e9nients de l\u2019\u00e9tablissement ;</li>\r\n\t<li>de signaler imm\u00e9diatement \u00e0 l\u2019autorit\u00e9 comp\u00e9tente tout cas d\u2019accident ou d\u2019incident de nature \u00e0 porter pr\u00e9judice aux int\u00e9r\u00eats vis\u00e9s \u00e0 l\u2019article 2 du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement ;</li>\r\n\t<li>de fournir toute l\u2019assistance n\u00e9cessaire pour permettre aux fonctionnaires et agents comp\u00e9tents de mener \u00e0 bien leurs actions vis\u00e9es aux articles D.146 et D.162 &nbsp;du Code de l\u2019environnement ;</li>\r\n\t<li>de conserver, sur les lieux m\u00eame de l\u2019\u00e9tablissement o\u00f9 \u00e0 tout endroit convenu avec l\u2019autorit\u00e9 comp\u00e9tente, l\u2019ensemble des permis ou d\u00e9clarations en vigueur, toutes d\u00e9cisions prescrivant des conditions compl\u00e9mentaires d\u2019exploitation, ainsi que le registre des modifications intervenues et la liste des incidents et accidents vis\u00e9s au point b ;</li>\r\n\t<li>de conserver \u00e9galement aux m\u00eames lieux, tous les rapports, certificats et proc\u00e8s-verbaux \u00e9manant d\u2019organisme de contr\u00f4le, de visiteurs ou d\u2019experts, et ayant trait \u00e0 la s\u00e9curit\u00e9 ou la salubrit\u00e9 publique ;</li>\r\n\t<li>d\u2019informer l\u2019autorit\u00e9 comp\u00e9tente, le fonctionnaire technique et les fonctionnaires et agents d\u00e9sign\u00e9s par le Gouvernement de toute cessation d\u2019activit\u00e9 au moins 10 jours avant cette op\u00e9ration sauf cas de force majeure ;</li>\r\n\t<li>d\u2019informer l\u2019autorit\u00e9 comp\u00e9tente, le fonctionnaire technique et les fonctionnaires et agents d\u00e9sign\u00e9s par le Gouvernement de la d\u00e9claration de la faillite dans les 10 jours de son prononc\u00e9 sauf cas de force majeure ;</li>\r\n\t<li>de remettre en \u00e9tat le site, en fin d\u2019exploitation, conform\u00e9ment \u00e0 l\u2019article 1er, 13\u00b0 du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement ;</li>\r\n\t<li>de porter \u00e0 la connaissance de l\u2019autorit\u00e9 comp\u00e9tente, du coll\u00e8ge communal et du fonctionnaire technique, au moins 15 jours \u00e0 l\u2019avance, la date fix\u00e9e pour la mise en \u0153uvre du permis.</li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>11. </strong>Toute transformation ou extension d\u2019un \u00e9tablissement de classe 1 ou de classe 2:</p>\r\n\r\n\r\n<ol>\r\n\t<li>qui ne consiste pas en un d\u00e9placement de l\u2019\u00e9tablissement&nbsp;;</li>\r\n\t<li>qui n\u2019entra\u00eene pas l\u2019application d\u2019une nouvelle rubrique de classement autre que de classe 3&nbsp;;</li>\r\n\t<li>qui n\u2019est pas de nature \u00e0 aggraver directement ou indirectement les dangers, nuisances ou inconv\u00e9nients \u00e0 l\u2019\u00e9gard de l\u2019homme ou de l\u2019environnement&nbsp;;</li>\r\n\t<li>qui n\u2019augmente pas le nombre d\u2019animaux faisant l\u2019objet du permis&nbsp;ou si cet accroissement n\u2019est pas de nature \u00e0 porter atteinte au bien-\u00eatre des animaux;</li>\r\n\t<li>qui affecte le descriptif ou les plans annex\u00e9s au permis ou encore une source d\u2019\u00e9mission de gaz \u00e0 effet de serre sp\u00e9cifi\u00e9s&nbsp;;</li>\r\n</ol>\r\n\r\n<p><strong>doit \u00eatre consign\u00e9e</strong> par l\u2019exploitant dans <strong>un registre de modification</strong>.</p>\r\n\r\n<p>Tous les ans, \u00e0 la date anniversaire du pr\u00e9sent arr\u00eat\u00e9 et pour autant que l\u2019\u00e9tablissement ait subi des transformations ou extensions, l\u2019exploitant envoie une copie de la liste des transformations ou extensions intervenues au cours de l\u2019ann\u00e9e \u00e9coul\u00e9e au fonctionnaire technique et au Coll\u00e8ge communal de la commune sur le territoire de laquelle est situ\u00e9 l\u2019\u00e9tablissement, et \u00e0 l\u2019organisme d\u00e9sign\u00e9 si la transformation ou l\u2019extension affecte notablement une source d\u2019\u00e9mission de gaz \u00e0 effet de serre sp\u00e9cifi\u00e9s.</p>\r\n\r\n<p>Pour plus de d\u00e9tail, consulter sur le portail <u>Wallonie.be</u> la d\u00e9marche \u00ab&nbsp;Transmettre le registre des transformations ou extensions d\u2019un \u00e9tablissement de classe 1 ou 2&nbsp;\u00bb.</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>12. </strong>Si l\u2019\u00e9tablissement est exploit\u00e9, en tout ou en partie, par une personne autre que le titulaire de ce permis, l\u2019exploitant c\u00e9dant ou ses ayants droit et l\u2019exploitant cessionnaire proc\u00e8dent \u00e0 une notification conjointe \u00e0 l\u2019autorit\u00e9 comp\u00e9tente c\u2019est-\u00e0-dire au Coll\u00e8ge communal. A cette occasion, le cessionnaire confirme par \u00e9crit avoir pris connaissance du permis, poursuivre la m\u00eame activit\u00e9 et accepter les conditions fix\u00e9es dans le permis d'environnement. Aussi longtemps que la d\u00e9claration conjointe du transfert n'a pas eu lieu et, quand le permis impose une s\u00fbret\u00e9, qu'une nouvelle s\u00fbret\u00e9 n'a pas \u00e9t\u00e9 constitu\u00e9e, l'exploitant c\u00e9dant ou ses ayants droit demeurent solidairement responsables avec le cessionnaire pour les dommages qui pourraient r\u00e9sulter du non-respect par le nouvel exploitant des conditions d'exploitation applicables \u00e0 l\u2019\u00e9tablissement.</p>\r\n\r\n<p>Pour plus de d\u00e9tail, consulter sur le portail <u>Wallonie.be</u> la d\u00e9marche \u00ab&nbsp;Changer l'exploitant d'un \u00e9tablissement autoris\u00e9 par permis d'environnement&nbsp;\u00bb.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>13. </strong>En cas de destruction partielle ou totale de l'\u00e9tablissement, l\u2019exploitant doit saisir l'autorit\u00e9 comp\u00e9tente pour qu\u2019elle d\u00e9cide si un nouveau permis doit \u00eatre sollicit\u00e9 pour tout ou partie de l'\u00e9tablissement.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>14. </strong>Sans pr\u00e9judice des poursuites pouvant \u00eatre exerc\u00e9es en vertu du Code p\u00e9nal, les contraventions au pr\u00e9sent arr\u00eat\u00e9 seront constat\u00e9es et punies conform\u00e9ment \u00e0 la Partie VIII - <em>Recherche, constatation, poursuite, r\u00e9pression et mesures de r\u00e9paration des infractions en mati\u00e8re d\u2019environnement</em> - des dispositions d\u00e9cr\u00e9tales et r\u00e9glementaires du Code de l\u2019environnement.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>15. </strong>Un recours aupr\u00e8s du Gouvernement wallon, \u00e0 l\u2019adresse du Service public de Wallonie Agriculture, Ressources Naturelles et Environnement, avenue Prince de Li\u00e8ge, 15 \u00e0 5100 NAMUR (Jambes), est ouvert \u00e0 toute personne physique ou morale justifiant d\u2019un int\u00e9r\u00eat, ainsi qu\u2019au fonctionnaire technique et au fonctionnaire d\u00e9l\u00e9gu\u00e9.</p>\r\n\r\n\r\n<p>Sous peine d\u2019irrecevabilit\u00e9, le recours doit \u00eatre adress\u00e9 par lettre recommand\u00e9e \u00e0 la poste avec accus\u00e9 de r\u00e9ception ou remis contre r\u00e9c\u00e9piss\u00e9 au fonctionnaire technique comp\u00e9tent sur recours - Service public de Wallonie c/o Direction g\u00e9n\u00e9rale op\u00e9rationnelle de l\u2019Agriculture, des Ressources naturelles et de l\u2019Environnement, avenue Prince de Li\u00e8ge, 15 \u00e0 5100 NAMUR (Jambes) - dans un d\u00e9lai de vingt jours :</p>\r\n\r\n<ol>\r\n\t<li>\u00e0 dater de la r\u00e9ception de la d\u00e9cision pour le demandeur, le fonctionnaire technique et le fonctionnaire d\u00e9l\u00e9gu\u00e9 ;</li>\r\n\t<li>\u00e0 dater du premier jour de l\u2019affichage de la d\u00e9cision pour les personnes non vis\u00e9es au 1\u00b0. Si la d\u00e9cision est affich\u00e9e dans plusieurs communes, le d\u00e9lai est prolong\u00e9 jusqu\u2019au vingti\u00e8me jour suivant le premier jour de l\u2019affichage dans la commune qui y a proc\u00e9d\u00e9 la derni\u00e8re.</li>\r\n</ol>\r\n\r\n<p>Le recours n\u2019est pas suspensif de la d\u00e9cision attaqu\u00e9e, sauf s\u2019il est introduit par le fonctionnaire technique ou le fonctionnaire d\u00e9l\u00e9gu\u00e9.</p>\r\n\r\n<p>Le <u>recours est introduit</u> selon les dispositions de l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 relatif \u00e0 la proc\u00e9dure et \u00e0 diverses mesures d\u2019ex\u00e9cution du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement et <u>en utilisant le formulaire \u00ab 2 - Formulaire relatif aux recours \u00bb</u>.</p>\r\n\r\n<p>Un droit de dossier de 25,00 euros est \u00e0 verser sur le compte 091-2150215-45 (IBAN : BE44 0912 1502 1545 \\ BIC : GKCCBEBB) du D\u00e9partement des Permis et Autorisations, avenue Prince de Li\u00e8ge, 15 \u00e0 5100 NAMUR (Jambes).</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>16. </strong>Dans les 10 jours qui suivent l\u2019adoption de la d\u00e9cision cette derni\u00e8re fait l\u2019objet d\u2019un avis - conforme aux dispositions de l\u2019article D.29-22, \u00a7 2, alin\u00e9a 4, du livre 1er du code de l\u2019environnement - affich\u00e9 durant vingt jours aux endroits habituels d\u2019affichage et, de mani\u00e8re parfaitement visible, sur le bien concern\u00e9 par le projet.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>17. </strong>La d\u00e9cision est notifi\u00e9e :</p>\r\n\r\n  <p><strong>En exp\u00e9dition conforme selon les dispositions de l\u2019article 176 du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement au :</strong></p>\r\n  <p>- demandeur </p>\r\n    <p>- fonctionnaire technique du Service public de Wallonie - Agriculture, Ressources naturelles et Environnement - D\u00e9partement des Permis et Autorisations \u2013 Direction ext\u00e9rieure de LI\u00c8GE , Rue Montagne Sainte-Walburge - B\u00e2timent II n\u00b0 2 \u00e0 4000 LIEGE</p>\r\n\r\n<p><strong>En copie libre et par pli ordinaire, ou par courrier \u00e9lectronique</strong></p>\r\n\r\n<p>- aux instances d\u2019avis consult\u00e9es :</p>\r\n   <p> au fonctionnaire charg\u00e9 de la surveillance : Service Public de Wallonie - Agriculture, Ressources naturelles et Environnement - D\u00e9partement de la Police et des Contr\u00f4les \u2013 Direction ext\u00e9rieure de LI\u00c8GE, Rue Montagne Ste-Walburge 2 n\u00b0 2 \u00e0 4000 LIEGE </p>\r\n\r\n<p>&nbsp;</p>\r\n   <p><strong> 18. </strong>La pr\u00e9sente d\u00e9cision relative \u00e0 l\u2019\u00e9tablissement PE n\u00b0 XXX est enregistr\u00e9e sous le num\u00e9ro de dossier XXX aupr\u00e8s de la Direction ext\u00e9rieure de LIEGE du D\u00e9partement des Permis et Autorisations.</p>\r\n\r\n\r\n</tal:vars>"
+                }
+            ],
+            "title": "DECISION du Coll\u00e8ge (octroi ou refus)",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/decision-du-recours",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/decision-du-recours",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "57342ed2de724a8e872e05d5849b023d",
+            "activatedFields": [
+                "recourseDecisionDisplayDate",
+                "recourseDecision"
+            ],
+            "allow_discussion": false,
+            "created": "2026-02-23T22:19:42+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de notification",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IRecourseEvent"
+            ],
+            "id": "decision-du-recours",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2026-02-23T22:19:42+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "disabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "D\u00e9cision du recours",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2026-02-23T22:19:42+00:00"
+                    },
+                    {
+                        "action": "disable",
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "disabled",
+                        "time": "2026-02-23T22:19:42+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/depot-de-la-demande",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/depot-de-la-demande",
+            "@type": "EventConfig",
+            "TALCondition": null,
+            "UID": "be30ef591389407cbb9251d8d043ea33",
+            "activatedFields": [
+                "transmitDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": null,
+            "eventDateLabel": "Date de d\u00e9p\u00f4t",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IDepositEvent"
+            ],
+            "id": "depot-de-la-demande",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-24T09:39:02+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "D\u00e9p\u00f4t de la demande",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/deuxieme-reunion-patrimoine",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/deuxieme-reunion-patrimoine",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "76f35343f9be4e76a804769d49f84ff9",
+            "activatedFields": [
+                "reportCreationDate",
+                "reportReceptionDate",
+                "misc_description"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:46+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de la r\u00e9union",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IPatrimonyMeetingEvent"
+            ],
+            "id": "deuxieme-reunion-patrimoine",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2023-05-11T08:17:46+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "Deuxi\u00e8me r\u00e9union patrimoine",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:46+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/dossier-abandonne",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/dossier-abandonne",
+            "@type": "EventConfig",
+            "TALCondition": null,
+            "UID": "d313ff10cba540d89085bb65a3535845",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2026-06-25T11:38:51+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [],
+            "id": "dossier-abandonne",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2026-06-25T11:38:51+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Dossier abandonn\u00e9",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2026-06-25T11:38:51+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/dossier-complet-recevable",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/dossier-complet-recevable",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "b7305e8c4a22453284c46268497087a4",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:16:31+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IAcknowledgmentEvent"
+            ],
+            "id": "dossier-complet-recevable",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2023-05-11T08:16:31+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "Dossier complet et recevable",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2024-05-08T10:27:36+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/dossier-incomplet",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/dossier-incomplet",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "d575b67977cf4ee7b907c238fe81ac74",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IMissingPartEvent"
+            ],
+            "id": "dossier-incomplet",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2023-05-11T08:17:41+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "Dossier incomplet",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/dossier-irrecevable",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/dossier-irrecevable",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "e3cd300446d04dfaabf2d29681b9684b",
+            "activatedFields": [
+                "transmitDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IRefusedIncompletenessEvent"
+            ],
+            "id": "dossier-irrecevable",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-24T09:56:25+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Dossier irrecevable",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/enquete-publique",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/enquete-publique",
+            "@type": "EventConfig",
+            "TALCondition": "here/mayAddInquiryEvent",
+            "UID": "e3e5ec818f5048478a1454e453d09422",
+            "activatedFields": [
+                "displayDate",
+                "claimsDate",
+                "claimEndSDate",
+                "explanationStartSDate",
+                "explanationEndSDate",
+                "claimsText",
+                "reportText",
+                "investigationStart",
+                "investigationEnd"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:42+00:00",
+            "description": null,
+            "eventDateLabel": "Date de notification",
+            "eventPortalType": "UrbanEventInquiry",
+            "eventType": [
+                "Products.urban.interfaces.IInquiryEvent",
+                "Products.urban.interfaces.ITransmitToSPWEvent"
+            ],
+            "id": "enquete-publique",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "investigationStart",
+                "investigationEnd"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-24T11:13:02+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [
+                {
+                    "fieldname": "claimsText",
+                    "text": "<p>Consid\u00e9rant que xxx r\u00e9clamations \u00e9crites ont \u00e9t\u00e9 introduites au cours de l'enqu\u00eate \u00e9manant des riverains (xxx lettres identiques et xxx lettres individuelles);</p>\r\n<p>Consid\u00e9rant que xxx r\u00e9clamations orales ont \u00e9t\u00e9 consign\u00e9es dans le registre;</p>\r\n<p>Consid\u00e9rant que ces r\u00e9clamations portent principalement sur :</p>\r\n<p>* ...</p>\r\n<p>* ...</p>\r\n<p>* ...</p>\r\n<p>Attendu qu'une r\u00e9union de cl\u00f4ture d'enqu\u00eate \u00e0 \u00e9t\u00e9 organis\u00e9e le xxx dans les bureaux du service de l'urbanisme de la Commune, conform\u00e9ment aux dispositions de l'article 340 du Code modifi\u00e9;</p>\r\n<p>Consid\u00e9rant qu'aucune personnes ne s'est pr\u00e9sent\u00e9e lors de cette r\u00e9union pour faire opposition;</p>\r\n<p>Consid\u00e9rant que xxx personnes se sont pr\u00e9sent\u00e9es \u00e0 cette r\u00e9union et ont \u00e9mis les r\u00e9clamations suivantes :</p>\r\n<p>* ...</p>\r\n<p>* ...</p>\r\n<p>* ...</p>"
+                }
+            ],
+            "title": "Enqu\u00eate publique",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:42+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/envoi-demande-FT",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/envoi-demande-FT",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "3c0676f7b9af4e56a46645dce8b6d107",
+            "activatedFields": [
+                "commentForDPA"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEventNotice",
+            "eventType": [
+                "Products.urban.interfaces.ITransmitToSPWEvent"
+            ],
+            "id": "envoi-demande-FT",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-22T16:36:18+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Transmis de la demande au FT",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/etude-dincidence",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/etude-dincidence",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "047d510725db493e9d0298e392147133",
+            "activatedFields": [
+                "officeCoordinate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de la RIP",
+            "eventPortalType": "UrbanEvent",
+            "eventType": null,
+            "id": "etude-dincidence",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2023-05-11T08:17:41+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "\u00c9tude d'incidence",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/modified-blueprints",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/modified-blueprints",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "722e7cf58ffd45d6b9511553637ae57c",
+            "activatedFields": [
+                "transmitDate",
+                "decisionDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:44+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IIntentionToSubmitAmendedPlans",
+                "Products.urban.interfaces.IAcknowledgmentEvent"
+            ],
+            "id": "modified-blueprints",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-24T13:32:50+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Demande de plans modificatifs suite au rapport de synth\u00e8se d\u00e9favorable",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:44+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/pre-decision",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/pre-decision",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "ef770e5f73d54314864c04c0a25b86a3",
+            "activatedFields": [
+                "decisionDate",
+                "collegeOpinion",
+                "pmTitle",
+                "pmDescription",
+                "pmMotivation",
+                "pmDecision"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:44+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEventCollege",
+            "eventType": [
+                "Products.urban.interfaces.ISimpleCollegeEvent",
+                "Products.urban.interfaces.ICollegeOpinionEvent"
+            ],
+            "id": "pre-decision",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-27T08:56:32+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [
+                {
+                    "fieldname": "pmTitle",
+                    "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> ENVIRONNEMENT - <tal:a replace=\"self/reference\"/> - <tal:a replace=\"applicants_signaletic\"/> - <tal:a replace=\"licence_subject\"/>, <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> - AVIS </tal:vars>"
+                },
+                {
+                    "fieldname": "pmDescription",
+                    "text": "<p>Avis favorable-conditionnel-d\u00e9favorable</p>"
+                },
+                {
+                    "fieldname": "pmMotivation",
+                    "text": "<tal:vars define=\"\r\napplicantobj python: self.getApplicants() and self.getApplicants()[0]; \r\nsi_1dem python: applicantobj.voc_term('personTitle').getMultiplicity() == 'single';\r\n    si_demandeurs python: applicantobj.voc_term('personTitle').getMultiplicity() == 'plural';\r\n licence_helper python: self;\r\n    date_accuse_de_reception python: licence.getLastAcknowledgment() and tool.formatDate(licence.getLastAcknowledgment().getEventDate());\r\n    date_de_transmis_nouveau_complet python: licence.getLastModificationDeposit() and tool.formatDate(licence.getLastModificationDeposit().getEventDate());\r\n\r\n    applicants_signaletic python: self.getApplicantsSignaletic(); \r\n    work_location_signaletic python: self.getWorkLocationSignaletic(); \r\n    portion_outs_text python: self.getPortionOutsText(); \r\n    licence_subject python: self.getLicenceSubject(); \r\n    patrimoine python: 'certificat de patrimoine' in licence.protectedBuilding;\r\n    is_cpdelivre python: 'certificatpatrimoine' in self.getProtectedBuilding();\r\n\r\naccuse_de_reception_complet python: self.getLastAcknowledgment();\r\n\r\nis_in_prorogation self/prorogation; \r\n     \r\n    sdc_zone python: licence.SSC;\r\n    egout python: licence.sewers;\r\n    si_zonecaptage python: len(self.catchmentArea) > 0;\r\n    zone python: licence.catchmentArea;\r\n    has_pash python: len(self.pash) > 0;\r\n    zone_pash python: self.pash;\r\n    bassinhydaulique python: context.pashDetails;\r\n    is_in_natura_2000 self/natura_2000;\r\n    is_in_sevesoSite self/sevesoSite;\r\n    has_linked_inquiry python: bool(context.getLastInquiry() and self.getLastInquiry().getLinkedInquiry());\r\n    folder_zone self/folderZone;\r\n    is_in_pca self/isInPCA;\r\n    pca_zone self/pcaZone;\r\n    is_in_subdivision self/isInSubdivision;\r\n    subdivision_details python: context.subdivisionDetails;\r\n    date_de_delivrance_du_lot python: self.getParcellings() and self.get_parcellings().split(' - ')[1][:-1];\r\n    numero_de_lot python: self.getParcellings() and self.get_parcellings().split(' (')[0]; \r\n    has_catchment_area_and_not_outside python: len(self.catchmentArea) > 0 and 'outside' not in context.catchmentArea;\r\n    location_technical_advice context/locationTechnicalAdvice;\r\n      karstNone python: 'no' in licence.karstConstraints;\r\n    karstFaible python: 'low' in licence.karstConstraints;\r\n    karstMod python: 'moderate' in licence.karstConstraints;\r\n    karstFort python: 'high' in licence.karstConstraints;\r\n    karstAll python: licence.karstConstraints;\r\n    floodingLevelRisque python: licence.floodingLevel;\r\n    floodingLevelNon python: not licence.floodingLevel;\r\n    concentratedRunoffSRiskAll python: licence.concentratedRunoffSRisk;\r\n    notConcentratedRunoffSRisk python: not licence.concentratedRunoffSRisk;\r\n    pash python: licence.pash;\r\n\r\nis_enquete_public python:'inquiry' in self.getProcedureChoice(); \r\n    nombre_de_reclamationEP python: self.getLastInquiry() and len(self.getLastInquiry().getClaimants()) or 0;\r\n    article_enquete python: self.getInvestigationArticlesText();\r\n    date_debutenquete python: self.getLastInquiry() and (self.getLastInquiry().investigationStart);\r\n    date_finenquete python: self.getLastInquiry() and (self.getLastInquiry().investigationEnd);\r\n    has_derogation python: len(self.derogation) > 0; \r\n    derogation python: self.derogation; \r\n    detail_derogation python: self.getDerogationDetails();\r\n\r\n    \r\n    licence_view python: self.restrictedTraverse('document_generation_helper_view');\r\n \r\n    all_opinion_requests_no_dup python: self.getAllOpinionRequestsNoDup(); \r\n    has_all_opinion_requests_no_dup python: len(self.getAllOpinionRequestsNoDup()) > 0; \r\n    avis_obligatoire python: self.solicitOpinionsTo;\r\n    avis_facultatif python: self.solicitOpinionsToOptional;\r\n   \r\n    has_protected_building python: len(self.protectedBuilding) > 0; \r\n    protected_building python: self.protectedBuilding; \r\n    is_archeologique python: 'archeologique' in self.getProtectedBuilding(); \r\n    is_centre_ancien_protege python: 'centre-ancien-protege' in self.getProtectedBuilding(); \r\n    is_classe python: 'classe' in self.getProtectedBuilding(); \r\n    is_zoneprotection python: 'zoneprotection' in self.getProtectedBuilding(); \r\n        is_inventaire python: 'reprisinventaire' in self.getProtectedBuilding();\r\n    noteworthyTrees python: licence.noteworthyTrees;\r\n    notNoteworthyTrees python: not licence.noteworthyTrees;\r\n    remarquable python: licence.noteworthyTrees;\r\n   \r\nproro python: self.getProrogationDelay();\r\n\r\nrubrics python: licence.getRubrics(); \r\nrubrics_titre python: licence.getRubrics()[0].title; \r\nrubrics_description python: licence.getRubrics()[0].Description(); \r\nintegralC python: licence.getIntegralConditions(); \r\nsectorialC python: licence.getSectorialConditions(); \r\niAndSC python: licence.getIandSConditions(); \r\nall_conditions python: licence._getConditions();\r\n\r\n\r\n\" > \r\n\r\n\r\n<p>Vu le Code de l\u2019environnement\u00a0;</p>\r\n<p>Vu le Code du d\u00e9veloppement territorial (CoDT) entr\u00e9 en vigueur le 1er juin 2017;</p>\r\n<p>Vu le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement;</p>\r\n<p>Vu l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 arr\u00eatant la liste des projets soumis \u00e0 \u00e9tude d\u2019incidences et des installations et activit\u00e9s class\u00e9es;</p>\r\n<p>Vu l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 relatif \u00e0 la proc\u00e9dure et \u00e0 diverses mesures d\u2019ex\u00e9cution du d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement;</p>\r\n<p>Vu l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 fixant les conditions g\u00e9n\u00e9rales d\u2019exploitation des \u00e9tablissements vis\u00e9s par le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement;</p>\r\n\r\n\r\n<p tal:condition=\"si_1dem\">Consid\u00e9rant que <tal:a replace=\"applicants_signaletic\"/> ci-apr\u00e8s d\u00e9nomm\u00e9 l\u2019exploitant, sollicite un permis d'environnement relatif \u00e0 un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/>, et ayant pour objet : <tal:a replace=\"python: self.getLicenceSubject()[0].lower() + self.getLicenceSubject()[1:]\"/> ;</p> \r\n<p tal:condition=\"python:\"si_demandeurs\">Consid\u00e9rant que <tal:a replace=\"applicants_signaletic\"/> ci-apr\u00e8s d\u00e9nomm\u00e9 les exploitants, sollicitent un permis d'environnement relatif \u00e0 un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/>, et ayant pour objet : <tal:a replace=\"python: self.getLicenceSubject()[0].lower() + self.getLicenceSubject()[1:]\"/> ;</p> \r\n\r\n<p>Vu l\u2019ensemble des pi\u00e8ces du dossier ;</p>\r\n\r\n<p>Consid\u00e9rant que la demande compl\u00e8te a fait l'objet d'un accus\u00e9 de r\u00e9ception envoy\u00e9 en date du <tal:a replace=\"date_accuse_de_reception\"/>;</p> \r\n\r\n\r\n<p>&nbsp;</p> \r\n<p><strong><u>INCIDENCES SUR L'ENVIRONNEMENT :</u></strong> </p>\r\n \r\n<p>Consid\u00e9rant que l'autorit\u00e9 qui a appr\u00e9ci\u00e9 la recevabilit\u00e9 et la compl\u00e9tude du dossier a \u00e9galement proc\u00e9d\u00e9 \u00e0 l'examen des incidences probables du projet sur l'environnement au sens large, sur base des crit\u00e8res de s\u00e9lection pertinents vis\u00e9s \u00e0 l'article D.62 du livre Ier du Code de l'Environnement ;</p>\r\n<p>Consid\u00e9rant que les rubriques de classement concern\u00e9es pour le projet le rangent en seconde classe ; que, d\u00e8s lors, une \u00e9tude d'incidences sur l'environnement ne s'impose pas d'office ;</p>\r\n<p>Consid\u00e9rant que le formulaire de demande de permis vaut notice d'\u00e9valuation des incidences sur l'environnement ; que cette notice est compl\u00e8te en identifiant, d\u00e9crivant et \u00e9valuant les incidences probables directes et indirectes du projet sur la population et la sant\u00e9 humaine ; la biodiversit\u00e9, en accordant une attention particuli\u00e8re aux esp\u00e8ces et aux habitats prot\u00e9g\u00e9s ; le bien-\u00eatre animal ; les terres, le sol, le sous-sol, l'eau, l'air, le bruit, les vibrations, la mobilit\u00e9, l'\u00e9nergie et le climat; les biens mat\u00e9riels, le patrimoine culturel et le paysage ; ainsi que sur l'interaction entre ces facteurs ;</p>\r\n\r\n<p>Consid\u00e9rant que la notice d'\u00e9valuation des incidences, les plans et les autres documents constitutifs du dossier synth\u00e9tisent suffisamment les principaux param\u00e8tres \u00e9cologiques du projet sur l'environnement, que la population int\u00e9ress\u00e9e a pu, d\u00e8s lors, recevoir l'information qu'elle \u00e9tait en droit d'attendre et que l'autorit\u00e9 appel\u00e9e \u00e0 statuer a \u00e9t\u00e9 suffisamment \u00e9clair\u00e9e sur les incidences possibles du projet sur l'environnement ;\r\n</p>\r\n\r\n<p>&nbsp;</p> <p><strong><u>SITUATION DU BIEN :</u></strong> </p> \r\n<p>&nbsp;</p> \r\n<p>Consid\u00e9rant que le bien est soumis \u00e0 l\u2019application :</p> \r\n\r\n<p tal:condition=\"has_linked_inquiry\">&nbsp;</p> \r\n<p>- &nbsp;du plan de secteur, qui n'a pas cess\u00e9 de produire ses effets pour le bien pr\u00e9cit\u00e9 en <tal:a replace=\"folder_zone\"/> ; &nbsp;</p> \r\n\r\n<p>&nbsp;du sch\u00e9ma de d\u00e9veloppement communal en <tal:a replace=\"sdc_zone\"/> ;</p> \r\n\r\n<p tal:condition=\"is_in_pca\">&nbsp;</p> \r\n<p tal:condition=\"is_in_pca\">- &nbsp;du sch\u00e9ma d\u2019orientation local, ancien plan communal d'am\u00e9nagement approuv\u00e9 par approbateur PCA  et qui n'a pas cess\u00e9 de produire ses effets pour le bien pr\u00e9cit\u00e9 en <tal:a replace=\"pca_zone\"/> dans le p\u00e9rim\u00e8tre du SOL ;</p> \r\n\r\n<p tal:condition=\"is_in_subdivision\">&nbsp;</p> \r\n<p tal:condition=\"is_in_subdivision\">- &nbsp;du permis d'urbanisation n\u00b0 <tal:a replace=\"numero_de_lot\"/> non p\u00e9rim\u00e9 autoris\u00e9 par le Coll\u00e8ge Communal d\u00e9livr\u00e9 le <tal:a replace=\"date_de_delivrance_du_lot\"/>, dans le lot n\u00b0<tal:a replace=\"subdivision_details\"/> ;</p> \r\n\r\n\r\n<p tal:condition=\"is_inventaire\">- &nbsp;du Code wallon du patrimoine, \u00e0 un site - un site arch\u00e9ologique - un monument - un ensemble architectural - inscrit sur la liste de sauvegarde - class\u00e9 - soumis provisoirement aux effets du classement - figurant sur la liste du patrimoine immobilier exceptionnel ; </p> \r\n\r\n<p tal:condition=\"is_zoneprotection\">- &nbsp;du Code wallon du patrimoine, \u00e0 un bien immobilier - situ\u00e9 dans une zone de protection - repris pastill\u00e9 \u00e0 l'inventaire r\u00e9gional du patrimoine - relevant du petit patrimoine populaire qui b\u00e9n\u00e9ficie ou a b\u00e9n\u00e9fici\u00e9 de l'intervention financi\u00e8re de la R\u00e9gion - repris \u00e0 l'inventaire communal - vis\u00e9 \u00e0 la carte arch\u00e9ologique et que les actes et travaux projet\u00e9s impliquent une modification de la structure portante d'un b\u00e2timent ant\u00e9rieur au XXe si\u00e8cle - vis\u00e9 \u00e0 la carte arch\u00e9ologique et que les actes et travaux projet\u00e9s impliquent une modification du sol ou du sous-sol du bien ; </p> \r\n\r\n  \r\n  <p tal:condition=\"noteworthyTrees\">- &nbsp;-du Code wallon du patrimoine, comportant <tal:a replace=\"remarquable\"/> ;</p> \r\n\r\n  <p tal:condition=\"is_classe\">- &nbsp;du Code wallon du patrimoine, \u00e0 bien class\u00e9 ou assimil\u00e9 ;</p>\r\n\r\n  <p tal:condition=\"is_zoneprotection\">- &nbsp;du Code wallon du patrimoine, repris dans la zone de protection ;</p>\r\n\r\n  <p tal:condition=\"is_inventaire\">- &nbsp;du Code wallon du patrimoine, repris \u00e0 l'inventaire Patrimonial de la Belgique ;</p>\r\n\r\n  <p tal:condition=\"is_archeologique\">- &nbsp;du Code wallon du patrimoine,repris \u00e0 l'Atlas Arch\u00e9ologique en vertu du Code Wallon du Patrimoine ;</p>\r\n \r\n  <p tal:condition=\"notNoteworthyTrees\">- &nbsp;du Code wallon du patrimoine, ne se rapporte pas \u00e0 un bien comportant un (une) (des) arbre(s), arbuste(s) ou haie(s) remarquable(s) ;</p>\r\n   \r\n\r\n  <p tal:condition=\"si_zonecaptage\">- &nbsp;de la zone de captage, en zone de pr\u00e9vention <tal:a replace=\"zone\"/> ;</p> \r\n \r\n  <p tal:condition=\"is_in_natura_2000\">- &nbsp;du p\u00e9rim\u00e8tre d\u2019un Site Natura 2000 (site&nbsp;: <tal:fusion replace=\"self/natura_2000\"/>) vis\u00e9 par l\u2019article 1 bis alin\u00e9a unique 18\u00b0 de la Loi du 12 juillet 1973 sur la conservation de la nature, modifi\u00e9 par le D\u00e9cret du 6 d\u00e9cembre 2001 relatif \u00e0 la conservation des Sites Natura 2000 ainsi que de la faune et de la flore sauvages; \u00e0 un bien immobilier situ\u00e9s dans ou \u00e0 proximit\u00e9 d\u2019un site Natura 2000 propos\u00e9 ou arr\u00eat\u00e9 en application de la loi du 12 juillet 1973 sur la conservation de la nature d\u2019une r\u00e9serve naturelle domaniale - d\u2019une r\u00e9serve naturelle agr\u00e9\u00e9e - d\u2019une cavit\u00e9 souterraine d\u2019int\u00e9r\u00eat scientifique - d\u2019une zone humide d\u2019int\u00e9r\u00eat biologique - d\u2019une r\u00e9serve foresti\u00e8re - vis\u00e9e par la loi du 12 juillet 1973 sur la conservation de la nature ;</p>\r\n\r\n     <p tal:condition=\"python: self.trail\">- &nbsp;est bord\u00e9 et/ou travers\u00e9 par <span tal:replace=\"trailDetails\"></span> repris \u00e0 l'atlas des chemins ;</p>\r\n     <p tal:condition=\"python: not self.trail\">- &nbsp;n\u2019est pas bord\u00e9 ou travers\u00e9 par un sentier repris \u00e0 l\u2019atlas des chemins vicinaux\u00a0;</p>\r\n\r\n\r\n<p>&nbsp;</p> \r\n<p><strong><u>\u00c9GOUTTAGE :</u></strong> </p>\r\n\r\n  <p tal:condition=\"karstNone\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone sans contrainte ;</p>\r\n    <p tal:condition=\"karstFaible\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone de contraintes faibles ;</p>\r\n    <p tal:condition=\"karstMod\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone de contraintes mod\u00e9r\u00e9es ;</p>\r\n    <p tal:condition=\"karstFort\">Consid\u00e9rant que sur le plan des contraintes karstiques (plans dress\u00e9s par la Facult\u00e9 Polytechnique de Mons \u00e0 la demande de la R\u00e9gion Wallonne et re\u00e7u en f\u00e9vrier 2004), le bien se situe en zone de contraintes fortes ;</p>\r\n    <p tal:condition=\"karstAll\">Consid\u00e9rant qu'en cons\u00e9quence il a \u00e9t\u00e9 joint une \u00e9tude g\u00e9ophysique du bureau \u2026 ;</p>\r\n    <p tal:condition=\"karstAll\">dont les conclusions excluent le risque d\u2019effondrement karstique;</p>\r\n    <p tal:condition=\"karstAll\">dont les conclusions concluent \u00e0 l\u2019impossibilit\u00e9 de r\u00e9aliser un essai sur le site;</p>\r\n    <p tal:condition=\"karstAll\">Consid\u00e9rant que les travaux ne sont pas de nature \u00e0 accentuer le risque pour la construction existante, la demande n\u2019a pas fait l\u2019objet d\u2019une \u00e9tude g\u00e9ophysique pr\u00e9alable ;</p>\r\n    \r\n    <p tal:condition=\"floodingLevelRisque\">Consid\u00e9rant que le bien est situ\u00e9 \u00e0 proximit\u00e9 d'un cours d'eau <span tal:replace=\"categorieEau\"></span> du sous-bassin hydrographique ; qu'il est repris sur la cartographie de l'al\u00e9a inondation par d\u00e9bordement de cours d'eau (cartographie adopt\u00e9e par le Gouvernement Wallon du 13 juillet 2006 \u2013 Moniteur Belge du 11 ao\u00fbt 2006 pris en ex\u00e9cution du plan P.L.U.I.E.S. - Plan de Pr\u00e9vention et de Lutte contre les Inondations et leurs Effets sur les Sinistr\u00e9s-) et qu'il y est d\u00e9fini avec une valeur d'al\u00e9a <tal:fusion replace=\"self/floodingLevel\"/> ;</p>\r\n\r\n    <p tal:condition=\"floodingLevelNon\">Consid\u00e9rant que le bien n'est pas concern\u00e9 par un risque d'inondation selon la cartographie de la R\u00e9gion Wallonne ;</p>\r\n\r\n    <p tal:condition=\"concentratedRunoffSRiskAll\">Consid\u00e9rant que, selon la cartographie approuv\u00e9e par le Gouvernement Wallon, des sous bassins hydrographiques de la Wallonie des al\u00e9as d'inondation par d\u00e9bordement \u00ab naturel \u00bb de cours d'eau ou par ruissellement \u00ab naturel \u00bb des eaux de pluies (axe d'\u00e9coulement pr\u00e9f\u00e9rentiel), pour le susdit bien ; qu' il y a \u00e9t\u00e9 d\u00e9fini un axe <tal:fusion replace=\"self/concentratedRunoffSRisk\"/> d'inondation par ruissellement ; qu'en cons\u00e9quence, l'avis de la cellule Giser de la R\u00e9gion Wallonne a \u00e9t\u00e9 sollicit\u00e9 ;</p>\r\n\r\n    <p tal:condition=\"notConcentratedRunoffSRisk\">Consid\u00e9rant que le bien n'est pas concern\u00e9 par un axe de ruissellement concentr\u00e9 selon la cartographie de la R\u00e9gion Wallonne ;</p>\r\n\r\n<p tal:condition=\"python: 'seuil' in licence.sevesoSite\"> Consid\u00e9rant que le bien se situe dans le p\u00e9rim\u00e8tre provisoire d\u00e9fini comme zone vuln\u00e9rable du site <span tal:replace=\"sevesoSite\"></span> ; que l\u2019avis de la Cellule Risques d\u2019Accidents Majeurs (RAM) du Service Public de Wallonie a \u00e9t\u00e9 sollicit\u00e9 ;</p>\r\n\r\n<p tal:condition=\"python: not licence.sevesoSite and not 'seuil' in licence.sevesoSite\">Consid\u00e9rant que la demande ne se rapporte pas \u00e0 un bien vis\u00e9  par le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement (site et p\u00e9rim\u00e8tre SEVESO)\u00a0;</p>\r\n \r\n    <p tal:condition=\"pash\">Consid\u00e9rant que le bien est situ\u00e9 dans le p\u00e9rim\u00e8tre du Plan d\u2019Assainissement par Sous-bassin Hydrographique , que celui-ci est applicable par d\u00e9cision du Gouvernement Wallon du 10 novembre 2005 (Moniteur Belge du 2 d\u00e9cembre 2005) et qu'il reprend celui-ci en <tal:fusion replace=\"pash\"/> ;</p>\r\n\r\n<p tal:condition=\"pash\">Consid\u00e9rant que le bien est situ\u00e9 dans le p\u00e9rim\u00e8tre du Plan d\u2019Assainissement Meuse Aval qui reprend celui-ci en <tal:a replace=\"zone_pash\"/> ;</p> \r\n\r\n<p>Consid\u00e9rant que le r\u00e9seau public d\u2019\u00e9gouttage \u00e0 cet endroit est : <tal:a replace=\"egout\"/> ;</p> \r\n\r\n\r\n<p>&nbsp;</p>\r\n<p><strong><u>PUBLICIT\u00c9 : </u></strong> </p>\r\n\r\n<p tal:condition=\"has_derogation\">&nbsp;</p> \r\n<p tal:condition=\"has_derogation\"> Consid\u00e9rant que la demande d\u00e9roge \u00e0 <tal:a replace=\"derogation\"/> pour les motifs suivants: <tal:a replace=\"detail_derogation\"/> ;</p> \r\n\r\n<p tal:condition=\"is_enquete_public\">&nbsp;</p> \r\n<p tal:condition=\"is_enquete_public\"> Consid\u00e9rant que la demande est soumise conform\u00e9ment \u00e0 l\u2019article D.IV.40 - D.IV.26, \u00a72 - D.IV.41 - D.VIII.3 - R.IV.40-1  \u00e0 une enqu\u00eate publique pour les motifs suivants :<tal:a replace=\"article_enquete\"/>;</p> \r\n\r\n<p tal:condition=\"is_enquete_public\">&nbsp;</p> \r\n<p tal:condition=\"is_enquete_public\">Consid\u00e9rant que l'enqu\u00eate a eu lieu du <tal:a replace=\"date_debutenquete\"/> au <tal:a replace=\"date_finenquete\"/>, conform\u00e9ment aux articles D.VIII.6 et suivants du Code; </p>\r\n\r\n\r\n<p>&nbsp;</p> \r\n<p><strong><u>ANALYSE : </u></strong> </p>\r\n\r\n<p>Consid\u00e9rant que, \u00e0 l\u2019analyse de la demande, les installations et/ou activit\u00e9s vis\u00e9es par le projet sont class\u00e9es comme suit par l\u2019arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002, arr\u00eatant la liste des projets soumis \u00e0 \u00e9tude d'incidences, des installations et activit\u00e9s class\u00e9es ou des installations ou des activit\u00e9s pr\u00e9sentant un risque pour le sol :  </p>\r\n\r\n<ul tal:repeat=\"rubric rubrics\"> <li><span tal:replace=\"python: rubric.title\"></span><span tal:replace=\"structure python: rubric.Description()\"></span></li> </ul> \r\n\r\n\r\n\r\n</tal:vars>"
+                },
+                {
+                    "fieldname": "pmDecision",
+                    "text": "<tal:vars define=\"\r\n    applicants_signaletic python: self.getApplicantsSignaletic();\r\n    portion_outs_text python: self.getPortionOutsText();\r\n    work_location_signaletic python: self.getWorkLocationSignaletic();\r\n    licence_subject python: self.getLicenceSubject();\r\n    reference self/reference;\r\n    all_opinion_requests_no_dup python: self.getAllOpinionRequestsNoDup(); \r\n\">\r\n\r\n<p>Pour les motifs pr\u00e9cit\u00e9s, DECIDE \u00e0 l'unanimit\u00e9 des membres votants : </p> \r\n\r\n<p><strong>1. </strong> d'\u00e9mettre un avis favorable conditionnel \u00e0 exploiter <tal:a replace=\"python: self.getLicenceSubject()[0].lower() + self.getLicenceSubject()[1:]\"/> et moyennant le respect des prescriptions l\u00e9gales et r\u00e9glementaires en vigueur et des conditions d'exploitation pr\u00e9cis\u00e9es dans le pr\u00e9sent arr\u00eat\u00e9.</p> \r\n<p>&nbsp;</p>\r\n\r\n<p><strong>2. </strong> Sont autoris\u00e9s, les b\u00e2timents, installations, activit\u00e9s, proc\u00e9d\u00e9s et d\u00e9p\u00f4ts principaux suivants :</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>3. </strong> Les rubriques compl\u00e9mentaires aux rubriques autoris\u00e9es et applicables \u00e0 l\u2019\u00e9tablissement sont les suivantes :</p>\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>4. </strong>Les conditions transform\u00e9es applicables la modification de l\u2019\u00e9tablissement sont les suivantes :</p>\r\n\r\n<ol>\r\n\t<li>Les dispositions de l\u2019Arr\u00eat\u00e9 du Gouvernement wallon du 4 juillet 2002 fixant les conditions g\u00e9n\u00e9rales d\u2019exploitation des \u00e9tablissements vis\u00e9s par le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement</li>\r\n\t<li>Les dispositions du R\u00e8glement g\u00e9n\u00e9ral sur les installations \u00e9lectriques rendues obligatoires dans les \u00e9tablissements dangereux, insalubres ou incommodes par l'arr\u00eat\u00e9 royal du 02 septembre 1981</li>\r\n\t<li>Les dispositions du R\u00e8glement G\u00e9n\u00e9ral pour la Protection du Travail (Titres II et III) [prescriptions non abrog\u00e9es]</li>\r\n\t<li>Les dispositions de l\u2019Arr\u00eat\u00e9 du Gouvernement wallon du 21 d\u00e9cembre 2006 d\u00e9terminant les conditions int\u00e9grales relatives aux transformateurs statiques d\u2019\u00e9lectricit\u00e9 d\u2019une puissance nominale \u00e9gale ou sup\u00e9rieure \u00e0 100 kVA et inf\u00e9rieure \u00e0 1 500 kVA</li>\r\n</ol>\r\n\r\n<p>Ces conditions peuvent \u00eatre consult\u00e9es sur le site <u>http://environnement.wallonie.be</u>.</p>\r\n\r\n<p><strong>5. </strong>Les conditions d'exploitation particuli\u00e8res sont compl\u00e9t\u00e9es par les conditions applicables \u00e0 l'\u00e9tablissement sont les suivantes : XXX</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n\r\n\r\n\r\n\r\n\r\n</tal:vars>"
+                }
+            ],
+            "title": "Avis pr\u00e9alable du Coll\u00e8ge",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:44+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/premiere-reunion-patrimoine",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/premiere-reunion-patrimoine",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "8107bedaa0f247cc9db25c06720747be",
+            "activatedFields": [
+                "reportCreationDate",
+                "reportReceptionDate",
+                "misc_description"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:45+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de la r\u00e9union",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IPatrimonyMeetingEvent"
+            ],
+            "id": "premiere-reunion-patrimoine",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2023-05-11T08:17:45+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "Premi\u00e8re r\u00e9union patrimoine",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/prorogation-30-jours",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/prorogation-30-jours",
+            "@type": "EventConfig",
+            "TALCondition": null,
+            "UID": "b8471003ae2e42cf810ed3946f7a63a9",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2024-05-08T08:45:28+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [],
+            "id": "prorogation-30-jours",
+            "isKeyEvent": false,
+            "is_folderish": true,
+            "keyDates": [],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-08T08:45:28+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Prorogation 30 jours",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2024-05-08T08:45:28+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/rapport-synthese",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/rapport-synthese",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "9674d74deafd45e48eecb6970e8a641d",
+            "activatedFields": null,
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:44+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de r\u00e9ception",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IDecisionProjectFromSPWEvent"
+            ],
+            "id": "rapport-synthese",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-08T08:41:12+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "Rapport de synth\u00e8se",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:44+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/recepisse-complement",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/recepisse-complement",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "af525fb318b144778c52969d52bcbbad",
+            "activatedFields": [
+                "transmitDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:41+00:00",
+            "description": null,
+            "eventDateLabel": "Date de d\u00e9p\u00f4t",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IMissingPartDepositEvent",
+                "Products.urban.interfaces.IMissingPartTransmitToSPWEvent"
+            ],
+            "id": "recepisse-complement",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-06-14T12:34:42+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "R\u00e9c\u00e9piss\u00e9 de compl\u00e9ments",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:41+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/reception-decision-dgo3",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/reception-decision-dgo3",
+            "@type": "EventConfig",
+            "TALCondition": "python: here.getAuthority() == 'ft'",
+            "UID": "bf0339c3faa94ad5a4c678dca53e50a9",
+            "activatedFields": [
+                "decisionDate",
+                "decision",
+                "validityEndDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:45+00:00",
+            "description": null,
+            "eventDateLabel": "Date de r\u00e9ception",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IWalloonRegionDecisionEvent",
+                "Products.urban.interfaces.ILicenceDeliveryEvent"
+            ],
+            "id": "reception-decision-dgo3",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-10-02T09:29:42+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "D\u00e9cision du FT",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/reception-plans-modificatifs",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/reception-plans-modificatifs",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "21e63143fa32449d8f6a48553228a7e5",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:45+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de r\u00e9ception",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IModificationDepositEvent"
+            ],
+            "id": "reception-plans-modificatifs",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-23T13:37:35+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": null,
+            "title": "R\u00e9ception des plans modificatifs",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/recours-au-gouvernement",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/recours-au-gouvernement",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "4f0a21c758ca40e6a7e95beb4ec5a8be",
+            "activatedFields": [
+                "transmitDate",
+                "auditionDate",
+                "decisionDate",
+                "recourseDecision",
+                "recourseDecisionDisplayDate",
+                "displayDateEnd",
+                "pmDescription",
+                "pmDecision",
+                "pmMotivation",
+                "pmTitle",
+                "displayDate"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:45+00:00",
+            "description": null,
+            "eventDateLabel": "Date de r\u00e9ception",
+            "eventPortalType": "UrbanEventCollege",
+            "eventType": [
+                "Products.urban.interfaces.IRecourseEvent"
+            ],
+            "id": "recours-au-gouvernement",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate",
+                "decisionDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-13T14:49:07+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Recours",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/reunion-dinformation-prealable",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/reunion-dinformation-prealable",
+            "@type": "EventConfig",
+            "TALCondition": null,
+            "UID": "477b8dc994844b769f6f79f715eccf44",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2024-05-08T08:46:45+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [],
+            "id": "reunion-dinformation-prealable",
+            "isKeyEvent": false,
+            "is_folderish": true,
+            "keyDates": [],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-08T08:46:45+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "R\u00e9union d'information pr\u00e9alable",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2024-05-08T08:46:45+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/reunion-patrimoine-supplementaire",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/reunion-patrimoine-supplementaire",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "c997d43ec1bf482dac18cf516316ed45",
+            "activatedFields": [
+                "reportCreationDate",
+                "reportReceptionDate",
+                "misc_description"
+            ],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:17:46+00:00",
+            "description": {
+                "content-type": null,
+                "data": "",
+                "encoding": "utf-8"
+            },
+            "eventDateLabel": "Date de la r\u00e9union",
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IPatrimonyMeetingEvent"
+            ],
+            "id": "reunion-patrimoine-supplementaire",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2023-05-11T08:17:46+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": true,
+            "textDefaultValues": null,
+            "title": "R\u00e9union patrimoine suppl\u00e9mentaire",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2023-05-11T08:17:46+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/township-council",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/township-council",
+            "@type": "EventConfig",
+            "TALCondition": "python: here.getPublicRoadModifications()",
+            "UID": "814841b5b13d46b5be83571fcfc2186a",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2023-05-11T08:16:32+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [],
+            "id": "township-council",
+            "isKeyEvent": true,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-30T13:45:15+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Passage au conseil communal",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2024-05-08T10:39:31+00:00"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/transmis-des-complements-au-ft",
+            "@relative_path": "/portal_urban/envclasstwo/eventconfigs/transmis-des-complements-au-ft",
+            "@type": "EventConfig",
+            "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+            "UID": "ebd0bae6fd8d49b49a4ac7020881c0cc",
+            "activatedFields": [],
+            "allow_discussion": false,
+            "created": "2024-05-08T10:26:37+00:00",
+            "description": null,
+            "eventDateLabel": null,
+            "eventPortalType": "UrbanEvent",
+            "eventType": [
+                "Products.urban.interfaces.IMissingPartTransmitToSPWEvent"
+            ],
+            "id": "transmis-des-complements-au-ft",
+            "isKeyEvent": false,
+            "is_folderish": true,
+            "keyDates": [
+                "eventDate"
+            ],
+            "layout": "view",
+            "lock": {
+                "locked": false,
+                "stealable": true
+            },
+            "modified": "2024-05-30T12:52:11+00:00",
+            "parent": {
+                "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+                "@type": "Folder",
+                "UID": "487fdc5b974047f087f542eba74eeb86",
+                "description": "",
+                "review_state": "private",
+                "title": "Types d'\u00e9v\u00e8nements"
+            },
+            "review_state": "enabled",
+            "showTitle": false,
+            "textDefaultValues": [],
+            "title": "Transmis des compl\u00e9ments au FT",
+            "version": "current",
+            "workflow_history": {
+                "activation_workflow": [
+                    {
+                        "action": null,
+                        "actor": "admin",
+                        "comments": "",
+                        "review_state": "enabled",
+                        "time": "2024-05-08T10:26:37+00:00"
+                    }
+                ]
+            }
+        }
+    ]
+]
