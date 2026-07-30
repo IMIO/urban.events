@@ -81,4 +81,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import free notification event"
+    description=""
+    source="1005"
+    destination="1006"
+    handler=".migrations.import_free_notification_event"
+    profile="urban.events:default"
+    />
+
 </configure>

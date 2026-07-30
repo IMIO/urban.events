@@ -94,3 +94,14 @@ def install_bordering_licence_events(context):
         )
 
     logger.info("upgrade done!")
+
+
+def import_free_notification_event(context):
+    logger.info("starting : Import Free Notification event")
+    if "liege" not in utils.get_configs():
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/codt_article127",
+            handle_existing_content=utils.ExistingContent.UPDATE,
+        )
+
+    logger.info("upgrade done!")
