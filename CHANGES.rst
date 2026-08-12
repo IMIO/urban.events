@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.3 (2026-08-12)
+------------------
+
+New features:
+
+
+- Import event config for free notification
+  [daggelpop] (URB-3561)
+
+
 1.0.2 (2026-05-12)
 ------------------
 
