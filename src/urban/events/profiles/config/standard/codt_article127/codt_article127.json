@@ -1,6 +1,7 @@
 [
 {
-    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes/demande-davis-pole-environnement",
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/eventconfigs/demande-davis-pole-environnement",
+    "@relative_path": "/portal_urban/codt_article127/eventconfigs/demande-davis-pole-environnement",
     "@type": "OpinionEventConfig",
     "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
     "UID": "47bcbe9ac80648acad6be5218faf655b",
@@ -49,7 +50,7 @@
     "numbering": null,
     "organization": null,
     "parent": {
-        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes",
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/eventconfigs",
         "@type": "Folder",
         "UID": "b9d04510ccb74f2593f37b3e65c2def5",
         "description": "",
@@ -79,7 +80,8 @@
     }
 },
 {
-    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes/demande-davis-amenagement-du-territoire",
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/eventconfigs/demande-davis-amenagement-du-territoire",
+    "@relative_path": "/portal_urban/codt_article127/eventconfigs/demande-davis-amenagement-du-territoire",
     "@type": "OpinionEventConfig",
     "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
     "UID": "6943b777542b41189ce509403f677b8c",
@@ -128,7 +130,7 @@
     "numbering": null,
     "organization": null,
     "parent": {
-        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/urbaneventtypes",
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/eventconfigs",
         "@type": "Folder",
         "UID": "b9d04510ccb74f2593f37b3e65c2def5",
         "description": "",
@@ -156,5 +158,59 @@
             }
         ]
     }
-}
+  },
+  {
+    "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/eventconfigs/notification-libre",
+    "@relative_path": "/portal_urban/codt_article127/eventconfigs/notification-libre",
+    "@type": "EventConfig",
+    "TALCondition": null,
+    "UID": "b11a08ecd07a45909f17c61c166b28fc",
+    "activatedFields": [],
+    "allow_discussion": false,
+    "created": "2026-07-23T09:31:36+00:00",
+    "description": {
+        "content-type": "text/x-plone-outputfilters-html",
+        "data": "",
+        "encoding": "utf-8"
+    },
+    "eventDateLabel": null,
+    "eventPortalType": "UrbanEvent",
+    "eventType": [
+        "Products.urban.interfaces.IFreeNotificationEvent"
+    ],
+    "id": "notification-libre",
+    "isKeyEvent": false,
+    "is_folderish": true,
+    "keyDates": [],
+    "layout": "view",
+    "lock": {
+        "locked": false,
+        "stealable": true
+    },
+    "modified": "2026-07-23T09:37:23+00:00",
+    "parent": {
+        "@id": "http://localhost:8081/liege/liege/portal_urban/codt_article127/eventconfigs",
+        "@type": "Folder",
+        "UID": "b9d04510ccb74f2593f37b3e65c2def5",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "review_state": "enabled",
+    "showTitle": true,
+    "textDefaultValues": [],
+    "title": "Notification libre",
+    "version": "current",
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2026-07-23T09:31:36+00:00"
+            }
+        ]
+    }
+  }
 ]
