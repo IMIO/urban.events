@@ -1,0 +1,182 @@
+[
+    {
+        "order": 0,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/reunion-dinformation-prealable",
+        "uuid": "2335fc2f76be4168983066bcbb400284"
+    },
+    {
+        "order": 1,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/etude-dincidence",
+        "uuid": "e9a6b388a8a24d0cb3374596f022aced"
+    },
+    {
+        "order": 2,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/depot-de-la-demande",
+        "uuid": "e4083e72fa9d4d90a318a34ad3638db0"
+    },
+    {
+        "order": 3,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/copy_of_depot-de-la-demande",
+        "uuid": "63d9e6d043454c4e8b2da439959a1656"
+    },
+    {
+        "order": 4,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/depot-complements-demande",
+        "uuid": "8092f8a6b25942b692c01d36caf15654"
+    },
+    {
+        "order": 5,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/copy2_of_depot-de-la-demande",
+        "uuid": "c006cfd8c2a74a918fede68c3c04664e"
+    },
+    {
+        "order": 6,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/dossier-irrecevable",
+        "uuid": "bd35d4d3ea884e6c853b18902ea3fa86"
+    },
+    {
+        "order": 7,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/dossier-complet",
+        "uuid": "3a29898f110c459f85b45d3cbe8fc97f"
+    },
+    {
+        "order": 8,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/enquete-publique",
+        "uuid": "44fb68321cde4fd085e66d2e351628b1"
+    },
+    {
+        "order": 9,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/copy_of_enquete-publique",
+        "uuid": "d6c671c9aeb4442cb4caa4bb6984736b"
+    },
+    {
+        "order": 10,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/config-opinion-request",
+        "uuid": "085b733691f246858fcb8a7287311b6d"
+    },
+    {
+        "order": 11,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/avis-college",
+        "uuid": "e2f4961efc7c4034a0240366f4bc3a51"
+    },
+    {
+        "order": 12,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/passage-au-conseil-communal",
+        "uuid": "636fe644c81444999e052f759eb8d334"
+    },
+    {
+        "order": 13,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/rapport-synthese",
+        "uuid": "fc5f6a7d989f4520a3f71ce026b17f69"
+    },
+    {
+        "order": 14,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/dossier-incomplet",
+        "uuid": "467b01f6ef7e4f6f8dd94699bc9d7588"
+    },
+    {
+        "order": 15,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/reception-plans-modificatifs",
+        "uuid": "ba4c3745f8474ed5b5c9c7f84c9b6143"
+    },
+    {
+        "order": 16,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/plans-modificatifs",
+        "uuid": "5cf8ccbf519e4887b1c8aaea09623baf"
+    },
+    {
+        "order": 17,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/prorogation-30-jours",
+        "uuid": "5c2f5b90308e437ab06a2a6b7182b0f4"
+    },
+    {
+        "order": 18,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/decision-ft-fd",
+        "uuid": "ed3bc76a5fa74829b145be8152a242a1"
+    },
+    {
+        "order": 19,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/delivrance-permis",
+        "uuid": "eae0a106523447bdaa38c0615ab0375c"
+    },
+    {
+        "order": 20,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/copy_of_avis-FD",
+        "uuid": "c8731dfe9fd84a20be94ec0100245b46"
+    },
+    {
+        "order": 21,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/affichage-decision",
+        "uuid": "e937ce4f4bca46dc8cee48d6ddc5aac3"
+    },
+    {
+        "order": 22,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/recours-gouvernement",
+        "uuid": "19ef3b57b34b455099b61c7845ca2f5b"
+    },
+    {
+        "order": 23,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/decision-recours",
+        "uuid": "f9ee0b7685aa458d857f92fecaaf4189"
+    },
+    {
+        "order": 24,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/premiere-reunion-patrimoine",
+        "uuid": "cd41a2f8d1b546c99f8620cb18b78c92"
+    },
+    {
+        "order": 25,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/deuxieme-reunion-patrimoine",
+        "uuid": "7471076306f74982a738da2d09aff497"
+    },
+    {
+        "order": 26,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/reunion-patrimoine-supplementaire",
+        "uuid": "c1419f7b445b4f78aecbe8893fd009b0"
+    },
+    {
+        "order": 27,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/en-attente-de-paiement-de-lamende",
+        "uuid": "424cb01d977d4905a548c2400c5b7e75"
+    },
+    {
+        "order": 28,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/cession-de-permis",
+        "uuid": "e75bb86918194ad7a2e5e955e33ddaf3"
+    },
+    {
+        "order": 52,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/dossier-abandonne",
+        "uuid": "cad5716932334e84859ccc91b32ae4e5"
+    },
+    {
+        "order": 53,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/decision-de-revision-des-conditions-particulieres",
+        "uuid": "4f0f7358d11d41db81ea18ad0d1d3204"
+    },
+    {
+        "order": 54,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/depot-de-revision-des-conditions-particulieres",
+        "uuid": "23939c8962584c578f4a61c4596a8fe9"
+    },
+    {
+        "order": 55,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/projet-de-revision-des-conditions-particulieres",
+        "uuid": "e9d183d98d364a3a95eb237aec01bd39"
+    },
+    {
+        "order": 56,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/refus-tacite",
+        "uuid": "d617f298286a4cd89a4e1d771b84d2b7"
+    },
+    {
+        "order": 57,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/cession",
+        "uuid": "733bad5fcb534259abbb60f1d4258b24"
+    },
+    {
+        "order": 58,
+        "path": "/urbanisme/portal_urban/codt_uniquelicence/eventconfigs/information",
+        "uuid": "55ac42f0d86847bf962cfb647bc14375"
+    }
+]

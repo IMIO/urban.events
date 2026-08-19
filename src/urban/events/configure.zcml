@@ -87,6 +87,14 @@
     source="1005"
     destination="1006"
     handler=".migrations.import_free_notification_event"
+    profile="urban.events:default"/>
+
+  <genericsetup:upgradeStep
+    title="Import envclassone, codt_uniquelicence and envclasstwo events"
+    description=""
+    source="1005"
+    destination="1006"
+    handler=".migrations.install_uniquelicence_and_envclasstwo_events"
     profile="urban.events:default"
     />
 
