@@ -21,8 +21,8 @@ def update_talcondition_on_events(context):
     )
     for brain in brains:
         obj = brain.getObject()
-        if obj.TALCondition in (None, "context/is_CODT2024"):
-            obj.TALCondition = "here/is_CODT2024"
+        if obj.TALCondition in (None, u"context/is_CODT2024"):
+            obj.TALCondition = u"here/is_CODT2024"
             logger.info("Update {0}".format(obj.absolute_url()))
     logger.info("upgrade done!")
 
@@ -48,7 +48,7 @@ def install_roaddecree_procedure(context):
     logger.info("starting : Import roaddecree events")
     directory_path = os.path.dirname(os.path.realpath(__file__))
     if "liege" not in utils.get_configs():
-        path = "./profiles/config/standard/roaddecree/urbantemplates.json"
+        path="./profiles/config/standard/roaddecree/urbantemplates.json"
         utils.import_json_config(
             json_path=os.path.normpath(os.path.join(directory_path, path)),
             context=api.portal.get_tool("portal_urban"),
@@ -107,15 +107,18 @@ def import_free_notification_event(context):
     logger.info("upgrade done!")
 
 
-def install_uniquelicence_and_envclasstwo_events(context):
-    logger.info("starting : Import codt_uniquelicence and envclasstwo events")
+def install_uniquelicence_and_envevents(context):
+    logger.info(
+        "starting : Import codt_uniquelicence, envclassone and envclasstwo events"
+    )
     if "liege" not in utils.get_configs():
 
-        # env classone
+        # envclassone
         utils.import_all_config(
             base_json_path="./profiles/config/standard/envclassone",
             handle_existing_content=utils.ExistingContent.UPDATE,
         )
+
         # codt_uniquelicence
         utils.import_all_config(
             base_json_path="./profiles/config/standard/codt_uniquelicence",

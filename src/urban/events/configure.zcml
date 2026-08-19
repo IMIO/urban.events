@@ -94,7 +94,7 @@
     description=""
     source="1005"
     destination="1006"
-    handler=".migrations.install_uniquelicence_and_envclasstwo_events"
+    handler=".migrations.install_uniquelicence_and_envevents"
     profile="urban.events:default"
     />
 
