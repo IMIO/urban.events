@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from urban.events import utils
 from plone import api
+from urban.events import utils
 
 import logging
 import os
+
 
 logger = logging.getLogger("urban.events: migrations")
 
