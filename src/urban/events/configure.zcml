@@ -90,4 +90,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import envclassone, codt_uniquelicence and envclasstwo events"
+    description=""
+    source="1006"
+    destination="1007"
+    handler=".migrations.install_uniquelicence_and_envevents"
+    profile="urban.events:default"
+    />
+
 </configure>

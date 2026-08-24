@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from urban.events import utils
 from plone import api
+from urban.events import utils
 
 import logging
 import os
+
 
 logger = logging.getLogger("urban.events: migrations")
 
@@ -101,6 +102,33 @@ def import_free_notification_event(context):
     if "liege" not in utils.get_configs():
         utils.import_all_config(
             base_json_path="./profiles/config/standard/codt_article127",
+            handle_existing_content=utils.ExistingContent.UPDATE,
+        )
+
+    logger.info("upgrade done!")
+
+
+def install_uniquelicence_and_envevents(context):
+    logger.info(
+        "starting : Import codt_uniquelicence, envclassone and envclasstwo events"
+    )
+    if "liege" not in utils.get_configs():
+
+        # envclassone
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/envclassone",
+            handle_existing_content=utils.ExistingContent.UPDATE,
+        )
+
+        # codt_uniquelicence
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/codt_uniquelicence",
+            handle_existing_content=utils.ExistingContent.UPDATE,
+        )
+
+        # envclasstwo
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/envclasstwo",
             handle_existing_content=utils.ExistingContent.UPDATE,
         )
 
