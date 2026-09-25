@@ -105,3 +105,21 @@ def import_free_notification_event(context):
         )
 
     logger.info("upgrade done!")
+
+
+def install_provision_of_security_event(context):
+    logger.info("starting : Import provision of security event")
+    if "liege" not in utils.get_configs():
+        for licence_type in [
+            "codt_uniquelicence",
+            "codt_uniqueborderinglicence",
+            "envclassone",
+            "envclasstwo",
+        ]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                match_filename="constitution_surete.json",
+                handle_existing_content=utils.ExistingContent.UPDATE,
+            )
+
+    logger.info("upgrade done!")
