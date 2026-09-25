@@ -22,8 +22,8 @@ def update_talcondition_on_events(context):
     )
     for brain in brains:
         obj = brain.getObject()
-        if obj.TALCondition in (None, u"context/is_CODT2024"):
-            obj.TALCondition = u"here/is_CODT2024"
+        if obj.TALCondition in (None, "context/is_CODT2024"):
+            obj.TALCondition = "here/is_CODT2024"
             logger.info("Update {0}".format(obj.absolute_url()))
     logger.info("upgrade done!")
 
@@ -49,7 +49,7 @@ def install_roaddecree_procedure(context):
     logger.info("starting : Import roaddecree events")
     directory_path = os.path.dirname(os.path.realpath(__file__))
     if "liege" not in utils.get_configs():
-        path="./profiles/config/standard/roaddecree/urbantemplates.json"
+        path = "./profiles/config/standard/roaddecree/urbantemplates.json"
         utils.import_json_config(
             json_path=os.path.normpath(os.path.join(directory_path, path)),
             context=api.portal.get_tool("portal_urban"),
@@ -145,8 +145,24 @@ def import_acknowledgment_of_transfer_event(context):
         ]:
             utils.import_all_config(
                 base_json_path="./profiles/config/standard/{0}".format(licence_type),
-                match_filename="prise-de-connaissance-de-la-cession.json",
                 handle_existing_content=utils.ExistingContent.SKIP,
+                match_filename="prise-de-connaissance-de-la-cession.json",
             )
+    logger.info("upgrade done!")
 
+
+def import_decision_register_of_modification_event(context):
+    logger.info("starting : Import decision register of modification event")
+    if "liege" not in utils.get_configs():
+        for licence_type in [
+            "codt_uniquelicence",
+            "codt_uniqueborderinglicence",
+            "envclassone",
+            "envclasstwo",
+        ]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                match_filename="decision_registre_modifications.json",
+                handle_existing_content=utils.ExistingContent.UPDATE,
+            )
     logger.info("upgrade done!")
