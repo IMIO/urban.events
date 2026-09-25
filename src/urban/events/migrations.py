@@ -113,23 +113,10 @@ def install_uniquelicence_and_envevents(context):
         "starting : Import codt_uniquelicence, envclassone and envclasstwo events"
     )
     if "liege" not in utils.get_configs():
-
-        # envclassone
-        utils.import_all_config(
-            base_json_path="./profiles/config/standard/envclassone",
-            handle_existing_content=utils.ExistingContent.UPDATE,
-        )
-
-        # codt_uniquelicence
-        utils.import_all_config(
-            base_json_path="./profiles/config/standard/codt_uniquelicence",
-            handle_existing_content=utils.ExistingContent.UPDATE,
-        )
-
-        # envclasstwo
-        utils.import_all_config(
-            base_json_path="./profiles/config/standard/envclasstwo",
-            handle_existing_content=utils.ExistingContent.UPDATE,
-        )
+        for licence_type in ["envclassone", "codt_uniquelicence", "envclasstwo"]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                handle_existing_content=utils.ExistingContent.UPDATE,
+            )
 
     logger.info("upgrade done!")
