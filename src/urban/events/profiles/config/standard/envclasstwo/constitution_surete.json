@@ -1,0 +1,64 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/constitution-de-surete",
+        "@relative_path": "/portal_urban/envclasstwo/eventconfigs/constitution-de-surete",
+        "@type": "EventConfig",
+        "TALCondition": "",
+        "UID": "6c7d0abf0b1e4f8ab9e0f493b6b715e1",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "contributors": [],
+        "created": "2026-09-15T00:00:00+00:00",
+        "creators": [
+            "admin"
+        ],
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": null,
+            "encoding": "utf-8"
+        },
+        "effective": null,
+        "eventDateLabel": "Date de l'acte de constitution de s\u00fbret\u00e9",
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IProvisionOfSecurity"
+        ],
+        "expires": null,
+        "id": "constitution-de-surete",
+        "isDefaultValue": false,
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "language": "fr",
+        "layout": "view",
+        "location": null,
+        "modified": "2026-09-15T00:00:00+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+            "@type": "Folder",
+            "UID": "79e8668c53cf4ef8bd6602122b0a3c15",
+            "description": null,
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "rights": null,
+        "showTitle": false,
+        "subjects": [],
+        "textDefaultValues": [],
+        "title": "Constitution de s\u00fbret\u00e9",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": null,
+                    "review_state": "enabled",
+                    "time": "2026-09-15T00:00:00+00:00"
+                }
+            ]
+        }
+    }
+]
