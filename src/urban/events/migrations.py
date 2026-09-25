@@ -105,3 +105,21 @@ def import_free_notification_event(context):
         )
 
     logger.info("upgrade done!")
+
+
+def import_decision_register_of_modification_event(context):
+    logger.info("starting : Import decision register of modification event")
+    if "liege" not in utils.get_configs():
+        for licence_type in [
+            "codt_uniquelicence",
+            "codt_uniqueborderinglicence",
+            "envclassone",
+            "envclasstwo",
+        ]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                match_filename="decision_registre_modifications.json",
+                handle_existing_content=utils.ExistingContent.UPDATE,
+            )
+
+    logger.info("upgrade done!")
