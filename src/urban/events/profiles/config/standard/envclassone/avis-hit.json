@@ -1,0 +1,72 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/avis-hit",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/avis-hit",
+        "@type": "OpinionEventConfig",
+        "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+        "UID": "c6cb2dafb39a4e46a72d8e4479c59b51",
+        "abbreviation": "DPSols",
+        "activatedFields": [
+            "receiptDate",
+            "receivedDocumentReference",
+            "externalDecision"
+        ],
+        "allow_discussion": false,
+        "country": null,
+        "created": "2023-07-17T10:39:38+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "<p>D.P.S. \u2013 Direction de la Protection des Sols</p>\r\n\r\n<p>Avenue Prince de Li\u00e8ge 15</p>\r\n\r\n<p>B-5100&nbsp;&nbsp; NAMUR</p>\r\n",
+            "encoding": "utf-8"
+        },
+        "dispatchInformation": null,
+        "eventDateLabel": "date de transmis",
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [],
+        "externalDirections": [],
+        "function_department": null,
+        "id": "avis-hit",
+        "internal_service": null,
+        "isDefaultValue": false,
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "is_internal_service": false,
+        "keyDates": [],
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-03-28T11:13:20+00:00",
+        "organization": null,
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "postcode_locality": null,
+        "recipientName": null,
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "DPS Protection des Sols",
+        "typeAndStreetName_number_box": null,
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "ccrepillon",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-04-25T09:47:20+00:00"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/avis-pompiers",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/avis-pompiers",
+        "@type": "OpinionEventConfig",
+        "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+        "UID": "598b555a2b004a1ea30fa92a80026720",
+        "abbreviation": "Pompiers",
+        "activatedFields": [
+            "receiptDate",
+            "receivedDocumentReference",
+            "externalDecision"
+        ],
+        "allow_discussion": false,
+        "country": null,
+        "created": "2023-07-17T10:39:38+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "<p>rue Ransonnet 5</p>\r\n\r\n<p>4020 LIEGE</p>\r\n",
+            "encoding": "utf-8"
+        },
+        "dispatchInformation": null,
+        "eventDateLabel": "date de transmis",
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [],
+        "externalDirections": [],
+        "function_department": null,
+        "id": "avis-pompiers",
+        "internal_service": null,
+        "isDefaultValue": false,
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "is_internal_service": false,
+        "keyDates": [],
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-04-25T08:05:56+00:00",
+        "organization": null,
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "postcode_locality": null,
+        "recipientName": null,
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Avis Pompiers",
+        "typeAndStreetName_number_box": null,
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-01-25T12:09:51+00:00"
+                }
+            ]
+        }
+    }
+]

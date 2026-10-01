@@ -1,0 +1,72 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/avis-mi",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/avis-mi",
+        "@type": "OpinionEventConfig",
+        "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+        "UID": "f0670e0b6c31418388fa3e872bea7c8f",
+        "abbreviation": "MI",
+        "activatedFields": [
+            "receiptDate",
+            "receivedDocumentReference",
+            "externalDecision"
+        ],
+        "allow_discussion": false,
+        "country": null,
+        "created": "2023-07-17T10:39:38+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "<table style=\"border:undefined; font-family:&quot;Liberation Sans&quot;; font-size:x-small\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><span style=\"font-size:x-small\"><span style=\"font-family:&quot;Liberation Sans&quot;\"><span style=\"font-size:medium\">SPW Mobilit\u00e9 et Infrastructures - Direction des Routes de Charleroi </span></span></span></p>\r\n\r\n\t\t\t<p><span style=\"font-size:x-small\"><span style=\"font-family:&quot;Liberation Sans&quot;\"><span style=\"font-size:medium\">Rue de l\u2019Ecluse 22 </span></span></span></p>\r\n\r\n\t\t\t<p><span style=\"font-size:x-small\"><span style=\"font-family:&quot;Liberation Sans&quot;\"><span style=\"font-size:medium\">B-6000 CHARLEROI</span></span></span></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n",
+            "encoding": "utf-8"
+        },
+        "dispatchInformation": null,
+        "eventDateLabel": "date de transmis",
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [],
+        "externalDirections": [],
+        "function_department": null,
+        "id": "avis-mi",
+        "internal_service": null,
+        "isDefaultValue": false,
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "is_internal_service": false,
+        "keyDates": [],
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-03-28T11:03:14+00:00",
+        "organization": null,
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "postcode_locality": null,
+        "recipientName": null,
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Mobilit\u00e9 Infrasctructure",
+        "typeAndStreetName_number_box": null,
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "ccrepillon",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-04-25T09:47:21+00:00"
+                }
+            ]
+        }
+    }
+]

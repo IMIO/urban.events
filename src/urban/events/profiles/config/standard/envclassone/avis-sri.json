@@ -1,0 +1,72 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/avis-sri",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/avis-sri",
+        "@type": "OpinionEventConfig",
+        "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+        "UID": "ed47c12418c54e06988502aafa7ed9e7",
+        "abbreviation": "SRI ZoHE",
+        "activatedFields": [
+            "receiptDate",
+            "receivedDocumentReference",
+            "externalDecision"
+        ],
+        "allow_discussion": false,
+        "country": null,
+        "created": "2023-07-17T10:39:38+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "<p>S.R.I. - Zone de secours Hainaut-Est Service Pr\u00e9vention</p>\r\n\r\n<p>Rue de la Tombe 112</p>\r\n\r\n<p>B-6001&nbsp;&nbsp; MARCINELLE</p>\r\n",
+            "encoding": "utf-8"
+        },
+        "dispatchInformation": null,
+        "eventDateLabel": "date de transmis",
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [],
+        "externalDirections": [],
+        "function_department": null,
+        "id": "avis-sri",
+        "internal_service": null,
+        "isDefaultValue": false,
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "is_internal_service": false,
+        "keyDates": [],
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-03-28T11:03:14+00:00",
+        "organization": null,
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "postcode_locality": null,
+        "recipientName": null,
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "S.R.I \u2013 Zone de Secours Hainaut-Est",
+        "typeAndStreetName_number_box": null,
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "ccrepillon",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-04-25T09:47:21+00:00"
+                }
+            ]
+        }
+    }
+]

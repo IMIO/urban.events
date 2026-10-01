@@ -1,0 +1,72 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/copy3_of_avis-pompiers-6389",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/copy3_of_avis-pompiers-6389",
+        "@type": "OpinionEventConfig",
+        "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+        "UID": "6f1b4d48f38f4901a2e629d2fd7a0209",
+        "abbreviation": "PAC",
+        "activatedFields": [
+            "receiptDate",
+            "receivedDocumentReference",
+            "externalDecision"
+        ],
+        "allow_discussion": false,
+        "country": null,
+        "created": "2023-07-17T10:39:38+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "<p>PORT AUTONOME DE CHARLEROI</p>\r\n\r\n<p>Rue de Marcinelle 31</p>\r\n\r\n<p>B-6000&nbsp; CHARLEROI</p>\r\n",
+            "encoding": "utf-8"
+        },
+        "dispatchInformation": null,
+        "eventDateLabel": "date de transmis",
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [],
+        "externalDirections": [],
+        "function_department": null,
+        "id": "copy3_of_avis-pompiers-6389",
+        "internal_service": null,
+        "isDefaultValue": false,
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "is_internal_service": false,
+        "keyDates": [],
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2023-10-12T14:26:18+00:00",
+        "organization": null,
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "postcode_locality": null,
+        "recipientName": null,
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "PORT AUTONOME DE CHARLEROI",
+        "typeAndStreetName_number_box": null,
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "ccrepillon",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-04-25T09:47:21+00:00"
+                }
+            ]
+        }
+    }
+]

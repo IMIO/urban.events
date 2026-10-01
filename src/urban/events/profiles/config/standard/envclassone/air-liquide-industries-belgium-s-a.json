@@ -1,0 +1,78 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/air-liquide-industries-belgium-s-a",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/air-liquide-industries-belgium-s-a",
+        "@type": "OpinionEventConfig",
+        "TALCondition": "python: event.mayAddOpinionRequestEvent(here)",
+        "UID": "b2f10daeffb64eb98e2664690e2c4f8a",
+        "abbreviation": "Air Liquide Industries Belgium S.A.",
+        "activatedFields": [
+            "transmitDate",
+            "receiptDate",
+            "receivedDocumentReference",
+            "externalDecision"
+        ],
+        "allow_discussion": false,
+        "country": null,
+        "created": "2021-10-11T07:44:02+00:00",
+        "description": {
+            "content-type": null,
+            "data": "<p>Air Liquide Industries Belgium S.A.<br />Rue Adolphe Qu\u00e9telet 1 bis<br />7180 Seneffe</p>",
+            "encoding": "utf-8"
+        },
+        "dispatchInformation": null,
+        "eventDateLabel": "Date",
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [
+            "Products.urban.interfaces.IOpinionRequestEvent"
+        ],
+        "externalDirections": [
+            "hainaut_1",
+            "hainaut_2"
+        ],
+        "function_department": null,
+        "id": "air-liquide-industries-belgium-s-a",
+        "internal_service": null,
+        "isDefaultValue": false,
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "is_internal_service": false,
+        "keyDates": null,
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-03-19T13:51:44+00:00",
+        "organization": null,
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "postcode_locality": null,
+        "recipientName": null,
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": null,
+        "title": "Air Liquide Industries Belgium S.A.",
+        "typeAndStreetName_number_box": null,
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "ccrepillon",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-04-25T09:47:20+00:00"
+                }
+            ]
+        }
+    }
+]

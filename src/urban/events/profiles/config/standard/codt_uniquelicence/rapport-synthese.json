@@ -1,20 +1,23 @@
 [
     {
-        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/dossier-abandonne",
-        "@relative_path": "/portal_urban/envclassone/eventconfigs/dossier-abandonne",
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/rapport-synthese",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/rapport-synthese",
         "@type": "EventConfig",
-        "TALCondition": null,
-        "UID": "4a9db0b677ed4043ad5a098815f8b533",
-        "activatedFields": [],
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "fc5f6a7d989f4520a3f71ce026b17f69",
+        "activatedFields": [
+            "externalDecision",
+            "opinionText"
+        ],
         "allow_discussion": false,
-        "created": "2026-06-25T10:29:34+00:00",
+        "created": "2023-05-11T08:18:17+00:00",
         "description": null,
         "eventDateLabel": null,
         "eventPortalType": "UrbanEvent",
         "eventType": [
-            "Products.urban.interfaces.IForcedEndEvent"
+            "Products.urban.interfaces.IDecisionProjectFromSPWEvent"
         ],
-        "id": "dossier-abandonne",
+        "id": "rapport-synthese",
         "isKeyEvent": true,
         "is_folderish": true,
         "keyDates": [
@@ -25,11 +28,11 @@
             "locked": false,
             "stealable": true
         },
-        "modified": "2026-06-25T10:29:43+00:00",
+        "modified": "2024-06-18T10:16:30+00:00",
         "parent": {
-            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
             "@type": "Folder",
-            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "UID": "5a6425575cc240358cd2348fd7ce148a",
             "description": "",
             "review_state": "private",
             "title": "Types d'\u00e9v\u00e8nements"
@@ -37,7 +40,7 @@
         "review_state": "enabled",
         "showTitle": false,
         "textDefaultValues": [],
-        "title": "Dossier abandonn\u00e9",
+        "title": "Rapport de synth\u00e8se",
         "version": "current",
         "workflow_history": {
             "activation_workflow": [
@@ -46,7 +49,7 @@
                     "actor": "admin",
                     "comments": "",
                     "review_state": "enabled",
-                    "time": "2026-06-25T10:29:34+00:00"
+                    "time": "2023-05-11T08:18:17+00:00"
                 }
             ]
         }

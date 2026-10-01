@@ -1,0 +1,54 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/projet-de-revision-des-conditions-particulieres",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/projet-de-revision-des-conditions-particulieres",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "c82142f67f684b308b0059ca445eee1b",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2026-08-17T09:25:03+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [],
+        "id": "projet-de-revision-des-conditions-particulieres",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-08-17T09:25:03+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "licence_url": "https://demo-urban.imio.be/portal_urban/envclassone",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Projet de r\u00e9vision des conditions particuli\u00e8res",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-08-17T09:25:03+00:00"
+                }
+            ]
+        }
+    }
+]
