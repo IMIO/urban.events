@@ -1,0 +1,50 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/prorogation-30-jours",
+        "@relative_path": "/portal_urban/envclasstwo/eventconfigs/prorogation-30-jours",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "b8471003ae2e42cf810ed3946f7a63a9",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2024-05-08T08:45:28+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [],
+        "id": "prorogation-30-jours",
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "keyDates": [],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-05-08T08:45:28+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+            "@type": "Folder",
+            "UID": "487fdc5b974047f087f542eba74eeb86",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Prorogation 30 jours",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-05-08T08:45:28+00:00"
+                }
+            ]
+        }
+    }
+]

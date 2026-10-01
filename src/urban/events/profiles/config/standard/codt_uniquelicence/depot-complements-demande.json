@@ -1,0 +1,57 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/depot-complements-demande",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/depot-complements-demande",
+        "@type": "EventConfig",
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "8092f8a6b25942b692c01d36caf15654",
+        "activatedFields": [
+            "transmitDate"
+        ],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:18:14+00:00",
+        "description": null,
+        "eventDateLabel": "Date de d\u00e9p\u00f4t",
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IMissingPartDepositEvent",
+            "Products.urban.interfaces.IMissingPartTransmitToSPWEvent"
+        ],
+        "id": "depot-complements-demande",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-06-05T13:36:23+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
+            "@type": "Folder",
+            "UID": "5a6425575cc240358cd2348fd7ce148a",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "R\u00e9c\u00e9piss\u00e9 de compl\u00e9ments",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2023-05-11T08:18:14+00:00"
+                }
+            ]
+        }
+    }
+]

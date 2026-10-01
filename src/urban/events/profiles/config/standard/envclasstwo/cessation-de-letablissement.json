@@ -1,0 +1,75 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/cessation-de-letablissement",
+        "@relative_path": "/portal_urban/envclasstwo/eventconfigs/cessation-de-letablissement",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "f63a31782951462395616819df24c8dc",
+        "activatedFields": [
+            "receiptDate",
+            "pmTitle",
+            "pmDescription",
+            "pmMotivation",
+            "pmDecision"
+        ],
+        "allow_discussion": false,
+        "created": "2024-05-08T08:48:04+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEventCollege",
+        "eventType": [
+            "Products.urban.interfaces.ISimpleCollegeEvent"
+        ],
+        "id": "cessation-de-letablissement",
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "keyDates": [],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-06-18T11:15:10+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+            "@type": "Folder",
+            "UID": "487fdc5b974047f087f542eba74eeb86",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [
+            {
+                "fieldname": "pmTitle",
+                "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> ENVIRONNEMENT - <tal:a replace=\"self/reference\"/> - <tal:a replace=\"applicants_signaletic\"/> - <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> - CESSATION \r\n</tal:vars>"
+            },
+            {
+                "fieldname": "pmDescription",
+                "text": "Cessation du permis"
+            },
+            {
+                "fieldname": "pmMotivation",
+                "text": "<tal:vars define=\"\r\n    applicants_signaletic python: self.getApplicantsSignaletic();\r\n    portion_outs_text python: self.getPortionOutsText();\r\n    work_location_signaletic python: self.getWorkLocationSignaletic();\r\n    licence_subject python: self.getLicenceSubject();\r\n    reference self/reference;\r\n    date_decision python: tool.formatDate(licence.getLastSimpleCollege().getDecisionDate());\r\n    \r\n\">\r\n<p>Vu le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement ;</p>\r\n\r\n<p>Consid\u00e9rant que le coll\u00e8ge \u00e0 prit acte du permis en date du <tal:a replace=\"date_decision\"/>;</p>\r\n\r\n<p>Que la d\u00e9claration concerne <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/> cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> ; </p>\r\n\r\n<p>Consid\u00e9rant que l'exploitant nous informe de la cessation de son permis ;</p>\r\n\r\n</tal:vars>"
+            },
+            {
+                "fieldname": "pmDecision",
+                "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> <p>PREND CONNAISSANCE de la cessation susvis\u00e9e, et ,</p> <p>DECIDE unanimement d'en informer les Fonctionnaires technique et d\u00e9l\u00e9gu\u00e9.</p> </tal:vars>"
+            }
+        ],
+        "title": "Cessation de l'\u00e9tablissement",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-05-08T08:48:04+00:00"
+                }
+            ]
+        }
+    }
+]
