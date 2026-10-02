@@ -90,4 +90,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import decision register of modification event"
+    description="Event config used by the NOTICE DECISION_REGISTRE_COMMUNE notification"
+    source="1006"
+    destination="1007"
+    handler=".migrations.import_decision_register_of_modification_event"
+    profile="urban.events:default"
+    />
+
 </configure>
