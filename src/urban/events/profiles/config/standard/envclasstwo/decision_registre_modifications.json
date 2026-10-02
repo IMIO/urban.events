@@ -24,7 +24,7 @@
         "eventDateLabel": "Date",
         "eventPortalType": "UrbanEvent",
         "eventType": [
-            "Products.urban.interfaces.IDecisionRegisterOfModification"
+            "Products.urban.interfaces.IModificationRegistryDecisionEvent"
         ],
         "expires": null,
         "id": "decision-registre-modifications",

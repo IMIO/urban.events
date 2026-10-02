@@ -1,10 +1,10 @@
 [
     {
-        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/decision-registre-modifications",
-        "@relative_path": "/portal_urban/envclassone/eventconfigs/decision-registre-modifications",
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/decision-registre-modifications",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/decision-registre-modifications",
         "@type": "EventConfig",
         "TALCondition": "",
-        "UID": "97a08c0c08d14dab8b6b4131fb0eb262",
+        "UID": "0d37395d7a384117b5adf72adcd86e87",
         "activatedFields": [
             "decisionDate",
             "decision"
@@ -39,9 +39,9 @@
         "location": null,
         "modified": "2026-09-15T00:00:00+00:00",
         "parent": {
-            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
             "@type": "Folder",
-            "UID": "96a43d2f123242f680deb3235e7fa2ac",
+            "UID": "e02113bd1d7b4e16a2b830a46987f4ea",
             "description": null,
             "review_state": "private",
             "title": "Types d'\u00e9v\u00e8nements"
