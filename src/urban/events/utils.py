@@ -35,22 +35,6 @@ def remove_uid(data):
     return new_data
 
 
-def fix_empty_description(data):
-    """`description` is a RichText field on event configs, if it is exported as
-    None it would be dropped by `remove_none` and the object would keep the
-    default dexterity `description` (u""), that breaks the RichText widget"""
-    for item in data:
-        if item.get("@type") not in ("EventConfig", "OpinionEventConfig"):
-            continue
-        if item.get("description") is None:
-            item["description"] = {
-                "content-type": "text/html",
-                "data": "",
-                "encoding": "utf-8",
-            }
-    return data
-
-
 def remove_none(data):
     return [{k: v for k, v in item.items() if v is not None} for item in data]
 
@@ -150,7 +134,6 @@ def import_json_config(
     import_content.handle_missing_parent = 0
 
     data = remove_uid(data)
-    data = fix_empty_description(data)
     data = remove_none(data)
     data = fix_all_ids(data)
     data = handle_update_keys(data, handle_existing_content, update_keys)
@@ -200,19 +183,7 @@ def import_all_config(
     for root, dirs, files in licences_types:
         if files == []:
             continue
-        licence_type = root.split("/")[-1]
-        context_plone = os.path.normpath(
-            os.path.join(
-                "/".join(root_site.getPhysicalPath()),
-                base_context_path,
-                licence_type,
-                config_type,
-            )
-        )
-        imported = False
-        # sorted to get a stable creation order when a procedure is split
-        # into one json file per event
-        for file in sorted(files, key=lambda f: os.path.splitext(f)[0]):
+        for file in files:
             if match_filename is not None and file != match_filename:
                 continue
             if (not file.endswith(".json")) or file.endswith("_ordering.json"):
@@ -220,20 +191,18 @@ def import_all_config(
             if file in blacklist:
                 continue
             json_path = os.path.join(root, file)
+            licence_type = root.split("/")[-1]
+            context_plone = os.path.normpath(
+                os.path.join(
+                    "/".join(root_site.getPhysicalPath()),
+                    base_context_path,
+                    licence_type,
+                    config_type,
+                )
+            )
             import_json_config(
                 json_path=json_path,
                 context=context_plone,
                 handle_existing_content=handle_existing_content,
                 update_keys=update_keys,
-            )
-            imported = True
-
-        # A procedure split into one json file per event has a single
-        # `<licence_type>_ordering.json` for the whole folder, applied once
-        # all its events are imported
-        procedure_json_path = os.path.join(root, "{}.json".format(licence_type))
-        if imported and not os.path.isfile(procedure_json_path):
-            ordering_content(
-                procedure_json_path,
-                api.portal.get().restrictedTraverse(context_plone),
             )
