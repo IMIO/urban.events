@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from urban.events import utils
 from plone import api
+from urban.events import utils
 
 import logging
 import os
+
 
 logger = logging.getLogger("urban.events: migrations")
 
@@ -103,5 +104,18 @@ def import_free_notification_event(context):
             base_json_path="./profiles/config/standard/codt_article127",
             handle_existing_content=utils.ExistingContent.UPDATE,
         )
+
+    logger.info("upgrade done!")
+
+
+def install_dossier_abandonne_event(context):
+    logger.info("starting : Import dossier abandonne event for codt_uniquelicence")
+    if "liege" not in utils.get_configs():
+        for licence_type in ("codt_uniquelicence", "envclassone", "envclasstwo"):
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{}".format(licence_type),
+                handle_existing_content=utils.ExistingContent.UPDATE,
+                match_filename="dossier-abandonne.json",
+            )
 
     logger.info("upgrade done!")
