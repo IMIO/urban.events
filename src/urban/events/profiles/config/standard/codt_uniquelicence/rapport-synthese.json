@@ -1,0 +1,57 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/rapport-synthese",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/rapport-synthese",
+        "@type": "EventConfig",
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "fc5f6a7d989f4520a3f71ce026b17f69",
+        "activatedFields": [
+            "externalDecision",
+            "opinionText"
+        ],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:18:17+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IDecisionProjectFromSPWEvent"
+        ],
+        "id": "rapport-synthese",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-06-18T10:16:30+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
+            "@type": "Folder",
+            "UID": "5a6425575cc240358cd2348fd7ce148a",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Rapport de synth\u00e8se",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2023-05-11T08:18:17+00:00"
+                }
+            ]
+        }
+    }
+]

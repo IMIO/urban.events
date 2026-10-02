@@ -1,0 +1,68 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/decision-du-recours",
+        "@relative_path": "/portal_urban/envclasstwo/eventconfigs/decision-du-recours",
+        "@type": "EventConfig",
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "57342ed2de724a8e872e05d5849b023d",
+        "activatedFields": [
+            "recourseDecisionDisplayDate",
+            "recourseDecision"
+        ],
+        "allow_discussion": false,
+        "created": "2026-02-23T22:19:42+00:00",
+        "description": {
+            "content-type": null,
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": "Date de notification",
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IRecourseEvent"
+        ],
+        "id": "decision-du-recours",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-02-23T22:19:42+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+            "@type": "Folder",
+            "UID": "487fdc5b974047f087f542eba74eeb86",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "disabled",
+        "showTitle": false,
+        "textDefaultValues": null,
+        "title": "D\u00e9cision du recours",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-02-23T22:19:42+00:00"
+                },
+                {
+                    "action": "disable",
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "disabled",
+                    "time": "2026-02-23T22:19:42+00:00"
+                }
+            ]
+        }
+    }
+]

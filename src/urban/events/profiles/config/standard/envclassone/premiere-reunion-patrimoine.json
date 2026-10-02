@@ -1,0 +1,62 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/premiere-reunion-patrimoine",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/premiere-reunion-patrimoine",
+        "@type": "EventConfig",
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "ea8d9607ba164c4b980e58f0ddd94f16",
+        "activatedFields": [
+            "reportCreationDate",
+            "reportReceptionDate",
+            "misc_description"
+        ],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:16:33+00:00",
+        "description": {
+            "content-type": null,
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": "Date de la r\u00e9union",
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IPatrimonyMeetingEvent"
+        ],
+        "id": "premiere-reunion-patrimoine",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2023-05-11T08:16:33+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": null,
+        "title": "Premi\u00e8re r\u00e9union patrimoine",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2023-05-11T08:16:33+00:00"
+                }
+            ]
+        }
+    }
+]

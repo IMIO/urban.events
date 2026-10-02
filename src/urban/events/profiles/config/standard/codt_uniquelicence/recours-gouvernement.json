@@ -1,0 +1,61 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/recours-gouvernement",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/recours-gouvernement",
+        "@type": "EventConfig",
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "19ef3b57b34b455099b61c7845ca2f5b",
+        "activatedFields": [
+            "transmitDate",
+            "displayDate"
+        ],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:18:19+00:00",
+        "description": {
+            "content-type": null,
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": "Date de notification",
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IRecourseEvent"
+        ],
+        "id": "recours-gouvernement",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-05-31T07:46:17+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
+            "@type": "Folder",
+            "UID": "5a6425575cc240358cd2348fd7ce148a",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": null,
+        "title": "Recours au Gouvernement Wallon",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2023-05-11T08:18:19+00:00"
+                }
+            ]
+        }
+    }
+]

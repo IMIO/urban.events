@@ -1,0 +1,57 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/affichage-decision",
+        "@relative_path": "/portal_urban/envclasstwo/eventconfigs/affichage-decision",
+        "@type": "EventConfig",
+        "TALCondition": "python: licence.getProcedureChoice() != 'article65'",
+        "UID": "4ef825aed8ce42489f189b7b7a73fac2",
+        "activatedFields": [
+            "displayDate",
+            "displayDateEnd"
+        ],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:17:45+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IDisplayingTheDecisionEvent"
+        ],
+        "id": "affichage-decision",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-05-24T08:29:56+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs",
+            "@type": "Folder",
+            "UID": "487fdc5b974047f087f542eba74eeb86",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Affichage de la d\u00e9cision",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2023-05-11T08:17:45+00:00"
+                }
+            ]
+        }
+    }
+]

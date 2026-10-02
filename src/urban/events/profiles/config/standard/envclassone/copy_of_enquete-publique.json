@@ -1,0 +1,69 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/copy_of_enquete-publique",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/copy_of_enquete-publique",
+        "@type": "EventConfig",
+        "TALCondition": "here/mayAddInquiryEvent",
+        "UID": "89738ece71af4911a84a9f86a27143f3",
+        "activatedFields": [
+            "displayDate",
+            "displayDateEnd",
+            "claimsDate",
+            "claimEndSDate",
+            "explanationStartSDate",
+            "explanationEndSDate",
+            "claimsText",
+            "reportText"
+        ],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:17:42+00:00",
+        "description": null,
+        "eventDateLabel": "Date de notification",
+        "eventPortalType": "UrbanEventInquiry",
+        "eventType": [
+            "Products.urban.interfaces.IInquiryEvent"
+        ],
+        "id": "copy_of_enquete-publique",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "investigationStart",
+            "investigationEnd"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-03-09T10:31:09+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [
+            {
+                "fieldname": "claimsText",
+                "text": "<p>Consid\u00e9rant que xxx r\u00e9clamations \u00e9crites ont \u00e9t\u00e9 introduites au cours de l'enqu\u00eate \u00e9manant des riverains (xxx lettres identiques et xxx lettres individuelles);</p>\r\n<p>Consid\u00e9rant que xxx r\u00e9clamations orales ont \u00e9t\u00e9 consign\u00e9es dans le registre;</p>\r\n<p>Consid\u00e9rant que ces r\u00e9clamations portent principalement sur :</p>\r\n<p>* ...</p>\r\n<p>* ...</p>\r\n<p>* ...</p>\r\n<p>Attendu qu'une r\u00e9union de cl\u00f4ture d'enqu\u00eate \u00e0 \u00e9t\u00e9 organis\u00e9e le xxx dans les bureaux du service de l'urbanisme de la Commune, conform\u00e9ment aux dispositions de l'article 340 du Code modifi\u00e9;</p>\r\n<p>Consid\u00e9rant qu'aucune personnes ne s'est pr\u00e9sent\u00e9e lors de cette r\u00e9union pour faire opposition;</p>\r\n<p>Consid\u00e9rant que xxx personnes se sont pr\u00e9sent\u00e9es \u00e0 cette r\u00e9union et ont \u00e9mis les r\u00e9clamations suivantes :</p>\r\n<p>* ...</p>\r\n<p>* ...</p>\r\n<p>* ...</p>"
+            }
+        ],
+        "title": "Enqu\u00eate publique",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-06-17T08:37:43+00:00"
+                }
+            ]
+        }
+    }
+]

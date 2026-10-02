@@ -1,0 +1,56 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/config-opinion-request",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/config-opinion-request",
+        "@type": "EventConfig",
+        "TALCondition": "python: False",
+        "UID": "b2f0c174f9d742d480635e35e29b75ec",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2023-05-11T08:16:32+00:00",
+        "description": {
+            "content-type": null,
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEventOpinionRequest",
+        "eventType": [
+            "Products.urban.interfaces.IOpinionRequestEvent"
+        ],
+        "id": "config-opinion-request",
+        "isKeyEvent": false,
+        "is_folderish": true,
+        "keyDates": null,
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2024-04-23T14:48:56+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": null,
+        "title": "*** Demande d'avis CONFIG ***",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2023-05-11T08:16:32+00:00"
+                }
+            ]
+        }
+    }
+]

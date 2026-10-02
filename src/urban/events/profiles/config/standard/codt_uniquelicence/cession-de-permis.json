@@ -1,0 +1,80 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/cession-de-permis",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/cession-de-permis",
+        "@type": "EventConfig",
+        "TALCondition": "here/mayAddTransferOfLicenceEvent",
+        "UID": "e75bb86918194ad7a2e5e955e33ddaf3",
+        "activatedFields": [
+            "transferType",
+            "transferDescription",
+            "pmTitle",
+            "pmDescription",
+            "pmMotivation",
+            "pmDecision"
+        ],
+        "allow_discussion": false,
+        "created": "2024-05-31T09:53:35+00:00",
+        "description": null,
+        "eventDateLabel": "Date de la cession",
+        "eventPortalType": "UrbanEventCollege",
+        "eventType": [
+            "Products.urban.interfaces.ISimpleCollegeEvent",
+            "Products.urban.interfaces.ITransferOfLicenceEvent",
+            "Products.urban.interfaces.ICollegeEvent"
+        ],
+        "id": "cession-de-permis",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-08-03T14:17:41+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
+            "@type": "Folder",
+            "UID": "5a6425575cc240358cd2348fd7ce148a",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [
+            {
+                "fieldname": "pmTitle",
+                "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> ENVIRONNEMENT - <tal:a replace=\"self/reference\"/> - <tal:a replace=\"applicants_signaletic\"/> - <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/>, cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> - Changement d'exploitant - CESSION \r\n</tal:vars>"
+            },
+            {
+                "fieldname": "pmDescription",
+                "text": "Cession du permis unique"
+            },
+            {
+                "fieldname": "pmMotivation",
+                "text": "<tal:vars define=\"\r\n    applicants_signaletic python: self.getApplicantsSignaletic();\r\n    portion_outs_text python: self.getPortionOutsText();\r\n    work_location_signaletic python: self.getWorkLocationSignaletic();\r\n    licence_subject python: self.getLicenceSubject();\r\n    reference self/reference;\r\n    date_decision python: tool.formatDate(licence.getLastSimpleCollege().getDecisionDate());\r\n    premier_demandeur python: licence.getApplicants()[0].getSignaletic();\r\n    dernier_demandeur python: licence.getApplicants()[0].getSignaletic();\r\n\">\r\n<p>Vu le d\u00e9cret du 11 mars 1999 relatif au permis d\u2019environnement ;</p>\r\n\r\n<p>Consid\u00e9rant que le coll\u00e8ge \u00e0 prit acte du permis unique en date du <tal:a replace=\"date_decision\"/>;</p>\r\n\r\n<p>Que la d\u00e9claration concerne <tal:a replace=\"licence_subject\"/> sur un bien sis <tal:a replace=\"work_location_signaletic\"/> cadastr\u00e9 <tal:a replace=\"portion_outs_text\"/> ; </p>\r\n\r\n<p>Consid\u00e9rant que l'exploitant <tal:a replace=\"premier_demandeur\"/> nous informe de la cession de son permis \u00e0 <tal:a replace=\"dernier_demandeur\"/>;\r\n\r\n<p>Consid\u00e9rant qu'il s'agit d'une cession compl\u00e8te de l'\u00e9tablissement.</p>\r\n\r\n</tal:vars>"
+            },
+            {
+                "fieldname": "pmDecision",
+                "text": "<tal:vars define=\"applicants_signaletic python: self.getApplicantsSignaletic(); portion_outs_text python: self.getPortionOutsText(); work_location_signaletic python: self.getWorkLocationSignaletic(); licence_subject python: self.getLicenceSubject(); reference self/reference\"> <p>PREND CONNAISSANCE du changement d'exploitant susvis\u00e9, et ,</p> <p>DECIDE unanimement d'en informer les Fonctionnaires technique et d\u00e9l\u00e9gu\u00e9.</p> </tal:vars>"
+            }
+        ],
+        "title": "Cession de permis",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2024-05-31T09:53:35+00:00"
+                }
+            ]
+        }
+    }
+]

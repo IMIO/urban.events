@@ -1,0 +1,54 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/dossier-abandonne",
+        "@relative_path": "/portal_urban/envclassone/eventconfigs/dossier-abandonne",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "4a9db0b677ed4043ad5a098815f8b533",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2026-06-25T10:29:34+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IForcedEndEvent"
+        ],
+        "id": "dossier-abandonne",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-06-25T10:29:43+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@type": "Folder",
+            "UID": "dfbed70cc4e148d58a60e0f84872ee25",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Dossier abandonn\u00e9",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-06-25T10:29:34+00:00"
+                }
+            ]
+        }
+    }
+]
