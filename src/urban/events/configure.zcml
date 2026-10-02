@@ -90,4 +90,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import provision of security event"
+    description="Event config used by the NOTICE ACTE_CONSTITUTION_SURETE_COMMUNE notification"
+    source="1006"
+    destination="1007"
+    handler=".migrations.install_provision_of_security_event"
+    profile="urban.events:default"
+    />
+
 </configure>
