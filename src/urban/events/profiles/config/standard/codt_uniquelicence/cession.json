@@ -1,0 +1,54 @@
+[
+    {
+        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs/cession",
+        "@relative_path": "/portal_urban/codt_uniquelicence/eventconfigs/cession",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "733bad5fcb534259abbb60f1d4258b24",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2026-08-19T08:40:25+00:00",
+        "description": null,
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.ICessionEvent"
+        ],
+        "id": "cession",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-08-19T08:40:25+00:00",
+        "parent": {
+            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniquelicence/eventconfigs",
+            "@type": "Folder",
+            "UID": "5a6425575cc240358cd2348fd7ce148a",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Cession",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-08-19T08:40:25+00:00"
+                }
+            ]
+        }
+    }
+]
