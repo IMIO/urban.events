@@ -129,7 +129,7 @@ def install_uniquelicence_and_envevents(context):
                     base_json_path="./profiles/config/standard/{0}".format(
                         licence_type
                     ),
-                    handle_existing_content=utils.ExistingContent.UPDATE,
+                    handle_existing_content=utils.ExistingContent.SKIP,
                     match_filename="{0}.json".format(event_id),
                 )
 
