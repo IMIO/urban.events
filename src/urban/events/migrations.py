@@ -114,7 +114,7 @@ def install_dossier_abandonne_event(context):
         for licence_type in ("codt_uniquelicence", "envclassone", "envclasstwo"):
             utils.import_all_config(
                 base_json_path="./profiles/config/standard/{}".format(licence_type),
-                handle_existing_content=utils.ExistingContent.UPDATE,
+                handle_existing_content=utils.ExistingContent.SKIP,
                 match_filename="dossier-abandonne.json",
             )
 
