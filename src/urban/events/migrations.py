@@ -119,7 +119,7 @@ def install_provision_of_security_event(context):
             utils.import_all_config(
                 base_json_path="./profiles/config/standard/{0}".format(licence_type),
                 match_filename="constitution_surete.json",
-                handle_existing_content=utils.ExistingContent.UPDATE,
+                handle_existing_content=utils.ExistingContent.SKIP,
             )
 
     logger.info("upgrade done!")
