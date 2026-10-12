@@ -132,5 +132,21 @@ def install_uniquelicence_and_envevents(context):
                     handle_existing_content=utils.ExistingContent.SKIP,
                     match_filename="{0}.json".format(event_id),
                 )
+    logger.info("upgrade done!")
+
+
+def import_acknowledgment_of_transfer_event(context):
+    logger.info("starting : Import acknowledgment of transfer event")
+    if "liege" not in utils.get_configs():
+        for licence_type in [
+            "codt_uniquelicence",
+            "envclassone",
+            "envclasstwo",
+        ]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                match_filename="prise-de-connaissance-de-la-cession.json",
+                handle_existing_content=utils.ExistingContent.SKIP,
+            )
 
     logger.info("upgrade done!")
