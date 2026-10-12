@@ -90,4 +90,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import dossier abandonne event for codt_uniquelicence and envclass"
+    description=""
+    source="1006"
+    destination="1007"
+    handler=".migrations.install_dossier_abandonne_event"
+    profile="urban.events:default"
+    />
+
 </configure>

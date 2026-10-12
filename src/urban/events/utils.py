@@ -35,6 +35,22 @@ def remove_uid(data):
     return new_data
 
 
+def fix_empty_description(data):
+    """`description` is a RichText field on event configs, if it is exported as
+    None it would be dropped by `remove_none` and the object would keep the
+    default dexterity `description` (u""), that breaks the RichText widget"""
+    for item in data:
+        if item.get("@type") not in ("EventConfig", "OpinionEventConfig"):
+            continue
+        if item.get("description") is None:
+            item["description"] = {
+                "content-type": "text/html",
+                "data": "",
+                "encoding": "utf-8",
+            }
+    return data
+
+
 def remove_none(data):
     return [{k: v for k, v in item.items() if v is not None} for item in data]
 
@@ -134,6 +150,7 @@ def import_json_config(
     import_content.handle_missing_parent = 0
 
     data = remove_uid(data)
+    data = fix_empty_description(data)
     data = remove_none(data)
     data = fix_all_ids(data)
     data = handle_update_keys(data, handle_existing_content, update_keys)
