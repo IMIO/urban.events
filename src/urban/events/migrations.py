@@ -163,6 +163,6 @@ def import_decision_register_of_modification_event(context):
             utils.import_all_config(
                 base_json_path="./profiles/config/standard/{0}".format(licence_type),
                 match_filename="decision_registre_modifications.json",
-                handle_existing_content=utils.ExistingContent.UPDATE,
+                handle_existing_content=utils.ExistingContent.SKIP,
             )
     logger.info("upgrade done!")
