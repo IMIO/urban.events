@@ -1,0 +1,68 @@
+[
+    {
+        "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs/avis-prealable-du-college",
+        "@relative_path": "/portal_urban/article65/eventconfigs/avis-prealable-du-college",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "1214d8f685dd47ae9f8be48fb7846ff3",
+        "activatedFields": [
+            "collegeOpinion",
+            "decisionDate",
+            "pmTitle",
+            "pmDescription",
+            "pmMotivation",
+            "pmDecision"
+        ],
+        "allow_discussion": false,
+        "created": "2026-10-08T15:49:57+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEventCollege",
+        "eventType": [
+            "Products.urban.interfaces.ISimpleCollegeEvent",
+            "Products.urban.interfaces.ICollegeReportEvent",
+            "Products.urban.interfaces.ICollegeOpinionEvent",
+            "Products.urban.interfaces.ITransmitToSPWEvent"
+        ],
+        "id": "avis-prealable-du-college",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-10-08T15:54:55+00:00",
+        "parent": {
+            "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs",
+            "@type": "Folder",
+            "UID": "eca5ac86a0cf4255968be02b504a17a4",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Avis pr\u00e9alable du Coll\u00e8ge",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-10-08T15:49:57+00:00"
+                }
+            ]
+        }
+    }
+]

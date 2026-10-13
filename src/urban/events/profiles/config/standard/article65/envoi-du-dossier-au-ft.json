@@ -1,0 +1,60 @@
+[
+    {
+        "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs/envoi-du-dossier-au-ft",
+        "@relative_path": "/portal_urban/article65/eventconfigs/envoi-du-dossier-au-ft",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "8cf2a371d98240e5b240696565fe9152",
+        "activatedFields": [
+            "commentForDPA"
+        ],
+        "allow_discussion": false,
+        "created": "2026-10-12T17:52:03+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEventNotice",
+        "eventType": [
+            "Products.urban.interfaces.ITransmitToSPWEvent"
+        ],
+        "id": "envoi-du-dossier-au-ft",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-10-12T17:52:15+00:00",
+        "parent": {
+            "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs",
+            "@type": "Folder",
+            "UID": "eca5ac86a0cf4255968be02b504a17a4",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Envoi du dossier au FT",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-10-12T17:52:03+00:00"
+                }
+            ]
+        }
+    }
+]

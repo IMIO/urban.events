@@ -90,4 +90,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import Article 65 events"
+    description=""
+    source="1006"
+    destination="1007"
+    handler=".migrations.import_article_65_event"
+    profile="urban.events:default"
+    />
+
 </configure>

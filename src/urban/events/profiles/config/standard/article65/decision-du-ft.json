@@ -1,0 +1,60 @@
+[
+    {
+        "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs/decision-du-ft",
+        "@relative_path": "/portal_urban/article65/eventconfigs/decision-du-ft",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "b34970a0222442c492d15a76b60a5ec4",
+        "activatedFields": [
+            "decision"
+        ],
+        "allow_discussion": false,
+        "created": "2026-10-08T15:24:34+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.ISpecialConditionsRevisionDecisionEvent"
+        ],
+        "id": "decision-du-ft",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-10-08T15:24:34+00:00",
+        "parent": {
+            "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs",
+            "@type": "Folder",
+            "UID": "eca5ac86a0cf4255968be02b504a17a4",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "D\u00e9cision du FT",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-10-08T15:24:34+00:00"
+                }
+            ]
+        }
+    }
+]
