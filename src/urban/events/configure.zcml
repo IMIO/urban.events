@@ -99,4 +99,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import acknowledgment of transfer event"
+    description=""
+    source="1007"
+    destination="1008"
+    handler=".migrations.import_acknowledgment_of_transfer_event"
+    profile="urban.events:default"
+    />
+
 </configure>
