@@ -117,9 +117,6 @@ def install_uniquelicence_and_envevents(context):
         "refus-tacite",
         "information",
         "cession",
-        "depot-de-revision-des-conditions-particulieres",
-        "projet-de-revision-des-conditions-particulieres",
-        "decision-de-revision-des-conditions-particulieres",
     ]
     if "liege" not in utils.get_configs():
         for licence_type in ["envclassone", "codt_uniquelicence", "envclasstwo"]:
