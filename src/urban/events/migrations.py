@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from urban.events import utils
 from plone import api
+from urban.events import utils
 
 import logging
 import os
+
 
 logger = logging.getLogger("urban.events: migrations")
 
@@ -107,6 +108,50 @@ def import_free_notification_event(context):
     logger.info("upgrade done!")
 
 
+def install_uniquelicence_and_envevents(context):
+    logger.info(
+        "starting : Import codt_uniquelicence, envclassone and envclasstwo events"
+    )
+    new_events = [
+        "dossier-abandonne",
+        "refus-tacite",
+        "information",
+        "cession",
+        "depot-de-revision-des-conditions-particulieres",
+        "projet-de-revision-des-conditions-particulieres",
+        "decision-de-revision-des-conditions-particulieres",
+    ]
+    if "liege" not in utils.get_configs():
+        for licence_type in ["envclassone", "codt_uniquelicence", "envclasstwo"]:
+            # only import the new events to not override existing event configs
+            for event_id in new_events:
+                utils.import_all_config(
+                    base_json_path="./profiles/config/standard/{0}".format(
+                        licence_type
+                    ),
+                    handle_existing_content=utils.ExistingContent.SKIP,
+                    match_filename="{0}.json".format(event_id),
+                )
+    logger.info("upgrade done!")
+
+
+def import_acknowledgment_of_transfer_event(context):
+    logger.info("starting : Import acknowledgment of transfer event")
+    if "liege" not in utils.get_configs():
+        for licence_type in [
+            "codt_uniquelicence",
+            "envclassone",
+            "envclasstwo",
+        ]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                match_filename="prise-de-connaissance-de-la-cession.json",
+                handle_existing_content=utils.ExistingContent.SKIP,
+            )
+
+    logger.info("upgrade done!")
+
+
 def import_article_65_event(context):
     logger.info("starting : Import Article 65 event")
 
@@ -119,6 +164,6 @@ def import_article_65_event(context):
         utils.import_all_config(
             base_json_path="./profiles/config/standard/article65",
             handle_existing_content=utils.ExistingContent.SKIP,
-        )
+        )    
 
     logger.info("upgrade done!")

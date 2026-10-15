@@ -91,10 +91,28 @@
     />
 
   <genericsetup:upgradeStep
-    title="Import Article 65 events"
+    title="Import envclassone, codt_uniquelicence and envclasstwo events"
     description=""
     source="1006"
     destination="1007"
+    handler=".migrations.install_uniquelicence_and_envevents"
+    profile="urban.events:default"
+    />
+
+  <genericsetup:upgradeStep
+    title="Import acknowledgment of transfer event"
+    description=""
+    source="1007"
+    destination="1008"
+    handler=".migrations.import_acknowledgment_of_transfer_event"
+    profile="urban.events:default"
+    />
+
+  <genericsetup:upgradeStep
+    title="Import Article 65 events"
+    description=""
+    source="1008"
+    destination="1009"
     handler=".migrations.import_article_65_event"
     profile="urban.events:default"
     />
