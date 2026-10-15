@@ -109,7 +109,13 @@ def import_free_notification_event(context):
 
 def import_article_65_event(context):
     logger.info("starting : Import Article 65 event")
-    if "liege" not in utils.get_configs():
+
+    if "liege" in utils.get_configs():
+        utils.import_all_config(
+            base_json_path="./profiles/config/liege/article65",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
+    else:
         utils.import_all_config(
             base_json_path="./profiles/config/standard/article65",
             handle_existing_content=utils.ExistingContent.SKIP,
