@@ -25,7 +25,9 @@
         "id": "decision-du-college",
         "isKeyEvent": true,
         "is_folderish": true,
-        "keyDates": [],
+        "keyDates": [
+            "eventDate"
+        ],
         "layout": "view",
         "lock": {
             "locked": false,

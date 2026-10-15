@@ -25,7 +25,9 @@
         "id": "affichage-de-la-decision",
         "isKeyEvent": true,
         "is_folderish": true,
-        "keyDates": [],
+        "keyDates": [
+            "eventDate"
+        ],
         "layout": "view",
         "lock": {
             "locked": false,
