@@ -1,0 +1,58 @@
+[
+    {
+        "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs/recevabilite-article-65",
+        "@relative_path": "/portal_urban/article65/eventconfigs/recevabilite-article-65",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "ad7cc3875c6a4d22b1d2c65b491812e9",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2026-10-08T14:23:42+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.IAcknowledgmentEvent"
+        ],
+        "id": "recevabilite-article-65",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-10-09T14:45:35+00:00",
+        "parent": {
+            "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs",
+            "@type": "Folder",
+            "UID": "eca5ac86a0cf4255968be02b504a17a4",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Recevabilit\u00e9 Article 65",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-10-08T14:23:42+00:00"
+                }
+            ]
+        }
+    }
+]

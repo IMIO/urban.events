@@ -1,0 +1,56 @@
+[{
+        "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs/depot-de-revision-des-conditions-particulieres",
+        "@relative_path": "/portal_urban/article65/eventconfigs/depot-de-revision-des-conditions-particulieres",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "bfa30c41aafa43e49bc90773954168c7",
+        "activatedFields": [],
+        "allow_discussion": false,
+        "created": "2026-10-09T12:48:25+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEvent",
+        "eventType": [
+            "Products.urban.interfaces.ISpecialConditionsRevisionDepositEvent"
+        ],
+        "id": "depot-de-revision-des-conditions-particulieres",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "eventDate"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-10-12T17:53:44+00:00",
+        "parent": {
+            "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs",
+            "@type": "Folder",
+            "UID": "eca5ac86a0cf4255968be02b504a17a4",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "D\u00e9p\u00f4t de r\u00e9vision des conditions particuli\u00e8res",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-10-09T12:48:25+00:00"
+                }
+            ]
+        }
+    }]
