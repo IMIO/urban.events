@@ -118,32 +118,42 @@ def install_uniquelicence_and_envevents(context):
         "information",
         "cession",
     ]
-    if "liege" not in utils.get_configs():
-        for licence_type in ["envclassone", "codt_uniquelicence", "envclasstwo"]:
-            # only import the new events to not override existing event configs
-            for event_id in new_events:
-                utils.import_all_config(
-                    base_json_path="./profiles/config/standard/{0}".format(
-                        licence_type
-                    ),
-                    handle_existing_content=utils.ExistingContent.SKIP,
-                    match_filename="{0}.json".format(event_id),
-                )
+    if "liege" in utils.get_configs():
+        cfg_folder = "liege"
+    else:
+        cfg_folder = "standard"
+    for licence_type in ["envclassone", "codt_uniquelicence", "envclasstwo"]:
+        # only import the new events to not override existing event configs
+        for event_id in new_events:
+            utils.import_all_config(
+                base_json_path="./profiles/config/{0}/{1}".format(
+                    cfg_folder,
+                    licence_type,
+                ),
+                handle_existing_content=utils.ExistingContent.SKIP,
+                match_filename="{0}.json".format(event_id),
+            )
     logger.info("upgrade done!")
 
 
 def import_acknowledgment_of_transfer_event(context):
     logger.info("starting : Import acknowledgment of transfer event")
-    if "liege" not in utils.get_configs():
-        for licence_type in [
-            "codt_uniquelicence",
-            "envclassone",
-            "envclasstwo",
-        ]:
-            utils.import_all_config(
-                base_json_path="./profiles/config/standard/{0}".format(licence_type),
-                match_filename="prise-de-connaissance-de-la-cession.json",
-                handle_existing_content=utils.ExistingContent.SKIP,
-            )
+    if "liege" in utils.get_configs():
+        cfg_folder = "liege"
+    else:
+        cfg_folder = "standard"
+    for licence_type in [
+        "codt_uniquelicence",
+        "envclassone",
+        "envclasstwo",
+    ]:
+        utils.import_all_config(
+            base_json_path="./profiles/config/{0}/{1}".format(
+                cfg_folder,
+                licence_type,
+            ),
+            match_filename="prise-de-connaissance-de-la-cession.json",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
 
     logger.info("upgrade done!")
