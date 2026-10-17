@@ -8,6 +8,18 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.4 (2026-10-17)
+------------------
+
+New features:
+
+
+- Add the Prise de connaissance de la cession event config for unique and environmental (class 1 and 2) licences
+  [WBoudabous] (URB-3636)
+- Add special conditions revision events (deposit, project, decision), tacit refusal, information, abandon and cession events
+  [wboudabous] (URB-3669)
+
+
 1.0.3 (2026-08-12)
 ------------------
 
