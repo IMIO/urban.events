@@ -157,3 +157,20 @@ def import_acknowledgment_of_transfer_event(context):
         )
 
     logger.info("upgrade done!")
+
+
+def import_article_65_event(context):
+    logger.info("starting : Import Article 65 event")
+
+    if "liege" in utils.get_configs():
+        utils.import_all_config(
+            base_json_path="./profiles/config/liege/article65",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
+    else:
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/article65",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )    
+
+    logger.info("upgrade done!")

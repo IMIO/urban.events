@@ -1,0 +1,65 @@
+[
+    {
+        "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs/enquete-publique",
+        "@relative_path": "/portal_urban/article65/eventconfigs/enquete-publique",
+        "@type": "EventConfig",
+        "TALCondition": null,
+        "UID": "49aa93344ddc4dd9a17d3940c48d59cd",
+        "activatedFields": [
+            "displayDate",
+            "displayDateEnd",
+            "claimsText",
+            "reportText"
+        ],
+        "allow_discussion": false,
+        "created": "2026-10-08T15:47:30+00:00",
+        "description": {
+            "content-type": "text/x-plone-outputfilters-html",
+            "data": "",
+            "encoding": "utf-8"
+        },
+        "eventDateLabel": null,
+        "eventPortalType": "UrbanEventInquiry",
+        "eventType": [
+            "Products.urban.interfaces.IInquiryEvent",
+            "Products.urban.interfaces.ITransmitToSPWEvent"
+        ],
+        "id": "enquete-publique",
+        "isKeyEvent": true,
+        "is_folderish": true,
+        "keyDates": [
+            "investigationStart",
+            "investigationEnd"
+        ],
+        "layout": "view",
+        "lock": {
+            "locked": false,
+            "stealable": true
+        },
+        "modified": "2026-10-08T15:48:53+00:00",
+        "parent": {
+            "@id": "http://localhost:8081/urbanisme/portal_urban/article65/eventconfigs",
+            "@type": "Folder",
+            "UID": "eca5ac86a0cf4255968be02b504a17a4",
+            "description": "",
+            "review_state": "private",
+            "title": "Types d'\u00e9v\u00e8nements"
+        },
+        "review_state": "enabled",
+        "showTitle": false,
+        "textDefaultValues": [],
+        "title": "Enqu\u00eate publique",
+        "version": "current",
+        "workflow_history": {
+            "activation_workflow": [
+                {
+                    "action": null,
+                    "actor": "admin",
+                    "comments": "",
+                    "review_state": "enabled",
+                    "time": "2026-10-08T15:47:30+00:00"
+                }
+            ]
+        }
+    }
+]
