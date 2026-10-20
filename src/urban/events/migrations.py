@@ -6,7 +6,6 @@ from urban.events import utils
 import logging
 import os
 
-
 logger = logging.getLogger("urban.events: migrations")
 
 
@@ -22,8 +21,8 @@ def update_talcondition_on_events(context):
     )
     for brain in brains:
         obj = brain.getObject()
-        if obj.TALCondition in (None, u"context/is_CODT2024"):
-            obj.TALCondition = u"here/is_CODT2024"
+        if obj.TALCondition in (None, "context/is_CODT2024"):
+            obj.TALCondition = "here/is_CODT2024"
             logger.info("Update {0}".format(obj.absolute_url()))
     logger.info("upgrade done!")
 
@@ -172,5 +171,21 @@ def import_article_65_event(context):
             base_json_path="./profiles/config/standard/article65",
             handle_existing_content=utils.ExistingContent.SKIP,
         )
+
+
+def install_provision_of_security_event(context):
+    logger.info("starting : Import provision of security event")
+    if "liege" not in utils.get_configs():
+        for licence_type in [
+            "codt_uniquelicence",
+            "codt_uniqueborderinglicence",
+            "envclassone",
+            "envclasstwo",
+        ]:
+            utils.import_all_config(
+                base_json_path="./profiles/config/standard/{0}".format(licence_type),
+                match_filename="constitution_surete.json",
+                handle_existing_content=utils.ExistingContent.SKIP,
+            )
 
     logger.info("upgrade done!")
