@@ -49,7 +49,7 @@ def install_roaddecree_procedure(context):
     logger.info("starting : Import roaddecree events")
     directory_path = os.path.dirname(os.path.realpath(__file__))
     if "liege" not in utils.get_configs():
-        path="./profiles/config/standard/roaddecree/urbantemplates.json"
+        path = "./profiles/config/standard/roaddecree/urbantemplates.json"
         utils.import_json_config(
             json_path=os.path.normpath(os.path.join(directory_path, path)),
             context=api.portal.get_tool("portal_urban"),
@@ -171,6 +171,6 @@ def import_article_65_event(context):
         utils.import_all_config(
             base_json_path="./profiles/config/standard/article65",
             handle_existing_content=utils.ExistingContent.SKIP,
-        )    
+        )
 
     logger.info("upgrade done!")

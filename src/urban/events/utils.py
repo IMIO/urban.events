@@ -144,6 +144,7 @@ def import_json_config(
 
     ordering_content(json_path, context)
 
+
 def import_all_config(
     base_json_path="./profiles/config",
     base_context_path="portal_urban",
@@ -151,7 +152,7 @@ def import_all_config(
     handle_existing_content=ExistingContent.SKIP,
     match_filename=None,
     update_keys=None,
-    blacklist=[]
+    blacklist=[],
 ):
     """
     Function used to import all json inside a folder
