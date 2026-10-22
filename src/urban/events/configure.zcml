@@ -117,4 +117,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Import abandon register modification event"
+    description=""
+    source="1009"
+    destination="1010"
+    handler=".migrations.import_abandon_register_modification_event"
+    profile="urban.events:default"
+    />
+
 </configure>
