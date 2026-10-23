@@ -6,7 +6,6 @@ from urban.events import utils
 import logging
 import os
 
-
 logger = logging.getLogger("urban.events: migrations")
 
 
@@ -170,6 +169,30 @@ def import_article_65_event(context):
     else:
         utils.import_all_config(
             base_json_path="./profiles/config/standard/article65",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
+
+    logger.info("upgrade done!")
+
+
+def import_abandon_register_modification_event(context):
+    logger.info("starting : Import abandon register modification event")
+    if "liege" in utils.get_configs():
+        cfg_folder = "liege"
+    else:
+        cfg_folder = "standard"
+    for licence_type in [
+        "codt_uniquelicence",
+        "codt_uniqueborderinglicence",
+        "envclassone",
+        "envclasstwo",
+    ]:
+        utils.import_all_config(
+            base_json_path="./profiles/config/{0}/{1}".format(
+                cfg_folder,
+                licence_type,
+            ),
+            match_filename="abandon-register-modification.json",
             handle_existing_content=utils.ExistingContent.SKIP,
         )
 
