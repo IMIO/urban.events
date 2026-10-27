@@ -1,2 +1,2 @@
-Add the Décision sur le registre des modifications event config (IModificationRegistryDecisionEvent marker) for unique, unique bordering and environmental (class 1 and 2) licences, used by the NOTICE DECISION_REGISTRE_COMMUNE notification
+Add the modification registry decision event config for unique, unique bordering and environmental (class 1 and 2) licences, used by the DECISION_REGISTRE_COMMUNE notice notification
 [WBoudabous]
