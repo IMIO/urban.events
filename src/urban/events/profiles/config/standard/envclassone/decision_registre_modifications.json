@@ -1,6 +1,6 @@
 [
     {
-        "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs/decision-registre-modifications",
+        "@id": "http://localhost:8081/arlon/arlon/portal_urban/envclassone/eventconfigs/decision-registre-modifications",
         "@relative_path": "/portal_urban/envclassone/eventconfigs/decision-registre-modifications",
         "@type": "EventConfig",
         "TALCondition": "",
@@ -39,7 +39,7 @@
         "location": null,
         "modified": "2026-09-15T00:00:00+00:00",
         "parent": {
-            "@id": "https://demo-urban.imio.be/portal_urban/envclassone/eventconfigs",
+            "@id": "http://localhost:8081/arlon/arlon/portal_urban/envclassone/eventconfigs",
             "@type": "Folder",
             "UID": "96a43d2f123242f680deb3235e7fa2ac",
             "description": null,
