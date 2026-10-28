@@ -40,7 +40,9 @@ def remove_none(data):
 
 
 def fix_id(id):
-    path = id.split("portal_urban")[1]
+    if "portal_urban" not in id:
+        raise ValueError("'portal_urban' not in {}".format(id))
+    path = id.split("portal_urban", 1)[1]
     root_site = getSite()
     return os.path.normpath(
         os.path.join(
@@ -64,6 +66,19 @@ def fix_all_ids(data, replacements=[]):
     return new_data
 
 
+def fix_all_paths(data, replacements=[]):
+    new_data = []
+
+    for item in data:
+        item["path"] = fix_id(item["path"])
+
+        for old, new in replacements:
+            item["path"] = item["path"].replace(old, new)
+        new_data.append(item)
+
+    return new_data
+
+
 def handle_update_keys(data, handle_existing_content, update_keys=None):
     if handle_existing_content is not ExistingContent.UPDATE:
         return data
@@ -82,20 +97,33 @@ def handle_update_keys(data, handle_existing_content, update_keys=None):
     return output_data
 
 
-def ordering_content(json_path, context):
-    ordering_path = json_path.replace(".json", "_ordering.json")
-    if not os.path.isfile(ordering_path):
+def ordering_content(
+    json_path, context, id_replacements=[], filter_ordering=True, item_to_order=[]
+):
+    if not os.path.isfile(json_path):
         return
 
-    with open(ordering_path, "r") as f:
+    portal = api.portal.get()
+
+    if isinstance(context, str):
+        context = portal.restrictedTraverse(context)
+
+    with open(json_path, "r") as f:
         data = json.load(f)
 
     ordering_content = context.unrestrictedTraverse("@@import_urban_config_ordering")
+
+    data = fix_all_paths(data, id_replacements)
+
     ordering_content.import_ordering(data)
 
 
 def import_json_config(
-    json_path, context, handle_existing_content=ExistingContent.SKIP, update_keys=None
+    json_path,
+    context,
+    handle_existing_content=ExistingContent.SKIP,
+    update_keys=None,
+    id_replacements=[],
 ):
     """
     This function is used to import a json file (exported with c.exportimport)
@@ -108,8 +136,11 @@ def import_json_config(
     :type handle_existing_content: urban.eventconfigs.utils.ExistingContent
     :param update_keys: List of key to update if ExistingContent.UPDATE is selected to handle_existing_content
     :type update_keys: List of string
+    :param id_replacements: List of ids to be replaced
+    :type context: List of List of String
     :raises ValueError: Raise if the json doesn't exist
     """
+
     if not os.path.isfile(json_path):
         raise ValueError("{} does not exist".format(json_path))
 
@@ -135,14 +166,13 @@ def import_json_config(
 
     data = remove_uid(data)
     data = remove_none(data)
-    data = fix_all_ids(data)
+    data = fix_all_ids(data, id_replacements)
     data = handle_update_keys(data, handle_existing_content, update_keys)
 
     import_content.start()
+
     import_content.do_import(data)
     import_content.finish()
-
-    ordering_content(json_path, context)
 
 
 def import_all_config(
@@ -153,6 +183,9 @@ def import_all_config(
     match_filename=None,
     update_keys=None,
     blacklist=[],
+    id_replacements=[],
+    apply_ordering=True,
+    filter_ordering=True,
 ):
     """
     Function used to import all json inside a folder
@@ -175,12 +208,13 @@ def import_all_config(
     """
     directory_path = os.path.dirname(os.path.realpath(__file__))
 
-    licences_types = os.walk(
-        os.path.normpath(os.path.join(directory_path, base_json_path))
+    licences_types = list(
+        os.walk(os.path.normpath(os.path.join(directory_path, base_json_path)))
     )
 
     root_site = getSite()
 
+    # import non ordering
     for root, dirs, files in licences_types:
         if files == []:
             continue
@@ -206,4 +240,31 @@ def import_all_config(
                 context=context_plone,
                 handle_existing_content=handle_existing_content,
                 update_keys=update_keys,
+                id_replacements=id_replacements,
+            )
+
+    if not apply_ordering:
+        return
+
+    # import ordering
+    for root, dirs, files in licences_types:
+        if files == []:
+            continue
+        for file in files:
+            if not file.endswith("_ordering.json"):
+                continue
+            json_path = os.path.join(root, file)
+            licence_type = root.split("/")[-1]
+            context_plone = os.path.normpath(
+                os.path.join(
+                    "/".join(root_site.getPhysicalPath()),
+                    base_context_path,
+                    licence_type,
+                    config_type,
+                )
+            )
+            ordering_content(
+                json_path=json_path,
+                context=context_plone,
+                id_replacements=id_replacements,
             )
