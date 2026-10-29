@@ -134,6 +134,15 @@
     handler=".migrations.import_decision_register_of_modification_event"
     profile="urban.events:default"
     />
+  
+    <genericsetup:upgradeStep
+    title="Fix empty RichText description on event configs"
+    description=""
+    source="1012"
+    destination="1013"
+    handler=".migrations.fix_empty_description_on_event_configs"
+    profile="urban.events:default"
+    />
 
   <genericsetup:upgradeStep
     title="Import provision of security event"
