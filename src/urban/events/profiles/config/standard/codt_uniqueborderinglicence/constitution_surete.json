@@ -1,6 +1,6 @@
 [
     {
-        "@id": "https://demo-urban.imio.be/portal_urban/codt_uniqueborderinglicence/eventconfigs/constitution-de-surete",
+        "@id": "http://localhost:8081/arlon/arlon/portal_urban/codt_uniqueborderinglicence/eventconfigs/constitution-de-surete",
         "@relative_path": "/portal_urban/codt_uniqueborderinglicence/eventconfigs/constitution-de-surete",
         "@type": "EventConfig",
         "TALCondition": "",
@@ -36,7 +36,7 @@
         "location": null,
         "modified": "2026-09-15T00:00:00+00:00",
         "parent": {
-            "@id": "https://demo-urban.imio.be/portal_urban/codt_uniqueborderinglicence/eventconfigs",
+            "@id": "http://localhost:8081/arlon/arlon/portal_urban/codt_uniqueborderinglicence/eventconfigs",
             "@type": "Folder",
             "UID": "ab3a977643b34ef6802f552a010eeb18",
             "description": null,
