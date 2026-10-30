@@ -172,28 +172,6 @@ def import_article_65_event(context):
             handle_existing_content=utils.ExistingContent.SKIP,
         )
 
-
-def install_provision_of_security_event(context):
-    logger.info("starting : Import provision of security event")
-    if "liege" in utils.get_configs():
-        cfg_folder = "liege"
-    else:
-        cfg_folder = "standard"
-    for licence_type in [
-        "codt_uniquelicence",
-        "codt_uniqueborderinglicence",
-        "envclassone",
-        "envclasstwo",
-    ]:
-        utils.import_all_config(
-            base_json_path="./profiles/config/{0}/{1}".format(
-                cfg_folder,
-                licence_type,
-            ),
-            match_filename="constitution_surete.json",
-            handle_existing_content=utils.ExistingContent.SKIP,
-        )
-
     logger.info("upgrade done!")
 
 
@@ -239,6 +217,30 @@ def import_decision_register_of_modification_event(context):
                 licence_type,
             ),
             match_filename="decision_registre_modifications.json",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
+
+    logger.info("upgrade done!")
+
+
+def install_provision_of_security_event(context):
+    logger.info("starting : Import provision of security event")
+    if "liege" in utils.get_configs():
+        cfg_folder = "liege"
+    else:
+        cfg_folder = "standard"
+    for licence_type in [
+        "codt_uniquelicence",
+        "codt_uniqueborderinglicence",
+        "envclassone",
+        "envclasstwo",
+    ]:
+        utils.import_all_config(
+            base_json_path="./profiles/config/{0}/{1}".format(
+                cfg_folder,
+                licence_type,
+            ),
+            match_filename="constitution_surete.json",
             handle_existing_content=utils.ExistingContent.SKIP,
         )
 
