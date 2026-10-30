@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from plone import api
+from plone.app.textfield.value import RichTextValue
 from urban.events import utils
 
 import logging
@@ -243,5 +244,20 @@ def install_provision_of_security_event(context):
             match_filename="constitution_surete.json",
             handle_existing_content=utils.ExistingContent.SKIP,
         )
+
+    logger.info("upgrade done!")
+
+
+def fix_empty_description_on_event_configs(context):
+    logger.info("starting : Fix empty RichText description on event configs")
+    brains = api.content.find(
+        container=api.portal.get_tool("portal_urban"),
+        portal_type=["EventConfig", "OpinionEventConfig"],
+    )
+    for brain in brains:
+        obj = brain.getObject()
+        if not isinstance(obj.description, RichTextValue):
+            obj.description = RichTextValue(u"", "text/html", "text/html")
+            logger.info("Update {0}".format(obj.absolute_url()))
 
     logger.info("upgrade done!")
