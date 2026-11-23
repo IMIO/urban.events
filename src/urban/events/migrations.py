@@ -261,3 +261,19 @@ def fix_empty_description_on_event_configs(context):
             logger.info("Update {0}".format(obj.absolute_url()))
 
     logger.info("upgrade done!")
+
+
+def update_talcondition_on_cession_events(context):
+    logger.info("starting : Update TAL Condition on cession event configs")
+    portal_urban = api.portal.get_tool("portal_urban")
+    for licence_type in ["envclassone", "envclasstwo", "codt_uniquelicence"]:
+        licence_config = getattr(portal_urban, licence_type, None)
+        if licence_config is None or "eventconfigs" not in licence_config:
+            continue
+        obj = licence_config.eventconfigs.get("cession")
+        if obj is None:
+            continue
+        if not obj.TALCondition:
+            obj.TALCondition = u"here/mayAddTransferOfLicenceEvent"
+            logger.info("Update {0}".format(obj.absolute_url()))
+    logger.info("upgrade done!")

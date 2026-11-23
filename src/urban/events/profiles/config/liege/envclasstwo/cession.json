@@ -3,7 +3,7 @@
         "@id": "https://demo-urban.imio.be/portal_urban/envclasstwo/eventconfigs/cession",
         "@relative_path": "/portal_urban/envclasstwo/eventconfigs/cession",
         "@type": "EventConfig",
-        "TALCondition": null,
+        "TALCondition": "here/mayAddTransferOfLicenceEvent",
         "UID": "e898252533164b999ffd0ae3ab5836e3",
         "activatedFields": [],
         "allow_discussion": false,
