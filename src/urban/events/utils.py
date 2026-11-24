@@ -7,7 +7,9 @@ from zope.component.hooks import getSite
 
 import json
 import os
+import logging
 
+logger = logging.getLogger("urban.event")
 
 def get_configs():
     """Return the configs defined in `URBAN_EVENT_CONFIGS` env variable"""
@@ -98,24 +100,36 @@ def handle_update_keys(data, handle_existing_content, update_keys=None):
 
 
 def ordering_content(
-    json_path, context, id_replacements=[], filter_ordering=True, item_to_order=[]
+    json_path, context, id_replacements=None, filter_ordering=False, item_to_order=None
 ):
-    if not os.path.isfile(json_path):
-        return
+    if id_replacements is None:
+        id_replacements = []
+    if item_to_order is None:
+        item_to_order = []
 
-    portal = api.portal.get()
+    if not os.path.isfile(json_path):
+        raise ValueError("{} does not exist".format(json_path))
 
     if isinstance(context, str):
-        context = portal.restrictedTraverse(context)
+        portal = api.portal.get()
+        context = portal.unrestrictedTraverse(context)
 
     with open(json_path, "r") as f:
         data = json.load(f)
 
-    ordering_content = context.unrestrictedTraverse("@@import_urban_config_ordering")
+    if filter_ordering:
+        data = [item for item in data if item.get("id") in item_to_order]
+
+    if not data:
+        return
+
+    ordering_content_view = context.unrestrictedTraverse(
+        "@@import_urban_config_ordering"
+    )
 
     data = fix_all_paths(data, id_replacements)
 
-    ordering_content.import_ordering(data)
+    ordering_content_view.import_ordering(data)
 
 
 def import_json_config(
@@ -137,7 +151,7 @@ def import_json_config(
     :param update_keys: List of key to update if ExistingContent.UPDATE is selected to handle_existing_content
     :type update_keys: List of string
     :param id_replacements: List of ids to be replaced
-    :type context: List of List of String
+    :type id_replacements: List of List of String
     :raises ValueError: Raise if the json doesn't exist
     """
 
@@ -182,10 +196,11 @@ def import_all_config(
     handle_existing_content=ExistingContent.SKIP,
     match_filename=None,
     update_keys=None,
-    blacklist=[],
-    id_replacements=[],
+    blacklist=None,
+    id_replacements=None,
     apply_ordering=True,
-    filter_ordering=True,
+    filter_ordering=False,
+    item_to_order=None,
 ):
     """
     Function used to import all json inside a folder
@@ -206,6 +221,13 @@ def import_all_config(
     :type update_keys: List of string
     :raises ValueError: Raise if the json doesn't exist
     """
+    if blacklist is None:
+        blacklist = []
+    if id_replacements is None:
+        id_replacements = []
+    if item_to_order is None:
+        item_to_order = []
+
     directory_path = os.path.dirname(os.path.realpath(__file__))
 
     licences_types = list(
@@ -253,7 +275,11 @@ def import_all_config(
         for file in files:
             if not file.endswith("_ordering.json"):
                 continue
-            json_path = os.path.join(root, file)
+            if match_filename is not None and file != match_filename:
+                continue
+            if file in blacklist:
+                continue
+            ordering_json_path = os.path.join(root, file)
             licence_type = root.split("/")[-1]
             context_plone = os.path.normpath(
                 os.path.join(
@@ -264,7 +290,9 @@ def import_all_config(
                 )
             )
             ordering_content(
-                json_path=json_path,
+                json_path=ordering_json_path,
                 context=context_plone,
                 id_replacements=id_replacements,
+                filter_ordering=filter_ordering,
+                item_to_order=item_to_order,
             )
