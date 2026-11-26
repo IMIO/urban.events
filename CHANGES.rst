@@ -8,6 +8,24 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.5 (2026-11-26)
+------------------
+
+New features:
+
+
+- Fix empty RichText description on imported event configs and add an upgrade step to fix existing ones
+  [WBoudabous] (URB-3568)
+- Add the modification registry decision event config for unique, unique bordering and environmental (class 1 and 2) licences, used by the DECISION_REGISTRE_COMMUNE notice notification
+  [WBoudabous] (URB-3674)
+- Add abandon register modification event config 
+  [WBoudabous] (URB-3676)
+- Add the provision of security event config for unique, unique bordering and environmental (class 1 and 2) licences
+  [WBoudabous] (URB-3678)
+- Add event configs for Article 65
+  [daggelpop] (URB-3779)
+
+
 1.0.4 (2026-10-17)
 ------------------
 
