@@ -261,3 +261,20 @@ def fix_empty_description_on_event_configs(context):
             logger.info("Update {0}".format(obj.absolute_url()))
 
     logger.info("upgrade done!")
+
+
+def import_miscdemandenvironment_events(context):
+    logger.info("starting : Import miscdemandenvironment events")
+
+    if "liege" in utils.get_configs():
+        utils.import_all_config(
+            base_json_path="./profiles/config/liege/miscdemandenvironment",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
+    else:
+        utils.import_all_config(
+            base_json_path="./profiles/config/standard/miscdemandenvironment",
+            handle_existing_content=utils.ExistingContent.SKIP,
+        )
+
+    logger.info("upgrade done!")

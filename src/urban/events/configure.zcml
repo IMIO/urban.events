@@ -134,7 +134,7 @@
     handler=".migrations.import_decision_register_of_modification_event"
     profile="urban.events:default"
     />
-  
+
     <genericsetup:upgradeStep
     title="Fix empty RichText description on event configs"
     description=""
@@ -152,5 +152,15 @@
     handler=".migrations.install_provision_of_security_event"
     profile="urban.events:default"
     />
+
+  <genericsetup:upgradeStep
+    title="Import Misc Demand Environment events"
+    description=""
+    source="1013"
+    destination="1014"
+    handler=".migrations.import_miscdemandenvironment_events"
+    profile="urban.events:default"
+    />
+
 
 </configure>

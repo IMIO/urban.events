@@ -1,0 +1,52 @@
+[{
+    "@id": "http://localhost:8081/urbanisme/portal_urban/miscdemandenvironment/eventconfigs/ppeie-designation-des-communes",
+    "@relative_path": "/portal_urban/miscdemandenvironment/eventconfigs/ppeie-designation-des-communes",
+    "@type": "EventConfig",
+    "TALCondition": null,
+    "UID": "cca6da2f4260409ba200a08d26f31004",
+    "activatedFields": [],
+    "allow_discussion": false,
+    "created": "2026-11-26T17:18:30+00:00",
+    "description": "",
+    "eventDateLabel": null,
+    "eventPortalType": "UrbanEvent",
+    "eventType": [
+        "Products.urban.interfaces.IDesignationEvent"
+    ],
+    "id": "ppeie-designation-des-communes",
+    "isKeyEvent": true,
+    "is_folderish": true,
+    "keyDates": [
+        "eventDate"
+    ],
+    "layout": "view",
+    "lock": {
+        "locked": false,
+        "stealable": true
+    },
+    "modified": "2026-11-26T17:18:30+00:00",
+    "parent": {
+        "@id": "http://localhost:8081/urbanisme/portal_urban/miscdemandenvironment/eventconfigs",
+        "@type": "Folder",
+        "UID": "f4904bcb8f434fa68ac7ee4e721e548b",
+        "description": "",
+        "review_state": "private",
+        "title": "Types d'\u00e9v\u00e8nements"
+    },
+    "review_state": "enabled",
+    "showTitle": false,
+    "textDefaultValues": [],
+    "title": "PPEIE - D\u00e9signation des communes",
+    "version": "current",
+    "workflow_history": {
+        "activation_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "enabled",
+                "time": "2026-11-26T17:18:30+00:00"
+            }
+        ]
+    }
+}]
