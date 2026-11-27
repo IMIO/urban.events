@@ -153,4 +153,13 @@
     profile="urban.events:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Add transfer of licence TAL condition on cession event configs"
+    description=""
+    source="1013"
+    destination="1014"
+    handler=".migrations.update_talcondition_on_cession_events"
+    profile="urban.events:default"
+    />
+
 </configure>
